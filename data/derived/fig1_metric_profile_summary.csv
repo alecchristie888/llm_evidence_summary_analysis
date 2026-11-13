@@ -1,0 +1,33 @@
+class,metric,model,n,mean,lo,hi
+Relevance,Relevance,Claude Sonnet 4,515,93.06,92.07,94.06
+Relevance,Relevance,Gemini 2.5 Pro,520,88.23,86.37,89.96
+Relevance,Relevance,GPT-5,467,96.47,95.71,97.2
+Relevance,Relevance,Kimi K2,489,94.42,93.52,95.31
+Coverage:,Retrieval recall,Claude Sonnet 4,515,72.88,70.59,75.18
+Coverage:,Retrieval recall,Gemini 2.5 Pro,520,49.24,46.59,51.94
+Coverage:,Retrieval recall,GPT-5,467,65.17,62.49,67.8
+Coverage:,Retrieval recall,Kimi K2,489,68.45,65.86,70.79
+Coverage:,Retrieval precision,Claude Sonnet 4,515,53.7,51.31,56.17
+Coverage:,Retrieval precision,Gemini 2.5 Pro,520,67.64,64.66,70.46
+Coverage:,Retrieval precision,GPT-5,467,70.29,67.73,72.99
+Coverage:,Retrieval precision,Kimi K2,489,57.63,55.14,59.99
+Coverage:,Citation recall,Claude Sonnet 4,515,68.97,66.52,71.35
+Coverage:,Citation recall,Gemini 2.5 Pro,520,48.57,45.94,51.48
+Coverage:,Citation recall,GPT-5,467,62.88,60.15,65.73
+Coverage:,Citation recall,Kimi K2,489,65.75,63.08,68.26
+Attribution:,Citation rate,Claude Sonnet 4,515,85.81,84.5,87.1
+Attribution:,Citation rate,Gemini 2.5 Pro,520,96.17,95.41,96.9
+Attribution:,Citation rate,GPT-5,467,97.78,97,98.45
+Attribution:,Citation rate,Kimi K2,489,42.46,38.79,46.11
+Attribution:,Citation correctness (when cited),Claude Sonnet 4,510,93.32,92.52,94.17
+Attribution:,Citation correctness (when cited),Gemini 2.5 Pro,519,96.9,96.2,97.52
+Attribution:,Citation correctness (when cited),GPT-5,467,96.93,96.21,97.59
+Attribution:,Citation correctness (when cited),Kimi K2,259,83.32,80.52,86.23
+Attribution:,Cite-through rate,Claude Sonnet 4,515,94.7,93.42,95.93
+Attribution:,Cite-through rate,Gemini 2.5 Pro,520,98.51,97.67,99.16
+Attribution:,Cite-through rate,GPT-5,467,96.64,95.64,97.72
+Attribution:,Cite-through rate,Kimi K2,489,96.02,94.83,97.08
+Faithfulness,Faithfulness,Claude Sonnet 4,515,81.11,79.74,82.5
+Faithfulness,Faithfulness,Gemini 2.5 Pro,519,91.51,90.32,92.59
+Faithfulness,Faithfulness,GPT-5,467,90.28,89.03,91.43
+Faithfulness,Faithfulness,Kimi K2,489,73.7,72.07,75.27

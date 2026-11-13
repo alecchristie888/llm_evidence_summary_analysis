@@ -1,0 +1,25 @@
+model,metric,n,p_lt_50,p_lt_70,p_ge_90
+Claude Sonnet 4,CC (all statements),515,0.0388,0.2117,0.3417
+Claude Sonnet 4,CC (when cited),510,0.0039,0.0275,0.7294
+Claude Sonnet 4,Citation rate,515,0.0272,0.1107,0.5592
+Claude Sonnet 4,Faithfulness,515,0.035,0.2233,0.3398
+Claude Sonnet 4,Relevance,515,0.0078,0.0447,0.7495
+Claude Sonnet 4,Retrieval recall,515,0.1864,0.4427,0.4
+GPT-5,CC (all statements),467,0.0107,0.0407,0.8137
+GPT-5,CC (when cited),467,0.0021,0.0214,0.8994
+GPT-5,Citation rate,467,0.0086,0.0193,0.9251
+GPT-5,Faithfulness,467,0.015,0.0685,0.6296
+GPT-5,Relevance,467,0.0021,0.0257,0.8651
+GPT-5,Retrieval recall,467,0.2591,0.591,0.3148
+Gemini 2.5 Pro,CC (all statements),520,0.0077,0.0462,0.7173
+Gemini 2.5 Pro,CC (when cited),519,0.0039,0.0193,0.8786
+Gemini 2.5 Pro,Citation rate,520,0.0038,0.0135,0.8423
+Gemini 2.5 Pro,Faithfulness,519,0.0193,0.0771,0.6917
+Gemini 2.5 Pro,Relevance,520,0.0519,0.1558,0.675
+Gemini 2.5 Pro,Retrieval recall,520,0.5,0.7538,0.2019
+Kimi K2,CC (all statements),489,0.5562,0.6994,0.0798
+Kimi K2,CC (when cited),259,0.0656,0.166,0.556
+Kimi K2,Citation rate,489,0.4969,0.5992,0.2045
+Kimi K2,Faithfulness,489,0.0818,0.3722,0.2025
+Kimi K2,Relevance,489,0.0082,0.0368,0.771
+Kimi K2,Retrieval recall,489,0.2249,0.5133,0.3354

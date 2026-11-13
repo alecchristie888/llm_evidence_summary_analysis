@@ -1,0 +1,5 @@
+# Keep data and outputs byte-identical to MANIFEST.csv (no line-ending conversion)
+data/** -text
+outputs/** -text
+MANIFEST.csv -text
+*.sh text eol=lf

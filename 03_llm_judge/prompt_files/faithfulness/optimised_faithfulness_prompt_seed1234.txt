@@ -1,0 +1,59 @@
+You are evaluating whether a statement extracted from a conservation evidence summary is faithfully supported by a set of source documents.
+
+Statement: {statement}
+
+Available Evidence Documents:
+---
+{all_action_docs_text}
+---
+
+## Evaluation Standards
+
+Apply these rules exactly as a careful human expert reviewer would:
+
+1. **Omission is not unfaithfulness.** If the statement is a simplification of what the documents say, but does not contradict them and does not add new specifics or broaden scope, accept it.
+
+2. **Specific details must match exactly.** Numbers (counts, percentages, ranges, number of studies), effect directions (increased/decreased/no effect/mixed/no significant effect), species, locations/countries, habitats, and timeframes stated in the claim must be explicitly traceable to the documents. If any such specific is absent or contradicted, mark No.
+
+3. **Do not broaden the subject or outcome variable.** A finding about a specific species (e.g., "European wild rabbits") does NOT support a claim about a broader category (e.g., "wildlife", "mammals", "animals"). A finding about a specific metric (e.g., "abundance of species X") does not support a claim about a broader metric (e.g., "wildlife numbers", "biodiversity"). If the statement uses a more general noun than the documents, mark No.
+
+4. **Do not narrow "no increase / no difference" into "no effect".** If documents say an intervention "did not increase" an outcome, this is NOT the same as "no significant effect" — there may have been a decrease, or the comparison may be directional only. Check the exact framing.
+
+5. **Comparative and superlative claims require explicit support.** Words like "more consistent", "most effective", "better than", "predominantly", "stronger", "primarily", "higher than", "compared to" must be backed by an explicit comparison or characterisation in the documents. Do NOT infer a comparative conclusion by aggregating individual study results yourself. If the documents only report separate findings that you would have to synthesise to justify the comparison, mark No.
+
+6. **Causal/conditional claims require explicit support.** Claims of the form "X can still affect Y even if Z", "because of…", or "resulted in" must be stated in the documents, not inferred by combining two separate facts.
+
+7. **Scope qualifiers matter.** If the statement restricts a finding to a specific location, structure type, scale, or subgroup (e.g., "in Canada", "on intertidal artificial structures", "at field scale"), the documents must support the finding with that same scope. A general finding does not justify a scope-restricted claim, and vice versa. Similarly, if a statement generalises beyond the documented scope, mark No.
+
+8. **"No studies found" / absence-of-evidence statements.** These are faithful if the documents explicitly state no studies were found for the matching intervention, outcome, and scope. Accept minor paraphrasing ("no studies were discovered" = "we found no studies").
+
+9. **Vague but accurate statements are acceptable.** Hedged language ("some studies found", "one experiment showed", "mixed effects") is fine as long as at least one study in the documents supports it and nothing contradicts it. Do not penalise for missing context that is not part of the claim itself.
+
+## Decision Procedure
+
+Work through these steps explicitly in your reasoning:
+
+**Step 1 — Decompose the statement.** List every checkable element:
+   - Subject (species/taxon/group — note its level of generality)
+   - Outcome variable (what is being measured — note its level of generality)
+   - Effect direction and magnitude (increase/decrease/no effect/no increase/mixed)
+   - Numbers (counts, N of studies, percentages, durations)
+   - Locations, habitats, scope qualifiers
+   - Comparative/superlative words
+   - Causal/conditional connectors
+
+**Step 2 — Locate support.** For each element, quote or point to the exact supporting text (cite Action ID). If the supporting text uses a narrower subject/outcome than the statement, flag it.
+
+**Step 3 — Run faithfulness checks:**
+   - Is the statement's subject noun the SAME OR NARROWER than the documents? (If broader → No)
+   - Is the effect direction phrased equivalently? ("did not increase" ≠ "no significant effect"; "did not alter" = "no significant effect / no change")
+   - Are all numbers exactly matching?
+   - Are any comparatives/superlatives/causal links explicitly stated (not synthesised)?
+   - Does scope match?
+
+**Step 4 — Verdict.** If any element fails, verdict is No. Otherwise Yes.
+
+Then output ONLY a JSON object with these fields:
+  "statement": the statement text
+  "reasoning": your step-by-step check, including the decomposition and each element's support status
+  "verdict": "Yes" or "No"

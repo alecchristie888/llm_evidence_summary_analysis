@@ -1,0 +1,201 @@
+model,metric,direction,synopsis,question,score,n_statements
+Claude Sonnet 4,Relevance,best,SustainableAquaculture,What are the observed effects on salmon growth and flesh quality when replacing fish oil with plant-based or other animal-based oils in their diet?,1,11
+Claude Sonnet 4,Relevance,best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,5
+Claude Sonnet 4,Relevance,best,SustainableAquaculture,"What actions are available to manage the waste products, such as excess nutrients and sludge, from salmon aquaculture operations?",1,14
+Claude Sonnet 4,Relevance,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,17
+Claude Sonnet 4,Relevance,best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,10
+Claude Sonnet 4,Relevance,worst,ControlofFreshwaterInvasiveSpecies,What are the documented effects of introducing native predators to control invasive American bullfrogs and Procambarus crayfish in North American freshwater systems?,0.14285714285714285,7
+Claude Sonnet 4,Relevance,worst,BiodiversityofMarineArtificialStructures,What is the evidence base for the effectiveness of creating large protrusions or ridges (>50 mm) on subtidal artificial structures?,0.2,10
+Claude Sonnet 4,Relevance,worst,PrimateConservation,What is the evidence for the effectiveness of providing financial incentives to farmers to encourage primate conservation on agricultural land?,0.4444444444444444,9
+Claude Sonnet 4,Relevance,worst,ForestConservation,What management interventions can be implemented to aid forest recovery after a wildfire?,0.45,20
+Claude Sonnet 4,Relevance,worst,GrasslandConservation,How does drill seeding compare with hydroseeding for establishing sown species in the USA?,0.5,8
+Claude Sonnet 4,Citation rate,best,SustainableAquaculture,What are the documented effects of using plant-based proteins in salmon feed in aquaculture operations in Norway and Scotland?,1,14
+Claude Sonnet 4,Citation rate,best,SustainableAquaculture,"How do krill, yeast, and animal protein alternatives to fishmeal compare in their effect on Atlantic salmon growth?",1,8
+Claude Sonnet 4,Citation rate,best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,5
+Claude Sonnet 4,Citation rate,best,SustainableAquaculture,What is the evidence from European studies for using vaccinations or probiotics to improve the survival rates of farmed Atlantic salmon?,1,8
+Claude Sonnet 4,Citation rate,best,SustainableAquaculture,"What are the comparative effects on Atlantic salmon weight when substituting fishmeal with krill, yeast, or other animal-based proteins?",1,10
+Claude Sonnet 4,Citation rate,worst,BeeConservation,How does the effectiveness of planting phacelia (Phacelia tanacetifolia) as a floral resource for wild bees vary by location?,0,10
+Claude Sonnet 4,Citation rate,worst,ButterflyandMothConservation,What is the evidence for the success of re-establishing butterfly populations through translocation and captive-breeding programs?,0,17
+Claude Sonnet 4,Citation rate,worst,ForestConservation,"After a wildfire, what are the documented benefits and harms of interventions like thinning and sowing seeds?",0,14
+Claude Sonnet 4,Citation rate,worst,GrasslandConservation,How do the outcomes of post-seeding grazing by livestock vary between studies in Europe and the USA?,0,14
+Claude Sonnet 4,Citation rate,worst,MarineandFreshwaterMammalConservation,What are the documented behavioral effects on marine mammals of implementing regulations for vessel operations during tourism activities?,0,11
+Claude Sonnet 4,CC (all stmts),best,SustainableAquaculture,How do plant-based and bacterial protein alternatives to fish meal compare in terms of their effect on Atlantic salmon growth rates in Norway?,1,9
+Claude Sonnet 4,CC (all stmts),best,SustainableAquaculture,What are the documented effects of using plant-based proteins in salmon feed in aquaculture operations in Norway and Scotland?,1,14
+Claude Sonnet 4,CC (all stmts),best,SustainableAquaculture,"How do krill, yeast, and animal protein alternatives to fishmeal compare in their effect on Atlantic salmon growth?",1,8
+Claude Sonnet 4,CC (all stmts),best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,5
+Claude Sonnet 4,CC (all stmts),best,SustainableAquaculture,"What are the comparative effects on Atlantic salmon weight when substituting fishmeal with krill, yeast, or other animal-based proteins?",1,10
+Claude Sonnet 4,CC (all stmts),worst,BeeConservation,How does the effectiveness of planting phacelia (Phacelia tanacetifolia) as a floral resource for wild bees vary by location?,0,10
+Claude Sonnet 4,CC (all stmts),worst,ButterflyandMothConservation,What is the evidence for the success of re-establishing butterfly populations through translocation and captive-breeding programs?,0,17
+Claude Sonnet 4,CC (all stmts),worst,ForestConservation,"After a wildfire, what are the documented benefits and harms of interventions like thinning and sowing seeds?",0,14
+Claude Sonnet 4,CC (all stmts),worst,GrasslandConservation,How do the outcomes of post-seeding grazing by livestock vary between studies in Europe and the USA?,0,14
+Claude Sonnet 4,CC (all stmts),worst,MarineandFreshwaterMammalConservation,What are the documented behavioral effects on marine mammals of implementing regulations for vessel operations during tourism activities?,0,11
+Claude Sonnet 4,CC (when cited),best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,12
+Claude Sonnet 4,CC (when cited),best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,13
+Claude Sonnet 4,CC (when cited),best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,17
+Claude Sonnet 4,CC (when cited),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,9
+Claude Sonnet 4,CC (when cited),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,10
+Claude Sonnet 4,CC (when cited),worst,PrimateConservation,What actions can be taken at research and tourism sites to reduce the risk of disease transmission from humans to wild primates?,0.2222222222222222,16
+Claude Sonnet 4,CC (when cited),worst,MarineandFreshwaterMammalConservation,How does the evidence for using acoustic devices to reduce human-wildlife conflict at aquaculture systems compare to their use on fishing gear?,0.4666666666666667,15
+Claude Sonnet 4,CC (when cited),worst,ButterflyandMothConservation,What are the most effective ways to manage field margins in arable landscapes for increasing butterfly abundance?,0.5,17
+Claude Sonnet 4,CC (when cited),worst,ControlofFreshwaterInvasiveSpecies,"In the UK, how does the effectiveness of using salt water compare to using lightproof barriers for controlling Crassula helmsii?",0.5,10
+Claude Sonnet 4,CC (when cited),worst,BiodiversityofMarineArtificialStructures,"In locations like Israel, the UK and Australia, how do outcomes vary when using environmentally-sensitive materials on subtidal artificial structures?",0.6,11
+Claude Sonnet 4,Faithfulness,best,SustainableAquaculture,How do physical interventions like aerobic training and altering cage size affect the health and survival of farmed Atlantic salmon?,1,7
+Claude Sonnet 4,Faithfulness,best,SustainableAquaculture,What are the observed effects on salmon growth and flesh quality when replacing fish oil with plant-based or other animal-based oils in their diet?,1,11
+Claude Sonnet 4,Faithfulness,best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,5
+Claude Sonnet 4,Faithfulness,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,7
+Claude Sonnet 4,Faithfulness,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,17
+Claude Sonnet 4,Faithfulness,worst,SoilFertility,"On sandy loam soils, how do the effects of amending with municipal waste compost compare to amending with organic processing waste composts?",0,10
+Claude Sonnet 4,Faithfulness,worst,MarineFishConservation,How does the effectiveness of prohibiting mobile bottom fishing gear vary between the North Atlantic and other regions like the Mediterranean or Indian Ocean?,0.17647058823529413,17
+Claude Sonnet 4,Faithfulness,worst,BiodiversityofMarineArtificialStructures,"In locations like Israel, the UK and Australia, how do outcomes vary when using environmentally-sensitive materials on subtidal artificial structures?",0.18181818181818185,11
+Claude Sonnet 4,Faithfulness,worst,ManagementofCaptiveAnimals,"For large felids in zoos, what are the observed behavioural and physiological outcomes of feeding whole carcasses versus providing bones or partial carcasses?",0.25,8
+Claude Sonnet 4,Faithfulness,worst,BeeConservation,What are the documented benefits of controlling or excluding competitor or predator species from bee nesting sites?,0.3333333333333333,6
+Gemini 2.5 Pro,Relevance,best,SustainableAquaculture,"What are the comparative effects on Atlantic salmon weight when substituting fishmeal with krill, yeast, or other animal-based proteins?",1,2
+Gemini 2.5 Pro,Relevance,best,SustainableAquaculture,"What actions are available to manage the waste products, such as excess nutrients and sludge, from salmon aquaculture operations?",1,4
+Gemini 2.5 Pro,Relevance,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,5
+Gemini 2.5 Pro,Relevance,best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,14
+Gemini 2.5 Pro,Relevance,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+Gemini 2.5 Pro,Relevance,worst,MarineandFreshwaterMammalConservation,What is the evidence for actions aimed at mitigating pollution threats to marine mammals from agricultural and sewage sources?,0,5
+Gemini 2.5 Pro,Relevance,worst,MediterraneanFarmland,"How do different organic amendments like compost, manure, and slurry compare in their effects on crop yields on Mediterranean farmland?",0,5
+Gemini 2.5 Pro,Relevance,worst,PrimateConservation,What is the evidence for the effectiveness of providing financial incentives to farmers to encourage primate conservation on agricultural land?,0,7
+Gemini 2.5 Pro,Relevance,worst,PrimateConservation,What are the documented outcomes of translocating primates as a conflict management tool?,0,8
+Gemini 2.5 Pro,Relevance,worst,PrimateConservation,What are the documented outcomes of providing artificial non-food resources like nesting sites and water sources for primates?,0,4
+Gemini 2.5 Pro,Citation rate,best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,3
+Gemini 2.5 Pro,Citation rate,best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,14
+Gemini 2.5 Pro,Citation rate,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+Gemini 2.5 Pro,Citation rate,best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+Gemini 2.5 Pro,Citation rate,best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,3
+Gemini 2.5 Pro,Citation rate,worst,GrasslandConservation,"In European grasslands, how does post-seeding management by mowing compare to livestock grazing for enhancing sown species?",0,1
+Gemini 2.5 Pro,Citation rate,worst,SustainableAquaculture,What are the documented effects of using plant-based proteins in salmon feed in aquaculture operations in Norway and Scotland?,0.35714285714285715,28
+Gemini 2.5 Pro,Citation rate,worst,AmphibianConservation,What actions can be taken to provide or improve shelter and refuge habitats for amphibians?,0.5,10
+Gemini 2.5 Pro,Citation rate,worst,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,0.5714285714285714,7
+Gemini 2.5 Pro,Citation rate,worst,ManagementofCaptiveAnimals,"For captive felids, what are some effective alternatives to presenting food frozen in ice for reducing stereotypic behaviours?",0.6666666666666666,6
+Gemini 2.5 Pro,CC (all stmts),best,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",1,15
+Gemini 2.5 Pro,CC (all stmts),best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,3
+Gemini 2.5 Pro,CC (all stmts),best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,14
+Gemini 2.5 Pro,CC (all stmts),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+Gemini 2.5 Pro,CC (all stmts),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,3
+Gemini 2.5 Pro,CC (all stmts),worst,GrasslandConservation,"In European grasslands, how does post-seeding management by mowing compare to livestock grazing for enhancing sown species?",0,1
+Gemini 2.5 Pro,CC (all stmts),worst,SustainableAquaculture,What are the documented effects of using plant-based proteins in salmon feed in aquaculture operations in Norway and Scotland?,0.35714285714285715,28
+Gemini 2.5 Pro,CC (all stmts),worst,ForestConservation,What are the key benefits and negative impacts of logging trees on different components of a forest ecosystem?,0.4,10
+Gemini 2.5 Pro,CC (all stmts),worst,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",0.42857142857142855,14
+Gemini 2.5 Pro,CC (all stmts),worst,AmphibianConservation,What actions can be taken to provide or improve shelter and refuge habitats for amphibians?,0.5,10
+Gemini 2.5 Pro,CC (when cited),best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,3
+Gemini 2.5 Pro,CC (when cited),best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,7
+Gemini 2.5 Pro,CC (when cited),best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,14
+Gemini 2.5 Pro,CC (when cited),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+Gemini 2.5 Pro,CC (when cited),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,3
+Gemini 2.5 Pro,CC (when cited),worst,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",0.42857142857142855,14
+Gemini 2.5 Pro,CC (when cited),worst,ForestConservation,What are the key benefits and negative impacts of logging trees on different components of a forest ecosystem?,0.4444444444444444,10
+Gemini 2.5 Pro,CC (when cited),worst,GrasslandConservation,What are the potential negative or neutral effects of adding amendments like mulch or carbon to the soil when seeding grasslands?,0.5,6
+Gemini 2.5 Pro,CC (when cited),worst,MediterraneanFarmland,What is the evidence for the effects of different grazing management strategies on plant biodiversity in Mediterranean grasslands?,0.5,6
+Gemini 2.5 Pro,CC (when cited),worst,PeatlandConservation,"What management options are available to mitigate damage from human recreational access on peatlands, and is there any evidence for them?",0.5,4
+Gemini 2.5 Pro,Faithfulness,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,5
+Gemini 2.5 Pro,Faithfulness,best,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",1,15
+Gemini 2.5 Pro,Faithfulness,best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,3
+Gemini 2.5 Pro,Faithfulness,best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,7
+Gemini 2.5 Pro,Faithfulness,best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+Gemini 2.5 Pro,Faithfulness,worst,MediterraneanFarmland,What actions can I take to reduce the loss of nutrients from Mediterranean farmland soils into water?,0.16666666666666666,6
+Gemini 2.5 Pro,Faithfulness,worst,MediterraneanFarmland,What are the most beneficial actions for reducing soil erosion in Mediterranean orchards?,0.2857142857142857,7
+Gemini 2.5 Pro,Faithfulness,worst,MarineFishConservation,How does the effectiveness of prohibiting mobile bottom fishing gear vary between the North Atlantic and other regions like the Mediterranean or Indian Ocean?,0.3,10
+Gemini 2.5 Pro,Faithfulness,worst,AmphibianConservation,"In US forests, how do mechanical and herbicide-based methods for controlling understory vegetation compare in their effects on amphibians?",0.3333333333333333,3
+Gemini 2.5 Pro,Faithfulness,worst,MediterraneanFarmland,What is the evidence for the effects of different grazing management strategies on plant biodiversity in Mediterranean grasslands?,0.3333333333333333,6
+GPT-5,Relevance,best,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",1,13
+GPT-5,Relevance,best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,11
+GPT-5,Relevance,best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,17
+GPT-5,Relevance,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+GPT-5,Relevance,best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,5
+GPT-5,Relevance,worst,MediterraneanFarmland,What is the evidence for the impacts of restoring habitat along watercourses on different biodiversity groups on Mediterranean farmland?,0.4,15
+GPT-5,Relevance,worst,ControlofFreshwaterInvasiveSpecies,What are the documented effects of introducing native predators to control invasive American bullfrogs and Procambarus crayfish in North American freshwater systems?,0.5,6
+GPT-5,Relevance,worst,PrimateConservation,"To manage human-wildlife conflict in residential areas, what are the benefits and potential drawbacks of relocating primates?",0.5333333333333333,15
+GPT-5,Relevance,worst,ControlofFreshwaterInvasiveSpecies,"Besides applying biocides, what are some effective alternative methods for reducing American bullfrog populations?",0.5555555555555556,9
+GPT-5,Relevance,worst,ShrublandandHeathlandConservation,What are the most beneficial interventions for encouraging shrubland recovery after a fire?,0.5714285714285714,14
+GPT-5,Citation rate,best,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",1,13
+GPT-5,Citation rate,best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,17
+GPT-5,Citation rate,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+GPT-5,Citation rate,best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+GPT-5,Citation rate,best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,5
+GPT-5,Citation rate,worst,MarineandFreshwaterMammalConservation,"What are the most effective interventions for reducing cetacean bycatch in fishing nets, based on evidence from the Atlantic and North Sea?",0.3333333333333333,6
+GPT-5,Citation rate,worst,PrimateConservation,What are the effects of installing different types of bridges to mitigate road impacts on arboreal and terrestrial primates?,0.3333333333333333,6
+GPT-5,Citation rate,worst,MediterraneanFarmland,What is the evidence for the impacts of different grazing management strategies on invertebrate and mammal biodiversity in US grasslands within a Mediterranean climate?,0.35714285714285715,14
+GPT-5,Citation rate,worst,BiodiversityofMarineArtificialStructures,"What is the state of evidence for managing human activities, like maintenance and harvesting, on intertidal artificial structures?",0.42857142857142855,7
+GPT-5,Citation rate,worst,PeatlandConservation,"What management options are available to mitigate damage from human recreational access on peatlands, and is there any evidence for them?",0.5555555555555556,9
+GPT-5,CC (all stmts),best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,5
+GPT-5,CC (all stmts),best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,17
+GPT-5,CC (all stmts),best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+GPT-5,CC (all stmts),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+GPT-5,CC (all stmts),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,5
+GPT-5,CC (all stmts),worst,GrasslandConservation,How does drill seeding compare with hydroseeding for establishing sown species in the USA?,0.3333333333333333,3
+GPT-5,CC (all stmts),worst,MarineandFreshwaterMammalConservation,"What are the most effective interventions for reducing cetacean bycatch in fishing nets, based on evidence from the Atlantic and North Sea?",0.3333333333333333,6
+GPT-5,CC (all stmts),worst,PrimateConservation,What are the effects of installing different types of bridges to mitigate road impacts on arboreal and terrestrial primates?,0.3333333333333333,6
+GPT-5,CC (all stmts),worst,MediterraneanFarmland,What is the evidence for the impacts of different grazing management strategies on invertebrate and mammal biodiversity in US grasslands within a Mediterranean climate?,0.35714285714285715,14
+GPT-5,CC (all stmts),worst,BiodiversityofMarineArtificialStructures,"What is the state of evidence for managing human activities, like maintenance and harvesting, on intertidal artificial structures?",0.42857142857142855,7
+GPT-5,CC (when cited),best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,11
+GPT-5,CC (when cited),best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,17
+GPT-5,CC (when cited),best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+GPT-5,CC (when cited),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+GPT-5,CC (when cited),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,5
+GPT-5,CC (when cited),worst,GrasslandConservation,How does drill seeding compare with hydroseeding for establishing sown species in the USA?,0.3333333333333333,3
+GPT-5,CC (when cited),worst,AmphibianConservation,"When managing understory vegetation in US forests, how does the effectiveness of herbicide use compare to mechanical removal for amphibian populations?",0.5,4
+GPT-5,CC (when cited),worst,AmphibianConservation,"In US forests, how do mechanical and herbicide-based methods for controlling understory vegetation compare in their effects on amphibians?",0.5,4
+GPT-5,CC (when cited),worst,BatConservation,"Instead of culling, what alternative non-lethal actions can be used to manage human-bat conflicts?",0.6,5
+GPT-5,CC (when cited),worst,SustainableAquaculture,What is the evidence from European studies for using vaccinations or probiotics to improve the survival rates of farmed Atlantic salmon?,0.6,5
+GPT-5,Faithfulness,best,SustainableAquaculture,What is the evidence from studies in Norway regarding the effectiveness of non-dietary interventions for improving farmed Atlantic salmon health and survival?,1,6
+GPT-5,Faithfulness,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,5
+GPT-5,Faithfulness,best,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,1,11
+GPT-5,Faithfulness,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+GPT-5,Faithfulness,best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,6
+GPT-5,Faithfulness,worst,SoilFertility,"On sandy loam soils, how do the effects of amending with municipal waste compost compare to amending with organic processing waste composts?",0,6
+GPT-5,Faithfulness,worst,GrasslandConservation,"In European grasslands, how does post-seeding management by mowing compare to livestock grazing for enhancing sown species?",0.16666666666666666,6
+GPT-5,Faithfulness,worst,ButterflyandMothConservation,Over what timescales have butterfly populations been observed to respond to woodland management practices like coppicing and clearing in the UK?,0.25,4
+GPT-5,Faithfulness,worst,BiodiversityofMarineArtificialStructures,In what ways do the reported outcomes of creating natural rocky reef topography on artificial structures differ between intertidal studies in the UK and subtidal studies in Italy?,0.3333333333333333,6
+GPT-5,Faithfulness,worst,GrasslandConservation,How does drill seeding compare with hydroseeding for establishing sown species in the USA?,0.3333333333333333,3
+Kimi K2,Relevance,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,8
+Kimi K2,Relevance,best,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",1,10
+Kimi K2,Relevance,best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,12
+Kimi K2,Relevance,best,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",1,16
+Kimi K2,Relevance,best,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",1,14
+Kimi K2,Relevance,worst,PrimateConservation,What is the evidence for the effectiveness of providing financial incentives to farmers to encourage primate conservation on agricultural land?,0.375,8
+Kimi K2,Relevance,worst,BeeConservation,What actions can be taken to support wild bee populations in urban areas and along infrastructure corridors like roads and power lines?,0.4166666666666667,12
+Kimi K2,Relevance,worst,ManagementofCaptiveAnimals,What is the state of the evidence for providing captive primates with gum or nectar to encourage natural feeding behaviours?,0.4444444444444444,9
+Kimi K2,Relevance,worst,ControlofFreshwaterInvasiveSpecies,What are the outcomes of using novel thermal or chemical methods like liquid nitrogen or hot foam for controlling invasive aquatic plants in European waterways?,0.4545454545454546,11
+Kimi K2,Relevance,worst,ForestConservation,"What is the evidence for the effectiveness of public engagement strategies, such as awareness campaigns or education programmes, for forest conservation?",0.5384615384615384,13
+Kimi K2,Citation rate,best,SoilFertility,"Besides using crop rotation, what other actions can increase the biodiversity of soil organisms?",1,7
+Kimi K2,Citation rate,best,SustainableAquaculture,How does the effectiveness of fallowing salmon farm cages for disease control vary between studies in Scotland and Australia?,1,5
+Kimi K2,Citation rate,best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,9
+Kimi K2,Citation rate,best,SustainableAquaculture,"What are the documented outcomes of using genetic selection or manipulation, such as breeding for disease resistance or inducing triploidy, in salmon aquaculture?",1,6
+Kimi K2,Citation rate,best,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,1,12
+Kimi K2,Citation rate,worst,AmphibianConservation,What actions can be taken to mitigate the impacts of roads on amphibian populations?,0,12
+Kimi K2,Citation rate,worst,AmphibianConservation,What are the potential benefits and harms of controlling fish populations to protect amphibians?,0,18
+Kimi K2,Citation rate,worst,AmphibianConservation,What is the evidence for the effectiveness of engaging the public in amphibian conservation efforts in Europe and the USA?,0,19
+Kimi K2,Citation rate,worst,AmphibianConservation,What are the overall success rates for establishing new amphibian populations through translocation or the release of captive-bred individuals?,0,15
+Kimi K2,Citation rate,worst,AmphibianConservation,"As an alternative to direct antifungal treatment of amphibians, what environmental management actions can reduce the threat of chytridiomycosis?",0,10
+Kimi K2,CC (all stmts),best,PeatlandConservation,What are the typical effects of rewetting on the vegetation of drained peatlands?,1,13
+Kimi K2,CC (all stmts),best,SoilFertility,"Besides using crop rotation, what other actions can increase the biodiversity of soil organisms?",1,7
+Kimi K2,CC (all stmts),best,SustainableAquaculture,How does the effectiveness of fallowing salmon farm cages for disease control vary between studies in Scotland and Australia?,1,5
+Kimi K2,CC (all stmts),best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,9
+Kimi K2,CC (all stmts),best,SustainableAquaculture,"What are the documented outcomes of using genetic selection or manipulation, such as breeding for disease resistance or inducing triploidy, in salmon aquaculture?",1,6
+Kimi K2,CC (all stmts),worst,AmphibianConservation,What actions can be taken to mitigate the impacts of roads on amphibian populations?,0,12
+Kimi K2,CC (all stmts),worst,AmphibianConservation,How do different partial harvesting methods in USA forests compare to clearcutting in their impact on salamander populations?,0,9
+Kimi K2,CC (all stmts),worst,AmphibianConservation,What are the potential benefits and harms of controlling fish populations to protect amphibians?,0,18
+Kimi K2,CC (all stmts),worst,AmphibianConservation,What is the evidence for the effectiveness of engaging the public in amphibian conservation efforts in Europe and the USA?,0,19
+Kimi K2,CC (all stmts),worst,AmphibianConservation,What are the overall success rates for establishing new amphibian populations through translocation or the release of captive-bred individuals?,0,15
+Kimi K2,CC (when cited),best,SustainableAquaculture,Which dietary alternatives or supplements to traditional fish meal have been shown to have no negative impact on Atlantic salmon growth or weight?,1,9
+Kimi K2,CC (when cited),best,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,1,9
+Kimi K2,CC (when cited),best,SustainableAquaculture,"What are the documented outcomes of using genetic selection or manipulation, such as breeding for disease resistance or inducing triploidy, in salmon aquaculture?",1,6
+Kimi K2,CC (when cited),best,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",1,8
+Kimi K2,CC (when cited),best,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",1,9
+Kimi K2,CC (when cited),worst,AmphibianConservation,How do different partial harvesting methods in USA forests compare to clearcutting in their impact on salamander populations?,0,9
+Kimi K2,CC (when cited),worst,BeeConservation,"How do different management approaches for uncropped arable field margins in Europe, such as sowing mixes versus natural regeneration, compare in their benefits for bumblebees?",0,11
+Kimi K2,CC (when cited),worst,BeeConservation,What are the documented outcomes and challenges of rearing bumblebees in captivity for reintroduction?,0,23
+Kimi K2,CC (when cited),worst,BiodiversityofMarineArtificialStructures,How do the effects of creating hole habitats versus pit habitats on intertidal artificial structures compare for biodiversity?,0,18
+Kimi K2,CC (when cited),worst,BiodiversityofMarineArtificialStructures,What is the state of evidence for controlling or removing non-native species on artificial marine structures to benefit biodiversity?,0,3
+Kimi K2,Faithfulness,best,SustainableAquaculture,How does the effectiveness of fallowing salmon farm cages for disease control vary between studies in Scotland and Australia?,1,5
+Kimi K2,Faithfulness,best,SustainableAquaculture,What is the evidence from studies in Norway for using alternative feed components in Atlantic salmon diets?,1,18
+Kimi K2,Faithfulness,best,SustainableAquaculture,"How do different non-chemical water-based treatments, such as fallowing and freshwater bathing, compare in their reported effectiveness for specific diseases in salmon?",1,7
+Kimi K2,Faithfulness,best,SustainableAquaculture,"What are the documented outcomes of using genetic selection or manipulation, such as breeding for disease resistance or inducing triploidy, in salmon aquaculture?",1,6
+Kimi K2,Faithfulness,best,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,1,8
+Kimi K2,Faithfulness,worst,BeeConservation,"For farmland in Europe, what are the effects of reducing management intensity, such as mowing or grazing, in grassy habitats for wild bees?",0.1,10
+Kimi K2,Faithfulness,worst,SoilFertility,"On sandy loam soils, how do the effects of amending with municipal waste compost compare to amending with organic processing waste composts?",0.1111111111111111,9
+Kimi K2,Faithfulness,worst,MediterraneanFarmland,What are the most beneficial tillage practices for increasing soil organic matter in arable fields on Mediterranean farmland?,0.18181818181818185,11
+Kimi K2,Faithfulness,worst,SoilFertility,"What conservation actions have evidence from Canada for improving soil health, particularly biodiversity and organic matter?",0.21428571428571427,14
+Kimi K2,Faithfulness,worst,BiodiversityofMarineArtificialStructures,"In locations like Israel, the UK and Australia, how do outcomes vary when using environmentally-sensitive materials on subtidal artificial structures?",0.2307692307692308,13

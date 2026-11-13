@@ -1,0 +1,61 @@
+metric,model_a,model_b,diff,lo,hi,sig
+Relevance,Claude Sonnet 4,Gemini 2.5 Pro,0.0483,0.0287,0.0678,TRUE
+Relevance,Claude Sonnet 4,GPT-5,-0.0341,-0.0461,-0.0216,TRUE
+Relevance,Claude Sonnet 4,Kimi K2,-0.0136,-0.0267,-5e-4,TRUE
+Relevance,Gemini 2.5 Pro,Claude Sonnet 4,-0.0483,-0.0677,-0.0274,TRUE
+Relevance,Gemini 2.5 Pro,GPT-5,-0.0823,-0.1022,-0.0638,TRUE
+Relevance,Gemini 2.5 Pro,Kimi K2,-0.0619,-0.0825,-0.0429,TRUE
+Relevance,GPT-5,Claude Sonnet 4,0.0341,0.0218,0.0464,TRUE
+Relevance,GPT-5,Gemini 2.5 Pro,0.0823,0.0633,0.1017,TRUE
+Relevance,GPT-5,Kimi K2,0.0205,0.0092,0.0321,TRUE
+Relevance,Kimi K2,Claude Sonnet 4,0.0136,9e-4,0.0266,TRUE
+Relevance,Kimi K2,Gemini 2.5 Pro,0.0619,0.0425,0.0814,TRUE
+Relevance,Kimi K2,GPT-5,-0.0205,-0.0321,-0.0088,TRUE
+Citation rate,Claude Sonnet 4,Gemini 2.5 Pro,-0.1036,-0.1182,-0.0887,TRUE
+Citation rate,Claude Sonnet 4,GPT-5,-0.1198,-0.1352,-0.105,TRUE
+Citation rate,Claude Sonnet 4,Kimi K2,0.4334,0.3953,0.4727,TRUE
+Citation rate,Gemini 2.5 Pro,Claude Sonnet 4,0.1036,0.0881,0.1187,TRUE
+Citation rate,Gemini 2.5 Pro,GPT-5,-0.0162,-0.0264,-0.006,TRUE
+Citation rate,Gemini 2.5 Pro,Kimi K2,0.537,0.4995,0.5754,TRUE
+Citation rate,GPT-5,Claude Sonnet 4,0.1198,0.1049,0.135,TRUE
+Citation rate,GPT-5,Gemini 2.5 Pro,0.0162,0.0059,0.0268,TRUE
+Citation rate,GPT-5,Kimi K2,0.5532,0.5144,0.5918,TRUE
+Citation rate,Kimi K2,Claude Sonnet 4,-0.4334,-0.4721,-0.3944,TRUE
+Citation rate,Kimi K2,Gemini 2.5 Pro,-0.537,-0.5764,-0.4992,TRUE
+Citation rate,Kimi K2,GPT-5,-0.5532,-0.5896,-0.5149,TRUE
+CC (all stmts),Claude Sonnet 4,Gemini 2.5 Pro,-0.1314,-0.1489,-0.1139,TRUE
+CC (all stmts),Claude Sonnet 4,GPT-5,-0.1469,-0.1632,-0.1299,TRUE
+CC (all stmts),Claude Sonnet 4,Kimi K2,0.4425,0.4071,0.4783,TRUE
+CC (all stmts),Gemini 2.5 Pro,Claude Sonnet 4,0.1314,0.1136,0.149,TRUE
+CC (all stmts),Gemini 2.5 Pro,GPT-5,-0.0154,-0.0292,-0.0019,TRUE
+CC (all stmts),Gemini 2.5 Pro,Kimi K2,0.5739,0.5394,0.6082,TRUE
+CC (all stmts),GPT-5,Claude Sonnet 4,0.1469,0.1297,0.1645,TRUE
+CC (all stmts),GPT-5,Gemini 2.5 Pro,0.0154,4e-4,0.029,TRUE
+CC (all stmts),GPT-5,Kimi K2,0.5894,0.5544,0.6225,TRUE
+CC (all stmts),Kimi K2,Claude Sonnet 4,-0.4425,-0.479,-0.4074,TRUE
+CC (all stmts),Kimi K2,Gemini 2.5 Pro,-0.5739,-0.607,-0.5376,TRUE
+CC (all stmts),Kimi K2,GPT-5,-0.5894,-0.623,-0.5543,TRUE
+CC (when cited),Claude Sonnet 4,Gemini 2.5 Pro,-0.0358,-0.0468,-0.0249,TRUE
+CC (when cited),Claude Sonnet 4,GPT-5,-0.0361,-0.0475,-0.0251,TRUE
+CC (when cited),Claude Sonnet 4,Kimi K2,0.1,0.0716,0.1296,TRUE
+CC (when cited),Gemini 2.5 Pro,Claude Sonnet 4,0.0358,0.0251,0.0467,TRUE
+CC (when cited),Gemini 2.5 Pro,GPT-5,-3e-4,-0.0101,0.0094,FALSE
+CC (when cited),Gemini 2.5 Pro,Kimi K2,0.1358,0.1074,0.1667,TRUE
+CC (when cited),GPT-5,Claude Sonnet 4,0.0361,0.0247,0.0473,TRUE
+CC (when cited),GPT-5,Gemini 2.5 Pro,3e-4,-0.0096,0.0104,FALSE
+CC (when cited),GPT-5,Kimi K2,0.1361,0.1068,0.1664,TRUE
+CC (when cited),Kimi K2,Claude Sonnet 4,-0.1,-0.1322,-0.0711,TRUE
+CC (when cited),Kimi K2,Gemini 2.5 Pro,-0.1358,-0.1657,-0.1067,TRUE
+CC (when cited),Kimi K2,GPT-5,-0.1361,-0.166,-0.1059,TRUE
+Faithfulness,Claude Sonnet 4,Gemini 2.5 Pro,-0.1039,-0.1224,-0.0855,TRUE
+Faithfulness,Claude Sonnet 4,GPT-5,-0.0917,-0.1108,-0.073,TRUE
+Faithfulness,Claude Sonnet 4,Kimi K2,0.0741,0.0535,0.0953,TRUE
+Faithfulness,Gemini 2.5 Pro,Claude Sonnet 4,0.1039,0.0859,0.1222,TRUE
+Faithfulness,Gemini 2.5 Pro,GPT-5,0.0123,-0.0048,0.03,FALSE
+Faithfulness,Gemini 2.5 Pro,Kimi K2,0.178,0.1586,0.1986,TRUE
+Faithfulness,GPT-5,Claude Sonnet 4,0.0917,0.0728,0.109,TRUE
+Faithfulness,GPT-5,Gemini 2.5 Pro,-0.0123,-0.0303,0.0049,FALSE
+Faithfulness,GPT-5,Kimi K2,0.1657,0.1448,0.1852,TRUE
+Faithfulness,Kimi K2,Claude Sonnet 4,-0.0741,-0.0942,-0.0527,TRUE
+Faithfulness,Kimi K2,Gemini 2.5 Pro,-0.178,-0.1984,-0.158,TRUE
+Faithfulness,Kimi K2,GPT-5,-0.1657,-0.1856,-0.1444,TRUE

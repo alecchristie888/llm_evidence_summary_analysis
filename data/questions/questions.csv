@@ -1,0 +1,524 @@
+question_id,synopsis,question,n_reference_actions,reference_action_ids,n_models_with_summary,evaluated
+Q0001,AmphibianConservation,"As an alternative to creating new ponds, what species augmentation techniques can be used to establish or increase amphibian populations at a site?",15,854;855;856;858;859;860;861;869;870;871;872;873;874;875;881,4,True
+Q0002,AmphibianConservation,"As an alternative to direct antifungal treatment of amphibians, what environmental management actions can reduce the threat of chytridiomycosis?",5,762;764;766;768;800,4,True
+Q0003,AmphibianConservation,"For amphibian conservation in North America, how do the outcomes of creating new wetlands compare to restoring existing wetlands?",3,878;879;880,4,True
+Q0004,AmphibianConservation,"For natterjack toad conservation in the UK, what are the documented benefits and negative side effects of adding lime to ponds?",2,748;803,4,True
+Q0005,AmphibianConservation,"For road mitigation projects, what design factors are associated with the success or failure of tunnels and culverts for amphibian passage?",6,756;782;840;841;842;884,4,True
+Q0006,AmphibianConservation,How do different partial harvesting methods in USA forests compare to clearcutting in their impact on salamander populations?,8,747;843;844;845;846;847;851;852,4,True
+Q0007,AmphibianConservation,How does the success of reintroduction programs using captive-bred amphibians differ for Mallorcan midwife toads in Mallorca compared to green and golden bell frogs in Australia?,6,870;871;872;873;874;875,4,True
+Q0008,AmphibianConservation,"In Australian captive breeding programs, how do artificial fertilization and hormone treatments compare in their success and challenges for frogs?",6,834;835;870;872;876;883,4,True
+Q0009,AmphibianConservation,"In US forests, how do mechanical and herbicide-based methods for controlling understory vegetation compare in their effects on amphibians?",3,761;778;781,4,True
+Q0010,AmphibianConservation,"In the USA, how do partial harvesting techniques like shelterwood, leave-tree, and group harvesting compare in their effects on salamander populations versus clearcutting?",4,844;846;851;852,4,True
+Q0011,AmphibianConservation,"To manage chytridiomycosis in captive amphibians, what are the most and least beneficial treatment strategies?",8,762;763;764;765;766;767;770;882,4,True
+Q0012,AmphibianConservation,"To protect migrating amphibians, how do physical interventions like tunnels and barrier fences compare to closing roads during migration seasons?",7,756;782;784;840;841;842;884,4,True
+Q0013,AmphibianConservation,What actions can be taken to mitigate the impacts of roads on amphibian populations?,7,756;782;784;840;841;842;884,4,True
+Q0014,AmphibianConservation,What actions can be taken to provide or improve shelter and refuge habitats for amphibians?,6,759;772;813;814;843;845,4,True
+Q0015,AmphibianConservation,"What are some alternatives to clearcutting forests, and what are their documented effects on amphibian populations?",8,747;843;844;845;846;847;851;852,4,True
+Q0016,AmphibianConservation,What are the documented benefits and negative impacts of livestock grazing on agricultural lands for amphibian habitats and populations?,2,746;780,2,True
+Q0017,AmphibianConservation,What are the documented benefits and potential negative impacts of releasing captive-bred or head-started toads into the wild?,7,854;855;859;871;873;875;881,4,True
+Q0018,AmphibianConservation,What are the documented impacts of using prescribed fire on amphibian populations in US forest and grassland habitats?,2,862;877,4,True
+Q0019,AmphibianConservation,"What are the general outcomes of releasing captive-bred toads, including species like the Mallorcan midwife toad?",5,837;848;871;873;875,4,True
+Q0020,AmphibianConservation,What are the overall success rates for establishing new amphibian populations through translocation or the release of captive-bred individuals?,13,854;855;856;858;859;860;861;870;871;872;873;874;875,3,True
+Q0021,AmphibianConservation,What are the potential benefits and harms of controlling fish populations to protect amphibians?,4,826;827;828;829,4,True
+Q0022,AmphibianConservation,What are the typical outcomes when creating new ponds to support toad populations in Europe?,6,817;864;866;868;869;878,4,True
+Q0023,AmphibianConservation,What design and placement factors are associated with the successful use of road tunnels by migrating amphibians?,6,756;782;840;841;842;884,4,True
+Q0024,AmphibianConservation,"What does the evidence suggest about the effectiveness of legal and regulatory frameworks, such as species protection laws or financial incentive schemes, for amphibian conservation?",3,779;785;818,3,True
+Q0025,AmphibianConservation,What factors have been found to influence the success of amphibian translocation projects?,7,854;855;856;858;859;860;861,4,True
+Q0026,AmphibianConservation,What have been the observed effects of excluding livestock from ponds and streams on amphibian populations in the USA and UK?,2,746;780,4,True
+Q0027,AmphibianConservation,What is the evidence for the effectiveness of engaging the public in amphibian conservation efforts in Europe and the USA?,5,760;776;777;784;831,4,True
+Q0028,AmphibianConservation,"What is the state of evidence on creating or restoring terrestrial habitat connectivity, such as through hedgerows, for amphibian populations?",5,790;791;811;840;853,4,True
+Q0029,AmphibianConservation,What is the state of evidence on the effectiveness of removing various types of invasive predators to benefit native amphibians?,10,797;798;822;825;826;827;828;829;830;839,4,True
+Q0030,AmphibianConservation,What legal and regulatory actions are available to protect wild amphibian populations from threats like development and trade?,3,779;785;824,4,True
+Q0031,AmphibianConservation,What treatments are available for amphibians infected with chytridiomycosis and how effective are they?,9,762;763;764;765;766;767;770;800;882,4,True
+Q0032,AmphibianConservation,"When managing understory vegetation in US forests, how does the effectiveness of herbicide use compare to mechanical removal for amphibian populations?",2,778;781,4,True
+Q0033,BatConservation,"As an alternative to increasing turbine cut-in speeds, what other operational changes can reduce bat mortality at wind farms?",4,1960;2939;970;971,4,True
+Q0034,BatConservation,"Besides avoiding illumination entirely, what alternative lighting strategies can be used to minimize disturbance to bats?",7,1020;2017;2018;2019;2020;2021;2022,4,True
+Q0035,BatConservation,"During building developments, what alternatives to bat exclusion have been studied to mitigate disturbance to roosts?",8,1930;1931;1935;946;947;949;950;997,4,True
+Q0036,BatConservation,"For arid regions, what is the evidence on the effectiveness of creating or managing water sources to support bat populations?",5,1951;1997;2027;2036;959,4,True
+Q0037,BatConservation,"For bat conservation related to transportation infrastructure, what are the documented benefits and limitations of providing or retaining roosts in bridges and culverts?",5,1966;1967;2940;2941;2942,4,True
+Q0038,BatConservation,"How do different methods for restricting public access to bat hibernation sites, such as gates versus fences, compare in their effects on bat populations?",3,1963;1991;999,2,True
+Q0039,BatConservation,How do different types of purpose-built road crossing structures compare in effectiveness for bats?,6,976;977;978;979;980;981,4,True
+Q0040,BatConservation,How does the evidence for legally protecting bat habitats compare to legally protecting bats during development activities?,3,1935;2037;2045,4,True
+Q0041,BatConservation,How does the evidence for managing existing hedgerows for bats compare to that for planting new ones?,2,1942;1943,4,True
+Q0042,BatConservation,How effective are different public education and engagement strategies for improving bat conservation outcomes?,12,1000;1003;1931;1936;1973;1974;2040;2041;2042;2043;2044;997,3,True
+Q0043,BatConservation,"In agricultural landscapes, which farming systems are most beneficial for bat populations?",4,2013;961;962;963,3,True
+Q0044,BatConservation,"In the agricultural sector, what are the observed effects of organic farming systems compared to conventional farming on bat populations?",5,1948;2013;2014;961;962,4,True
+Q0045,BatConservation,"Instead of culling, what alternative non-lethal actions can be used to manage human-bat conflicts?",9,1000;1012;1950;1952;1953;1973;1974;1979;2044,3,True
+Q0046,BatConservation,"To mitigate impacts from onshore wind farms, what are the most effective operational adjustments to turbines to reduce bat fatalities?",4,1960;2939;970;971,4,True
+Q0047,BatConservation,"To mitigate the impact of road and railway developments, what structures can be installed to help bats cross safely?",11,1966;1967;2940;2941;2942;976;977;978;979;980;981,4,True
+Q0048,BatConservation,"To protect bats from the impacts of mining operations, what actions can be taken during and after mine closure and reclamation?",7,1961;1962;1963;1964;1965;974;975,4,True
+Q0049,BatConservation,What actions can be taken to provide bat roosting sites in trees where natural cavities are lacking?,5,1024;1982;2047;2048;993,3,True
+Q0050,BatConservation,What are the documented benefits and harms of installing gates at cave and mine entrances for bat conservation?,3,1963;1991;999,0,False
+Q0051,BatConservation,What are the documented benefits and negative impacts of installing gates to restrict public access to subterranean bat roosts?,4,1003;1963;1991;999,1,True
+Q0052,BatConservation,What are the documented outcomes of educating and engaging different groups of people for bat conservation?,13,1000;1003;1931;1936;1973;1974;1992;2040;2041;2042;2043;2044;997,0,False
+Q0053,BatConservation,What are the most effective legislative actions for protecting bats and their habitats?,8,1015;1935;1971;2012;2037;2045;984;987,4,True
+Q0054,BatConservation,What are the outcomes and success rates associated with ex-situ bat conservation actions like captive breeding and rehabilitation?,4,2009;2039;2053;2054,4,True
+Q0055,BatConservation,What conservation actions can be implemented to combat the spread and impact of white-nose syndrome in bats?,7,1010;1011;1012;2006;2007;2008;2009,4,True
+Q0056,BatConservation,What design and placement factors influence the successful use of bat boxes by bats?,4,1024;2038;2052;949,4,True
+Q0057,BatConservation,What evidence exists for the effectiveness of different strategies to combat white-nose syndrome in bats?,7,1010;1011;1012;2006;2007;2008;2009,4,True
+Q0058,BatConservation,What factors are associated with the successful use of artificial bat roosts by bats?,8,1005;1024;2038;2046;2049;2052;949;974,3,True
+Q0059,BatConservation,What is the extent of evidence for actions to mitigate pollution from agricultural sources to benefit bats?,9,1016;1948;2013;2014;2015;2016;2284;961;963,4,True
+Q0060,BeeConservation,"For farmland in Europe, what are the effects of reducing management intensity, such as mowing or grazing, in grassy habitats for wild bees?",2,22;23,4,True
+Q0061,BeeConservation,"How do different low-intensity grassland management strategies on farmland, such as restoring species-rich grassland or reducing grazing, compare in their effectiveness for wild bees?",5,12;14;22;23;8,3,True
+Q0062,BeeConservation,"How do different management approaches for uncropped arable field margins in Europe, such as sowing mixes versus natural regeneration, compare in their benefits for bumblebees?",5,14;18;19;20;29,4,True
+Q0063,BeeConservation,How does sowing agricultural forage plants on field margins compare to sowing native wildflower mixes in terms of benefits for bumblebees?,4,14;18;19;20,4,True
+Q0064,BeeConservation,How does the effectiveness of managing hedges for bees in Scotland compare to managing land under power lines for bees in the USA?,2,15;31,4,True
+Q0065,BeeConservation,How does the effectiveness of planting phacelia (Phacelia tanacetifolia) as a floral resource for wild bees vary by location?,1,17,4,True
+Q0066,BeeConservation,"In Europe, what is the evidence for the effectiveness of agri-environment schemes for wild bees, and how does this vary between locations?",2,15;24,4,True
+Q0067,BeeConservation,"In the USA, what factors have been shown to affect the success of artificial nesting sites for solitary bees?",3,44;46;47,4,True
+Q0068,BeeConservation,"On UK farmland, how does sowing field margins with agricultural forage plants compare to native wildflower mixes for attracting bumblebees?",4,14;18;19;20,4,True
+Q0069,BeeConservation,What actions can be taken to support wild bee populations in urban areas and along infrastructure corridors like roads and power lines?,6,1;2;3;30;31;4,3,True
+Q0070,BeeConservation,What actions have been studied to mitigate the direct impacts of pesticides on wild bees?,3,26;27;29,3,True
+Q0071,BeeConservation,What are the documented benefits of controlling or excluding competitor or predator species from bee nesting sites?,4,38;44;45;46,3,True
+Q0072,BeeConservation,What are the documented effects on wild bees of introducing agri-environment schemes on European farmland?,5,15;21;22;24;8,4,True
+Q0073,BeeConservation,What are the documented outcomes and challenges of rearing bumblebees in captivity for reintroduction?,3,50;51;52,4,True
+Q0074,BeeConservation,What are the documented outcomes of practicing wildlife-friendly or low-intensity gardening for bees in urban areas?,2,1;2,3,True
+Q0075,BeeConservation,What are the known risks and control methods associated with using commercial bee colonies for pollination?,6,38;39;40;41;42;43,2,True
+Q0076,BeeConservation,What are the most effective ways to manage uncropped field margins on European farmland to support bumblebees?,5,14;18;19;20;29,4,True
+Q0077,BeeConservation,What evidence exists for creating or managing land to provide nesting sites for ground-nesting bees?,3,11;12;13,4,True
+Q0078,BeeConservation,"What evidence exists for the landscape-scale effects of bee conservation interventions, beyond the immediate site of action?",4,17;21;24;6,4,True
+Q0079,BeeConservation,What factors are known to influence the occupancy and productivity of artificial nest sites provided for solitary bees?,3,44;46;47,4,True
+Q0080,BeeConservation,"What factors, such as diet and social parasitism, have been shown to affect the success of captive-rearing and reintroducing bumblebee colonies?",3,50;51;52,4,True
+Q0081,BeeConservation,What is the evidence for the effectiveness of different sown floral mixes on agricultural land for wild bees?,5,16;17;18;19;21,4,True
+Q0082,BeeConservation,What is the evidence for the effectiveness of increasing floral resources for bees at a landscape scale versus a local patch scale on farmland?,3,17;21;24,4,True
+Q0083,BeeConservation,What is the extent of evidence on the success of translocating bees or augmenting small populations to improve genetic diversity?,3,53;55;56,4,True
+Q0084,BeeConservation,What is the most effective design for an artificial nest box intended for bumblebees?,1,48,4,True
+Q0085,BeeConservation,"What is the state of the evidence for wild bee conservation when restoring different habitat types like grassland, heathland, and forest?",4,30;35;8;9,1,True
+Q0086,BeeConservation,What unintended negative consequences or limitations have been identified when providing artificial nest boxes for bees?,5,44;46;47;48;52,4,True
+Q0087,BiodiversityofMarineArtificialStructures,How do the biodiversity outcomes of creating 'rock pools' on intertidal artificial structures vary by location?,1,3476,4,True
+Q0088,BiodiversityofMarineArtificialStructures,How do the biodiversity outcomes of creating large hole habitats (>50mm) on artificial structures vary between subtidal zones in Israel and Sweden versus intertidal zones in Australia and Europe?,2,3434;3467,4,True
+Q0089,BiodiversityofMarineArtificialStructures,How do the biodiversity outcomes of creating short flexible habitats compare with long flexible habitats on subtidal artificial structures?,2,3450;3451,4,True
+Q0090,BiodiversityofMarineArtificialStructures,How do the biodiversity outcomes of creating small pits (1-50 mm) versus larger holes (>50 mm) on intertidal artificial structures compare?,2,3467;3475,4,True
+Q0091,BiodiversityofMarineArtificialStructures,"How do the biodiversity outcomes of creating small versus large protrusions, ridges or ledges on intertidal artificial structures compare?",4,3462;3463;3464;3465,4,True
+Q0092,BiodiversityofMarineArtificialStructures,How do the effects of creating hole habitats versus pit habitats on intertidal artificial structures compare for biodiversity?,2,3467;3475,4,True
+Q0093,BiodiversityofMarineArtificialStructures,How do the effects of creating short versus long flexible habitats on subtidal artificial structures compare for fish and invertebrate populations in Australia?,2,3450;3451,4,True
+Q0094,BiodiversityofMarineArtificialStructures,"In Australian estuaries, what factors influence the effectiveness of transplanting oysters onto intertidal artificial structures for enhancing wider biodiversity?",2,3472;3474,4,True
+Q0095,BiodiversityofMarineArtificialStructures,"In European marine environments, how do the outcomes of creating textured surfaces on intertidal structures vary?",1,3466,4,True
+Q0096,BiodiversityofMarineArtificialStructures,"In locations like Israel, the UK and Australia, how do outcomes vary when using environmentally-sensitive materials on subtidal artificial structures?",1,3470,4,True
+Q0097,BiodiversityofMarineArtificialStructures,"In northern Israel, how do the effects of creating pit habitats (1-50 mm) compare with creating hole habitats (>50 mm) on subtidal artificial structures?",2,3434;3455,4,True
+Q0098,BiodiversityofMarineArtificialStructures,In what ways do the reported outcomes of creating natural rocky reef topography on artificial structures differ between intertidal studies in the UK and subtidal studies in Italy?,2,3435;3446,4,True
+Q0099,BiodiversityofMarineArtificialStructures,"To alter the existing ecological community on an intertidal artificial structure, which habitat modifications have been most consistently effective?",14,3435;3459;3460;3462;3463;3464;3467;3468;3469;3472;3473;3474;3475;3476,4,True
+Q0100,BiodiversityofMarineArtificialStructures,"To improve biodiversity on intertidal artificial structures, how do the outcomes of creating natural rocky reef topography compare to creating 'rock pools'?",3,3435;3461;3476,4,True
+Q0101,BiodiversityofMarineArtificialStructures,What actions can be taken to increase species richness on intertidal artificial structures?,18,3435;3458;3459;3460;3461;3462;3463;3464;3465;3466;3467;3468;3469;3472;3473;3474;3475;3476,4,True
+Q0102,BiodiversityofMarineArtificialStructures,What actions can enhance fish communities on subtidal artificial structures?,11,3434;3436;3447;3448;3450;3451;3455;3456;3457;3470;3471,4,True
+Q0103,BiodiversityofMarineArtificialStructures,What are the effects of creating flexible habitats on the biodiversity of intertidal artificial structures?,2,3459;3460,4,True
+Q0104,BiodiversityofMarineArtificialStructures,"What are the effects of creating protrusions, ridges, or ledges on mobile invertebrate abundance on artificial marine structures?",10,3443;3444;3445;3452;3453;3462;3463;3464;3465;3474,4,True
+Q0105,BiodiversityofMarineArtificialStructures,"What are the general ecological effects of simultaneously creating grooves and small protrusions, ridges, or ledges on artificial structures?",2,3452;3474,4,True
+Q0106,BiodiversityofMarineArtificialStructures,What are the observed effects on invertebrate abundance when using environmentally-sensitive materials on artificial marine structures?,2,3469;3470,4,True
+Q0107,BiodiversityofMarineArtificialStructures,What are the observed outcomes of transplanting or seeding organisms onto intertidal artificial structures in Australian estuaries?,1,3472,4,True
+Q0108,BiodiversityofMarineArtificialStructures,What biodiversity outcomes have been observed from interventions on intertidal artificial structures in Australian estuaries?,10,3459;3461;3464;3467;3469;3472;3473;3474;3475;3476,4,True
+Q0109,BiodiversityofMarineArtificialStructures,What factors influence the survival and growth of canopy algae transplanted onto subtidal artificial structures?,1,3471,4,True
+Q0110,BiodiversityofMarineArtificialStructures,What interventions are available to increase macroalgal abundance on subtidal artificial structures?,9,3434;3446;3447;3448;3449;3453;3455;3470;3471,4,True
+Q0111,BiodiversityofMarineArtificialStructures,What interventions can be used to increase algal abundance on marine artificial structures?,19,3434;3446;3447;3448;3449;3453;3455;3459;3461;3465;3466;3467;3469;3470;3471;3472;3474;3475;3476,4,True
+Q0112,BiodiversityofMarineArtificialStructures,What interventions have been shown to alter the community composition of both macroalgae and invertebrates on subtidal artificial structures?,6,3434;3448;3449;3452;3455;3470,4,True
+Q0113,BiodiversityofMarineArtificialStructures,What interventions have been shown to alter the overall community composition of organisms on subtidal artificial structures?,11,3434;3436;3447;3448;3449;3450;3451;3452;3456;3470;3471,4,True
+Q0114,BiodiversityofMarineArtificialStructures,"What interventions have been studied in Singaporean waters to enhance intertidal artificial structures, and what were their outcomes?",7,3462;3464;3469;3472;3473;3474;3475,4,True
+Q0115,BiodiversityofMarineArtificialStructures,What is the evidence base for the effectiveness of creating large protrusions or ridges (>50 mm) on subtidal artificial structures?,3,3443;3444;3445,4,True
+Q0116,BiodiversityofMarineArtificialStructures,"What is the evidence for creating adjoining cavities or 'swimthrough' habitats on artificial structures, and how does it differ between subtidal and intertidal zones?",4,3436;3438;3456;3468,4,True
+Q0117,BiodiversityofMarineArtificialStructures,"What is the evidence for enhancing biodiversity on subtidal artificial structures by creating depressions like pits, holes, grooves, or crevices?",4,3434;3448;3454;3455,4,True
+Q0118,BiodiversityofMarineArtificialStructures,What is the evidence for the effectiveness of reducing the slope of marine artificial structures for biodiversity?,2,3442;3461,4,True
+Q0119,BiodiversityofMarineArtificialStructures,What is the evidence for the effects of ceasing or altering maintenance activities on artificial marine structures?,2,3440;3447,4,True
+Q0120,BiodiversityofMarineArtificialStructures,What is the state of evidence for controlling or removing non-native species on artificial marine structures to benefit biodiversity?,2,3439;3441,4,True
+Q0121,BiodiversityofMarineArtificialStructures,What is the state of evidence for controlling or removing non-native species to enhance biodiversity on marine artificial structures?,2,3439;3441,4,True
+Q0122,BiodiversityofMarineArtificialStructures,What is the state of evidence for creating 'swimthrough' habitats on marine artificial structures?,4,3436;3438;3456;3468,4,True
+Q0123,BiodiversityofMarineArtificialStructures,"What is the state of evidence for managing human activities, like maintenance and harvesting, on intertidal artificial structures?",3,3439;3440;3458,4,True
+Q0124,BiodiversityofMarineArtificialStructures,"When creating flexible habitats on subtidal artificial structures, what are the comparative effects of using short versus long materials?",2,3450;3451,4,True
+Q0125,BiodiversityofMarineArtificialStructures,"When modifying intertidal artificial structures, what factors influence whether invertebrate abundance increases?",16,3435;3458;3459;3462;3463;3464;3465;3466;3467;3468;3469;3472;3473;3474;3475;3476,3,True
+Q0126,BiodiversityofMarineArtificialStructures,Which habitat creation interventions most consistently alter community composition on subtidal artificial structures?,12,3434;3436;3446;3448;3449;3450;3451;3452;3455;3456;3470;3471,3,True
+Q0127,BiodiversityofMarineArtificialStructures,Which habitat creation methods are most effective for increasing overall species richness and diversity on intertidal artificial structures?,15,3435;3461;3462;3463;3464;3465;3466;3467;3468;3469;3472;3473;3474;3475;3476,4,True
+Q0128,BiodiversityofMarineArtificialStructures,Which interventions are most consistently effective at altering the overall community composition of algae and invertebrates on artificial structures?,20,3434;3435;3446;3448;3449;3452;3455;3459;3460;3462;3463;3464;3466;3467;3469;3470;3473;3474;3475;3476,3,True
+Q0129,BiodiversityofMarineArtificialStructures,Which interventions have most consistently increased invertebrate abundance on intertidal artificial structures?,15,3435;3459;3462;3463;3464;3465;3466;3467;3468;3469;3472;3473;3474;3475;3476,4,True
+Q0130,ButterflyandMothConservation,"For butterfly conservation in European farmland, how do wildflower strips compare to uncultivated or grass margins?",6,3915;3923;3930;3932;3981;3982,4,True
+Q0131,ButterflyandMothConservation,"How do different methods of creating field margins in European farmland, such as uncultivated strips versus sown wildflower strips, compare in their effectiveness for butterfly communities?",7,3915;3923;3927;3930;3932;3981;3982,4,True
+Q0132,ButterflyandMothConservation,"How do different methods of harvesting timber, such as selective logging and shelterwood harvesting, compare to clearcutting in their impact on moth diversity in US forests?",6,3867;3868;3869;3870;3871;3872,4,True
+Q0133,ButterflyandMothConservation,How does managing semi-natural open habitats with rough grazing compare to using prescribed fire for butterfly and moth populations?,2,3882;3944,4,True
+Q0134,ButterflyandMothConservation,How does rotational burning compare to leaving unburned patches during prescribed fires for butterfly populations in US prairies?,4,3878;3879;3882;3883,4,True
+Q0135,ButterflyandMothConservation,"How does the scale of habitat features, such as field size and margin width, affect butterfly and moth communities on farmland?",4,3974;3975;3981;3982,4,True
+Q0136,ButterflyandMothConservation,"In European forests, how do the effects of coppicing and clearing patches compare for butterfly and moth communities?",4,3877;3938;3939;3940,4,True
+Q0137,ButterflyandMothConservation,"In agricultural landscapes, how does restoring grassland from arable land compare to restoring grassland from abandoned meadows for butterfly communities?",2,3929;3955,3,True
+Q0138,ButterflyandMothConservation,Over what timescales have butterfly populations been observed to respond to woodland management practices like coppicing and clearing in the UK?,6,3936;3938;3939;3940;3941;3942,4,True
+Q0139,ButterflyandMothConservation,"To benefit butterflies on productive grasslands, how does reducing livestock density compare with seasonal livestock removal or reducing mowing frequency?",6,3958;3959;3960;3961;3962;3967,4,True
+Q0140,ButterflyandMothConservation,What actions are available to mitigate the negative impacts of artificial lighting on moth populations?,8,3843;3852;3901;3902;3903;3904;3905;3906,4,True
+Q0141,ButterflyandMothConservation,What actions can be taken in urban environments to support butterfly and moth populations?,9,3834;3835;3836;3837;3838;3841;3842;3899;3900,4,True
+Q0142,ButterflyandMothConservation,What are the alternatives to using prescribed fire for maintaining disturbance in forest habitats for the benefit of butterflies and moths?,9,3867;3868;3871;3877;3938;3939;3940;3941;3942,3,True
+Q0143,ButterflyandMothConservation,"What are the benefits for butterflies of maintaining species-rich, semi-natural grasslands compared to using set-aside in European agricultural landscapes?",2,3908;3980,4,True
+Q0144,ButterflyandMothConservation,What are the benefits of planting new hedges and managing existing ones for butterfly and moth conservation on farmland?,4,3910;3974;3975;3976,4,True
+Q0145,ButterflyandMothConservation,What are the documented benefits and negative impacts of using prescribed fire in forest ecosystems for butterfly and moth populations?,3,3877;3878;3879,4,True
+Q0146,ButterflyandMothConservation,What are the documented effects of excluding different types of herbivores on butterfly and moth populations?,2,3885;3891,4,True
+Q0147,ButterflyandMothConservation,"What are the effects of managing traditional perennial crops like orchards, vineyards, and coffee plantations to benefit butterflies and moths?",4,3917;3919;3920;3931,3,True
+Q0148,ButterflyandMothConservation,What are the effects of removing or excluding problematic plant and animal species on butterfly and moth populations?,5,3884;3885;3889;3890;3891,4,True
+Q0149,ButterflyandMothConservation,What are the effects on butterflies and moths of different methods for managing linear features like road verges and power lines?,6,3841;3852;3853;3854;3855;3899,4,True
+Q0150,ButterflyandMothConservation,"What are the effects on butterfly and moth communities of opening up forest canopies through clearing, coppicing, or thinning?",10,3867;3868;3871;3877;3936;3938;3939;3940;3941;3942,4,True
+Q0151,ButterflyandMothConservation,What are the most effective methods for reducing grazing intensity on grasslands to benefit butterfly populations?,11,3908;3956;3958;3959;3960;3962;3963;3965;3967;3971;3973,4,True
+Q0152,ButterflyandMothConservation,What are the most effective ways to manage field margins in arable landscapes for increasing butterfly abundance?,6,3898;3923;3927;3932;3981;3982,4,True
+Q0153,ButterflyandMothConservation,"What are the observed effects of ceasing grassland management, either by stopping mowing or grazing, on butterfly abundance and diversity?",9,3908;3955;3956;3957;3958;3959;3960;3961;3962,4,True
+Q0154,ButterflyandMothConservation,What are the overall effects on butterfly and moth communities of creating uncropped habitat areas like set-asides and beetle banks within farmland?,3,3923;3927;3980,4,True
+Q0155,ButterflyandMothConservation,What are the potential benefits and negative consequences of abandoning management on grasslands for butterfly and moth populations?,3,3908;3956;3957,4,True
+Q0156,ButterflyandMothConservation,"What are the typical timeframes for butterfly and moth population responses following forest management interventions like clearing, coppicing, and thinning?",5,3876;3936;3938;3939;3940,4,True
+Q0157,ButterflyandMothConservation,What conservation actions can be implemented in urban environments to support butterfly and moth populations?,9,3834;3835;3836;3837;3838;3841;3842;3899;3900,3,True
+Q0158,ButterflyandMothConservation,"What does the evidence say about the effectiveness of restoring different types of wetland habitats, such as peatlands and floodplains, for butterfly conservation?",4,3948;3949;3950;3971,4,True
+Q0159,ButterflyandMothConservation,What does the evidence say about the long-term success of re-establishing butterfly populations through translocation or captive-release?,5,3909;3911;3912;3914;3916,4,True
+Q0160,ButterflyandMothConservation,What factors influence the success of captive breeding and release programs for butterflies and moths?,5,3909;3911;3912;3914;3916,4,True
+Q0161,ButterflyandMothConservation,"What is the evidence for the effects of restoring post-industrial sites, like mines or brownfields, on butterfly and moth communities?",2,3835;3862,4,True
+Q0162,ButterflyandMothConservation,What is the evidence for the success of re-establishing butterfly populations through translocation and captive-breeding programs?,4,3909;3911;3914;3916,4,True
+Q0163,ButterflyandMothConservation,What is the state of the evidence regarding the success of restoring habitats after mining and quarrying activities for butterfly and moth conservation?,4,3831;3835;3845;3862,4,True
+Q0164,ControlofFreshwaterInvasiveSpecies,"Besides adding chemicals, what are some effective, alternative methods for managing invasive Asian clam populations in industrial water systems?",10,1110;1113;1114;1115;1116;1117;1118;1119;1120;1121,4,True
+Q0165,ControlofFreshwaterInvasiveSpecies,"Besides applying biocides, what are some effective alternative methods for reducing American bullfrog populations?",4,1039;1045;1046;1048,4,True
+Q0166,ControlofFreshwaterInvasiveSpecies,"Besides applying biocides, what are some effective methods for the complete eradication of black bullheads from UK ponds?",12,1051;1053;1076;1077;1078;1079;1080;1081;1082;1083;1084;1085,4,True
+Q0167,ControlofFreshwaterInvasiveSpecies,"Besides direct chemical application, what alternative methods have proven beneficial for managing invasive fish like brown/black bullheads and Ponto-Caspian gobies?",27,1051;1053;1061;1062;1064;1065;1066;1067;1068;1069;1070;1071;1072;1073;1074;1075;1076;1077;1078;1079;1080;1081;1082;1083;1084;1085;1086,3,True
+Q0168,ControlofFreshwaterInvasiveSpecies,"For controlling Ponto-Caspian gammarids in manageable waterbodies, what are the most and least effective environmental manipulation techniques?",4,1091;1092;1093;1094,4,True
+Q0169,ControlofFreshwaterInvasiveSpecies,"For invasive red swamp crayfish (Procambarus clarkii) in European ponds, which control methods are most likely to be beneficial?",6,1029;1030;1031;1032;1036;1037,4,True
+Q0170,ControlofFreshwaterInvasiveSpecies,How does the effectiveness of altering water salinity compare to altering temperature for controlling invasive invertebrates like Asian clams and Ponto-Caspian gammarids?,4,1091;1092;1115;1116,4,True
+Q0171,ControlofFreshwaterInvasiveSpecies,"How does the herbicide 2,4-D compare to other herbicides like diquat or glyphosate for controlling parrot's feather?",6,1606;1676;1680;1681;1689;1699,4,True
+Q0172,ControlofFreshwaterInvasiveSpecies,"How effective are physical barriers, such as dams or electrical fields, at containing the spread of invasive crayfish and gobies in river systems?",2,1037;1074,4,True
+Q0173,ControlofFreshwaterInvasiveSpecies,"In European wetlands, what are the observed effects of using flame treatments to control invasive plants like floating pennywort?",4,1106;1131;1143;1291,4,True
+Q0174,ControlofFreshwaterInvasiveSpecies,"In industrial water systems in Europe, what are the most effective methods for controlling biofouling by Asian clams?",3,1118;1119;1120,4,True
+Q0175,ControlofFreshwaterInvasiveSpecies,"In the UK, how does the effectiveness of using salt water compare to using lightproof barriers for controlling Crassula helmsii?",2,1288;1294,4,True
+Q0176,ControlofFreshwaterInvasiveSpecies,"To control Crassula helmsii, how do chemical methods like herbicides compare in effectiveness to physical methods like using lightproof barriers or salt water?",7,1279;1281;1286;1288;1293;1294;1313,4,True
+Q0177,ControlofFreshwaterInvasiveSpecies,What actions are available to control or contain invasive Procambarus crayfish populations?,10,1029;1030;1031;1032;1033;1034;1035;1036;1037;1038,4,True
+Q0178,ControlofFreshwaterInvasiveSpecies,What actions are available to prevent the upstream migration of invasive species like red swamp crayfish and round gobies?,2,1037;1074,4,True
+Q0179,ControlofFreshwaterInvasiveSpecies,What are the benefits and potential trade-offs of using biocides for the control of invasive species like Procambarus crayfish and black bullheads in freshwater ponds?,9,1036;1048;1050;1059;1063;1095;1118;1279;1281,4,True
+Q0180,ControlofFreshwaterInvasiveSpecies,What are the different outcomes of physical removal for controlling invasive skunk cabbage versus floating pennywort?,3,1101;1126;1138,4,True
+Q0181,ControlofFreshwaterInvasiveSpecies,"What are the documented benefits of using combined control measures, such as trapping with predator encouragement for crayfish or herbicide with physical removal for invasive plants, in ponds and streams?",8,1031;1068;1080;1103;1128;1140;1313;1709,4,True
+Q0182,ControlofFreshwaterInvasiveSpecies,What are the documented effects of draining waterways as a control method for different invasive species like Procambarus crayfish and Asian clams?,7,1034;1042;1057;1065;1078;1110;1303,4,True
+Q0183,ControlofFreshwaterInvasiveSpecies,What are the documented effects of introducing native predators to control invasive American bullfrogs and Procambarus crayfish in North American freshwater systems?,4,1030;1031;1039;1053,4,True
+Q0184,ControlofFreshwaterInvasiveSpecies,"What are the documented outcomes of using physical removal techniques for invasive plants like skunk cabbage, floating pennywort, and water primrose, which are known to regenerate from small fragments?",9,1101;1126;1138;1278;1568;1570;1572;1573;1575,4,True
+Q0185,ControlofFreshwaterInvasiveSpecies,What are the most and least effective actions for controlling invasive Ponto-Caspian gammarids?,11,1087;1088;1089;1090;1091;1092;1093;1094;1095;1096;1097,4,True
+Q0186,ControlofFreshwaterInvasiveSpecies,What are the most beneficial actions for controlling American bullfrog populations in small ponds?,11,1039;1040;1041;1042;1043;1044;1045;1046;1047;1048;1049,4,True
+Q0187,ControlofFreshwaterInvasiveSpecies,What are the most effective methods for controlling invasive aquatic plants like floating pennywort and parrot's feather in the UK?,34,1123;1124;1125;1126;1127;1128;1129;1130;1131;1132;1133;1134;1568;1570;1572;1573;1575;1576;1585;1587;1598;1599;1601;1602;1603;1604;1605;1606;1676;1680;1681;1689;1699;1709,4,True
+Q0188,ControlofFreshwaterInvasiveSpecies,"What are the observed outcomes of using herbivores as a biological control for invasive aquatic plants like floating pennywort, water primrose, and parrot's feather?",14,1098;1099;1100;1123;1124;1125;1135;1136;1137;1276;1277;1598;1599;1601,4,True
+Q0189,ControlofFreshwaterInvasiveSpecies,"What are the observed outcomes of using native predators as a biological control for invasive species like Procambarus crayfish, American bullfrogs, and Ponto-Caspian gobies?",4,1030;1039;1053;1061,4,True
+Q0190,ControlofFreshwaterInvasiveSpecies,What are the outcomes of using novel thermal or chemical methods like liquid nitrogen or hot foam for controlling invasive aquatic plants in European waterways?,10,1104;1105;1129;1130;1141;1142;1275;1281;1282;1286,4,True
+Q0191,ControlofFreshwaterInvasiveSpecies,"What control options are available for managing American bullfrogs in shallow ponds, and what is their likely effectiveness?",11,1039;1040;1041;1042;1043;1044;1045;1046;1047;1048;1049,4,True
+Q0192,ControlofFreshwaterInvasiveSpecies,What factors appear to influence the success of trapping as a control method for invasive crayfish?,2,1029;1031,4,True
+Q0193,ControlofFreshwaterInvasiveSpecies,What factors influence the effectiveness of biological control for invasive aquatic plants such as floating pennywort and water primrose?,11,1123;1124;1125;1135;1136;1137;1276;1277;1598;1599;1601,4,True
+Q0194,ControlofFreshwaterInvasiveSpecies,What factors influence the effectiveness of using non-native herbivores as biological control agents for invasive aquatic plants like water primrose and parrot's feather?,3,1135;1277;1599,4,True
+Q0195,ControlofFreshwaterInvasiveSpecies,"What factors influence the success of physical removal for invasive plants like skunk cabbage and water primrose, which can regenerate from fragments?",9,1101;1126;1138;1278;1568;1570;1572;1573;1575,4,True
+Q0196,ControlofFreshwaterInvasiveSpecies,"What factors, such as the specific chemical used or application method, influence the success of herbicide treatments for invasive aquatic plants like skunk cabbage, water primrose, and parrot's feather?",10,1102;1139;1140;1279;1606;1676;1680;1681;1689;1699,4,True
+Q0197,ControlofFreshwaterInvasiveSpecies,What is the evidence for effective control methods for Ponto-Caspian gobies in North American and European waterways?,15,1061;1062;1063;1064;1065;1066;1067;1068;1069;1070;1071;1072;1073;1074;1075,4,True
+Q0198,ControlofFreshwaterInvasiveSpecies,What is the evidence for using parasites or pathogens as biological control agents for invasive invertebrates like Ponto-Caspian gammarids and Asian clams?,4,1089;1090;1111;1112,4,True
+Q0199,ControlofFreshwaterInvasiveSpecies,"What is the evidence that public education campaigns can help control the spread of invasive species like the red-eared terrapin, Ponto-Caspian gobies, and skunk cabbage?",10,1049;1060;1075;1086;1109;1122;1134;1148;1311;1603,4,True
+Q0200,ControlofFreshwaterInvasiveSpecies,What is the extent of evidence for the effectiveness of different control methods for invasive brown and black bullheads in European freshwater systems?,14,1050;1051;1053;1076;1077;1078;1079;1080;1081;1082;1083;1084;1085;1086,4,True
+Q0201,ControlofFreshwaterInvasiveSpecies,"What is the extent of evidence for the effectiveness of public education programs in controlling the spread of invasive species like the American bullfrog, red-eared terrapin, and parrot's feather?",10,1049;1060;1075;1086;1109;1122;1134;1148;1311;1603,4,True
+Q0202,ControlofFreshwaterInvasiveSpecies,"What management actions are available for red-eared terrapins in the UK, and what is their likely effectiveness?",6,1055;1056;1057;1058;1059;1060,4,True
+Q0203,ControlofFreshwaterInvasiveSpecies,"When attempting direct removal of American bullfrogs, is it more effective to target adults or juveniles?",2,1045;1046,4,True
+Q0204,FarmlandConservation,"As an alternative to conventional ploughing, what are the wildlife benefits of undersowing spring cereals?",3,126;136;643,4,True
+Q0205,FarmlandConservation,"Following the restoration of grassland from other land uses on European farmland, what is the typical timeframe to see changes in plant communities?",8,119;129;133;561;643;69;694;702,4,True
+Q0206,FarmlandConservation,"For improving invertebrate biodiversity in UK grasslands, what is the comparative evidence between reducing management intensity versus restoring species-rich semi-natural grassland?",5,131;133;69;694;702,4,True
+Q0207,FarmlandConservation,"For managing heather moorland in the UK, what is the comparative evidence for the effectiveness of swiping versus controlled burning on plant diversity?",4,151;152;647;650,4,True
+Q0208,FarmlandConservation,"For the benefit of farmland birds, what is the comparative evidence for sowing crops in spring versus leaving stubbles overwinter?",2,137;695,4,True
+Q0209,FarmlandConservation,How do farm-level agri-environment scheme options scale up to benefit biodiversity at the landscape level?,3,145;362;700,4,True
+Q0210,FarmlandConservation,"In European agricultural landscapes, what management techniques are available to restore or create species-rich wet meadows?",4,119;121;122;696,4,True
+Q0211,FarmlandConservation,"In UK silage fields, what is the comparative evidence for leaving uncut strips of rye grass versus raising the mowing height to benefit wildlife?",4,131;132;138;698,4,True
+Q0212,FarmlandConservation,"In the Netherlands, what are the most effective management strategies for increasing wading bird populations on wet grasslands?",5,119;121;130;146;696,4,True
+Q0213,FarmlandConservation,"On UK moorland, what are the comparative effects on plant species richness of managing heather by swiping versus controlled burning?",4,151;152;647;650,4,True
+Q0214,FarmlandConservation,"To mitigate the impacts of intensive arable farming, what are the effects of taking land out of production, either as set-aside or by converting it to grassland?",3,133;156;561,4,True
+Q0215,FarmlandConservation,What are some alternatives to direct predator control for improving the breeding success of ground-nesting birds on farmland?,7,108;109;131;147;148;698;699,4,True
+Q0216,FarmlandConservation,What are the documented benefits and drawbacks of reducing tillage intensity on European farmland?,1,126,4,True
+Q0217,FarmlandConservation,What are the documented benefits and limitations of creating uncropped plots in arable fields for wildlife?,3,156;540;562,4,True
+Q0218,FarmlandConservation,What are the documented benefits and potential drawbacks of reducing tillage on European farmland?,1,126,4,True
+Q0219,FarmlandConservation,What are the documented effects on farmland biodiversity of switching from mineral to organic fertilizers?,3,134;139;694,4,True
+Q0220,FarmlandConservation,"What are the observed benefits and drawbacks of creating uncropped, cultivated margins or plots on UK farmland?",5,246;540;562;63;652,4,True
+Q0221,FarmlandConservation,What are the overall effects of broad-scale agri-environment schemes on farmland biodiversity in Europe?,8,113;114;130;145;146;362;70;700,4,True
+Q0222,FarmlandConservation,What factors influence the occupancy and success rates of nest boxes provided for birds on farmland?,2,154;155,4,True
+Q0223,FarmlandConservation,What is the comparative effectiveness of providing supplementary food versus planting wild bird seed mixtures for supporting farmland birds over winter?,6,117;132;149;594;648;695,4,True
+Q0224,FarmlandConservation,"What is the evidence base for the effectiveness of providing artificial nest sites, such as boxes for birds and bees, on European farmland?",5,108;154;155;80;81,4,True
+Q0225,FarmlandConservation,"What is the extent of evidence for controlling mammal populations, such as deer, squirrels, and mink, to benefit farmland wildlife in the UK?",4,106;107;111;699,4,True
+Q0226,FarmlandConservation,What is the extent of the evidence base for the effectiveness of managing land under power lines to benefit wildlife on European farmland?,1,99,0,False
+Q0227,FarmlandConservation,What is the extent of the evidence for the effectiveness of managing or planting new hedgerows to benefit wildlife on farmland?,3,116;538;73,4,True
+Q0228,FarmlandConservation,What is the typical timeframe to see positive changes in plant communities when restoring species-rich or wet grasslands from intensive agriculture?,6,119;129;133;643;694;702,4,True
+Q0229,FarmlandConservation,"When undertaking habitat restoration on farmland, such as creating species-rich grassland, what is the typical timeframe for seeing positive ecological changes?",6,119;129;133;650;701;702,4,True
+Q0230,ForestConservation,"After a wildfire, what are the documented benefits and harms of interventions like thinning and sowing seeds?",4,1234;1235;1236;1237,4,True
+Q0231,ForestConservation,"Considering different timber harvesting methods, which are most effective for increasing understory plant diversity?",10,1209;1210;1211;1214;1215;1222;1223;1224;1271;1273,4,True
+Q0232,ForestConservation,"Following restoration planting, which actions are most beneficial for promoting the survival and growth of the planted trees?",23,1149;1153;1154;1156;1238;1239;1240;1241;1254;1255;1256;1257;1258;1259;1260;1261;1262;1263;1264;1266;1267;1268;1269,3,True
+Q0233,ForestConservation,"How do different methods of tree removal, such as logging, thinning, and clearcutting, compare in their effects on understory plants?",19,1209;1210;1211;1212;1214;1215;1222;1223;1224;1225;1226;1227;1234;1238;1261;1270;1271;1272;1273,4,True
+Q0234,ForestConservation,How does the effectiveness of community-based forest management vary across different countries according to the available evidence?,1,1152,4,True
+Q0235,ForestConservation,How does the effectiveness of soil improvement techniques for forest restoration vary between studies conducted in Europe and the USA?,10,1153;1248;1249;1250;1251;1252;1253;1258;1259;1260,3,True
+Q0236,ForestConservation,How does the evidence for using shelterwood harvesting compare with clearcutting for promoting plant diversity and tree regeneration?,4,1214;1215;1222;1223,4,True
+Q0237,ForestConservation,"In restored forest areas, what are some alternatives to using herbicides for controlling competing vegetation after tree planting, and how effective are they?",7,1239;1240;1241;1256;1262;1266;1267,2,True
+Q0238,ForestConservation,"To protect forests from large native herbivores, how do wire fences and electric fences compare in effectiveness?",2,1230;1231,4,True
+Q0239,ForestConservation,"What actions are available to legally protect forests, and what is the evidence for their effectiveness?",3,1169;1201;1233,3,True
+Q0240,ForestConservation,"What are the documented benefits and harms of amending soil with additives like organic matter, lime, or fertilizer after planting trees?",7,1153;1248;1249;1250;1258;1259;1260,3,True
+Q0241,ForestConservation,"What are the documented effects of different livestock management strategies within forests, such as exclusion, reducing intensity, or shortening the grazing period?",7,1177;1192;1202;1205;1206;1207;1208,4,True
+Q0242,ForestConservation,"What are the documented negative impacts of timber harvesting activities, such as thinning or logging, on non-vascular plants in forests?",3,1212;1234;1270,4,True
+Q0243,ForestConservation,What are the effects of tree thinning and logging on non-vascular plants like mosses and ferns within forests?,3,1212;1234;1270,4,True
+Q0244,ForestConservation,What are the key benefits and negative impacts of logging trees on different components of a forest ecosystem?,8,1209;1210;1211;1212;1270;1271;1272;1273,4,True
+Q0245,ForestConservation,"What are the main alternatives to clearcutting for timber harvesting, and how do they compare in terms of their effects on forest plants?",6,1179;1214;1215;1222;1223;1224,4,True
+Q0246,ForestConservation,What are the main benefits and negative impacts of using prescribed fire as a management tool in North American forests?,7,1196;1217;1220;1221;1227;1234;1255,3,True
+Q0247,ForestConservation,What evidence exists for the effectiveness of community-based management for protecting forests in different parts of the world?,1,1152,4,True
+Q0248,ForestConservation,What evidence exists regarding the effectiveness of legal frameworks and public engagement initiatives for forest conservation?,5,1157;1158;1169;1201;1233,4,True
+Q0249,ForestConservation,What is the evidence comparing the effectiveness of using wire fencing versus electric fencing to exclude large native herbivores from forests in Africa and the Americas?,5,1199;1205;1230;1231;1254,4,True
+Q0250,ForestConservation,"What is the evidence for the effectiveness of public engagement strategies, such as awareness campaigns or education programmes, for forest conservation?",2,1157;1158,4,True
+Q0251,ForestConservation,What is the state of the evidence for interventions aimed at reducing the risk or impact of forest fires?,12,1172;1217;1218;1219;1220;1221;1227;1234;1235;1236;1237;1255,4,True
+Q0252,ForestConservation,What is the state of the evidence regarding the effectiveness of different methods to control invasive plant species in forests?,5,1195;1196;1228;1229;1314,4,True
+Q0253,ForestConservation,"What management actions are available to aid forest recovery after a wildfire, and what is known about their effectiveness?",4,1234;1235;1236;1237,3,True
+Q0254,ForestConservation,What management interventions can be implemented to aid forest recovery after a wildfire?,4,1234;1235;1236;1237,4,True
+Q0255,GrasslandConservation,"How do different mechanical seeding methods like drill seeding, strip seeding, and hydroseeding compare in their effects on grassland vegetation in the US and UK?",3,3410;3411;3412,4,True
+Q0256,GrasslandConservation,How do the effects of sowing parasitic plants differ across European countries for restoring grassland vegetation?,1,3404,4,True
+Q0257,GrasslandConservation,How do the outcomes of post-seeding grazing by livestock vary between studies in Europe and the USA?,1,3423,4,True
+Q0258,GrasslandConservation,How does drill seeding compare with hydroseeding for establishing sown species in the USA?,2,3410;3412,4,True
+Q0259,GrasslandConservation,"In Europe, how does the effectiveness of sowing locally sourced seeds compare to sowing commercial seed mixes for improving plant species richness?",1,3400,4,True
+Q0260,GrasslandConservation,"In European grasslands, how do different soil preparation methods prior to seeding, such as soil disturbance, topsoil removal, and herbicide application, compare in their effects on seedling emergence and survival?",5,3413;3414;3415;3416;3418,4,True
+Q0261,GrasslandConservation,"In European grasslands, how does post-seeding management by mowing compare to livestock grazing for enhancing sown species?",2,3419;3423,4,True
+Q0262,GrasslandConservation,What actions are available to increase the abundance of sown or planted species in grassland restoration projects?,20,3397;3399;3405;3406;3407;3408;3409;3410;3411;3412;3415;3418;3419;3420;3423;3425;3427;3428;3432;3433,4,True
+Q0263,GrasslandConservation,"What are the documented effects of adding soil amendments like charcoal, sulphur, or carbon before or after seeding on grassland vegetation?",5,3422;3427;3428;3429;3433,4,True
+Q0264,GrasslandConservation,What are the documented effects of adding soil amendments like mycorrhiza or topsoil prior to seeding?,6,3420;3422;3427;3428;3429;3433,4,True
+Q0265,GrasslandConservation,What are the documented impacts of sowing grass seeds on the abundance of native forbs and shrubs in North American grasslands?,1,3397,4,True
+Q0266,GrasslandConservation,"What are the effects of post-seeding management, specifically mowing versus grazing, on grassland vegetation in the UK?",2,3419;3423,4,True
+Q0267,GrasslandConservation,What are the potential negative impacts on native vegetation of sowing grass seeds at high densities in the USA?,3,3397;3405;3432,4,True
+Q0268,GrasslandConservation,What are the potential negative or neutral effects of adding amendments like mulch or carbon to the soil when seeding grasslands?,6,3422;3425;3427;3428;3429;3433,4,True
+Q0269,GrasslandConservation,What does the evidence from different continents suggest about how sowing different seed types—such as just grasses versus mixed grass and forbs—affects forb abundance?,7,3397;3404;3405;3418;3419;3422;3432,4,True
+Q0270,GrasslandConservation,What does the evidence from different continents suggest about the effect of sowing grass seeds on native grass and forb abundance?,1,3397,3,True
+Q0271,GrasslandConservation,What does the evidence show about the effectiveness of different site preparation methods for improving the survival of seeded or planted species?,12,3402;3403;3413;3414;3415;3416;3417;3418;3419;3421;3423;3427,3,True
+Q0272,GrasslandConservation,"What evidence exists for the effectiveness of altering seed mix characteristics, such as density or species diversity, for grassland restoration in the USA?",2,3405;3406,4,True
+Q0273,GrasslandConservation,What is the extent of evidence on how different grassland seeding and planting interventions affect vegetation structure?,35,3397;3398;3399;3400;3401;3402;3403;3404;3405;3406;3407;3408;3409;3410;3411;3412;3413;3414;3415;3416;3418;3419;3420;3421;3422;3423;3425;3426;3427;3428;3429;3430;3431;3432;3433,3,True
+Q0274,GrasslandConservation,"What management practices, when combined with seeding or planting, have been shown to affect the survival of new plants in grassland restoration?",9,3400;3402;3403;3413;3415;3419;3421;3423;3427,4,True
+Q0275,GrasslandConservation,"When restoring grasslands, how do the outcomes of simply disturbing the soil before seeding compare to removing the topsoil entirely?",2,3413;3415,4,True
+Q0276,GrasslandConservation,"When restoring grasslands, how does the effectiveness of drill seeding compare to hydroseeding or slot/strip seeding for establishing new plants?",3,3410;3411;3412,4,True
+Q0277,GrasslandConservation,Which site preparation techniques appear most effective at increasing species richness before seeding in European grasslands?,5,3413;3414;3415;3416;3418,3,True
+Q0278,ManagementofCaptiveAnimals,"For captive carnivores like maned wolves and cheetahs, what are the documented alternatives to a standard commercial diet for improving nutritional outcomes?",6,1900;1901;1903;1905;1907;1908,4,True
+Q0279,ManagementofCaptiveAnimals,"For captive carnivores, how does hiding food around an enclosure compare to scattering it, in terms of behavioural changes?",3,1915;1918;1921,4,True
+Q0280,ManagementofCaptiveAnimals,"For captive carnivores, how does the effectiveness of hiding or scattering food compare to simply changing its location within the enclosure?",3,1915;1918;1921,4,True
+Q0281,ManagementofCaptiveAnimals,"For captive felids, what are some effective alternatives to presenting food frozen in ice for reducing stereotypic behaviours?",9,1901;1902;1904;1906;1915;1918;1923;1924;1927,4,True
+Q0282,ManagementofCaptiveAnimals,"For captive primates, how do the behavioural effects of presenting food frozen in ice compare to presenting it in water?",2,1320;1321,4,True
+Q0283,ManagementofCaptiveAnimals,"For improving the diet of captive primates, how does presenting whole foods instead of processed compare to providing fresh produce instead of pellets?",4,1323;1329;1335;1900,4,True
+Q0284,ManagementofCaptiveAnimals,"For large captive carnivores like felids and bears, what are the most effective food-based enrichment strategies to reduce stereotypic behaviours?",10,1901;1902;1904;1906;1915;1918;1923;1924;1925;1927,4,True
+Q0285,ManagementofCaptiveAnimals,"For large felids in zoos, what are the observed behavioural and physiological outcomes of feeding whole carcasses versus providing bones or partial carcasses?",3,1900;1901;1902,4,True
+Q0286,ManagementofCaptiveAnimals,How do the effects of providing carnivores with whole carcasses compare to the effects of providing live vertebrate prey?,3,1901;1925;1926,4,True
+Q0287,ManagementofCaptiveAnimals,How do the effects of scattering food throughout a primate's enclosure compare with hiding it in containers?,2,1315;1316,4,True
+Q0288,ManagementofCaptiveAnimals,"In a European zoo setting, what actions are available to simulate seasonal environmental changes to encourage breeding in captive amphibians?",7,1863;1864;1865;1866;1867;1872;1883,4,True
+Q0289,ManagementofCaptiveAnimals,"In a captive breeding program for Australian frogs, what are the most effective interventions to stimulate successful breeding?",10,1864;1872;1873;1874;1876;1879;1880;1881;1882;1888,4,True
+Q0290,ManagementofCaptiveAnimals,"In a zoo setting, what are the observed behavioural effects on bears of providing food frozen in ice versus inside other objects?",2,1923;1924,4,True
+Q0291,ManagementofCaptiveAnimals,"To improve the welfare of captive maned wolves, what are the most effective dietary and food presentation interventions documented?",5,1900;1903;1908;1915;1921,4,True
+Q0292,ManagementofCaptiveAnimals,"To reduce anticipatory pacing in captive cheetahs, what are the alternatives to a standard, fixed feeding routine?",5,1904;1915;1918;1921;1924,4,True
+Q0293,ManagementofCaptiveAnimals,What are the documented benefits and harms of altering the frequency or timing of feeds for captive primates?,5,1337;1338;1339;1340;1341,4,True
+Q0294,ManagementofCaptiveAnimals,What are the documented effects of modifying captive primate diets to better reflect what they would eat in the wild?,7,1323;1329;1330;1331;1332;1333;1335,4,True
+Q0295,ManagementofCaptiveAnimals,What are the observed behavioural and physiological outcomes of feeding captive primates a diet that more closely reflects their natural nutritional composition?,5,1323;1329;1332;1333;1335,4,True
+Q0296,ManagementofCaptiveAnimals,What are the observed behavioural outcomes of providing live prey to captive primates and carnivores?,3,1333;1925;1926,4,True
+Q0297,ManagementofCaptiveAnimals,What are the trade-offs involved when feeding whole carcasses to captive carnivores?,3,1900;1901;1902,3,True
+Q0298,ManagementofCaptiveAnimals,What dietary manipulations are available to improve breeding success and larval development in captive amphibians?,8,1883;1884;1885;1886;1887;1888;1889;1890,4,True
+Q0299,ManagementofCaptiveAnimals,"What evidence exists for stimulating breeding in captive amphibians by manipulating environmental cues like temperature, rainfall, and sound?",8,1863;1864;1865;1866;1867;1870;1872;1881,4,True
+Q0300,ManagementofCaptiveAnimals,What evidence exists for the effectiveness of providing live prey to captive carnivores and primates to stimulate natural behaviours?,4,1333;1925;1926;1927,4,True
+Q0301,ManagementofCaptiveAnimals,What is the state of evidence on presenting food that encourages or requires tool use in captive primates?,3,1318;1319;1320,4,True
+Q0302,ManagementofCaptiveAnimals,What is the state of the evidence for providing captive primates with gum or nectar to encourage natural feeding behaviours?,4,1325;1326;1330;1331,4,True
+Q0303,ManagementofCaptiveAnimals,What is the state of the evidence for providing primates with food that requires tool use or modification?,3,1318;1319;1320,4,True
+Q0304,ManagementofCaptiveAnimals,What is the state of the evidence regarding the provision of gum or nectar to captive primates?,4,1325;1326;1330;1331,4,True
+Q0305,MarineFishConservation,"Besides changing hook type in longline fisheries, what other gear modifications can reduce unwanted catches of sharks and rays?",4,2696;2698;2699;2700,3,True
+Q0306,MarineFishConservation,How do long-term and temporary fishery closures compare in their effects on marine fish abundance?,2,2655;2664,4,True
+Q0307,MarineFishConservation,"How do mesh escape panels, size-sorting grids, and large supported openings compare in their effectiveness at improving size-selectivity in trawl nets?",7,2716;2717;2720;2723;2725;2727;2728,4,True
+Q0308,MarineFishConservation,How do separator trawls and topless trawls compare in their effectiveness at reducing unwanted fish catch?,3,2711;2712;2713,4,True
+Q0309,MarineFishConservation,How do the effects on fish community composition of prohibiting all commercial fishing compare between the Tasman Sea and the South Atlantic Ocean?,2,2667;2682,4,True
+Q0310,MarineFishConservation,How does the effectiveness of no-take marine protected areas on fish communities differ between the Mediterranean Sea and the Indian Ocean?,1,2682,3,True
+Q0311,MarineFishConservation,How does the effectiveness of prohibiting mobile bottom fishing gear vary between the North Atlantic and other regions like the Mediterranean or Indian Ocean?,3,2654;2668;2673,4,True
+Q0312,MarineFishConservation,How does using a square mesh codend compare to rotating a diamond mesh codend for improving size-selectivity in trawl nets?,3,2697;2714;2715,4,True
+Q0313,MarineFishConservation,"In European waters, what does the evidence show about the effectiveness of using a square mesh codend instead of a diamond mesh codend for reducing unwanted catch?",3,2697;2714;2715,4,True
+Q0314,MarineFishConservation,What are the comparative effects of long-term versus temporary fishery closures on marine fish populations?,2,2655;2664,4,True
+Q0315,MarineFishConservation,What are the comparative effects on fish abundance of prohibiting all static fishing gear versus prohibiting only line fishing?,2,2670;2671,4,True
+Q0316,MarineFishConservation,What are the documented benefits of ceasing all fishing in a marine protected area on fish community composition and species richness?,4,2667;2674;2681;2682,4,True
+Q0317,MarineFishConservation,What are the documented effects of modifying fishing trap or pot configurations on marine fish?,1,2702,4,True
+Q0318,MarineFishConservation,What are the most effective spatial management actions for protecting spawning fish and their habitats?,5,2654;2655;2664;2682;2938,4,True
+Q0319,MarineFishConservation,"What are the observed effects of fitting deterrents, such as lights or electropositive materials, to fishing gear?",2,2695;2696,4,True
+Q0320,MarineFishConservation,What are the observed effects on fish abundance and diversity from prohibiting most or all fishing within Marine Protected Areas?,5,2667;2674;2680;2681;2682,4,True
+Q0321,MarineFishConservation,What are the outcomes for fish populations when marine protected areas are managed with zonation systems that permit some fishing?,4,2674;2678;2681;2682,4,True
+Q0322,MarineFishConservation,What does the evidence suggest about the timeframe over which prohibiting all fishing in a marine protected area leads to increased fish abundance?,4,2674;2680;2681;2682,3,True
+Q0323,MarineFishConservation,What gear modifications are available to reduce the unwanted catch of cod and haddock in the North Sea?,14,2686;2687;2697;2705;2706;2710;2711;2712;2715;2716;2717;2720;2725;3809,4,True
+Q0324,MarineFishConservation,What is the evidence for using electropositive deterrents on fishing gear to reduce unwanted catches of sharks and rays?,2,2695;2696,4,True
+Q0325,MarineFishConservation,What is the evidence from global reviews on the effectiveness of catch share systems for managing fish stocks sustainably?,4,3811;3812;3813;3814,4,True
+Q0326,MarineandFreshwaterMammalConservation,"Based on the available evidence, what are the most beneficial actions for reducing human-wildlife conflict at wild fisheries?",15,2778;2779;2803;2806;2808;2815;2816;2817;2818;2819;2820;2821;2822;2824;2825,4,True
+Q0327,MarineandFreshwaterMammalConservation,"For shark control programs in Australia and South Africa, what is the evidence for alternative methods to nets that reduce harm to marine mammals?",1,2856,4,True
+Q0328,MarineandFreshwaterMammalConservation,How do the outcomes of using catch protection devices on longlines compare to modifying fishing pots for reducing human-wildlife conflict?,2,2821;2822,4,True
+Q0329,MarineandFreshwaterMammalConservation,How does the evidence for modifying fishing pots and traps to exclude mammals compare with installing exclusion or escape devices on fishing nets?,2,2822;2823,4,True
+Q0330,MarineandFreshwaterMammalConservation,How does the evidence for using acoustic devices to reduce human-wildlife conflict at aquaculture systems compare to their use on fishing gear?,8,2748;2751;2761;2775;2808;2815;2816;2896,4,True
+Q0331,MarineandFreshwaterMammalConservation,How does the evidence for using acoustically reflective materials on fishing gear compare to attaching acoustically reflective objects for reducing marine mammal entanglement?,2,2806;2807,4,True
+Q0332,MarineandFreshwaterMammalConservation,"In the South Pacific and Indian Oceans, what is the best available method for shark control programs to minimize harm to non-target marine mammals?",1,2856,4,True
+Q0333,MarineandFreshwaterMammalConservation,What actions are available to reduce the risk of lethal vessel collisions with large whales?,10,2754;2755;2756;2757;2758;2759;2760;2761;2762;2777,4,True
+Q0334,MarineandFreshwaterMammalConservation,What are the available strategies to reduce the negative impacts of aquaculture systems on marine mammals?,11,2742;2743;2744;2745;2746;2774;2775;2776;2876;2877;2878,3,True
+Q0335,MarineandFreshwaterMammalConservation,What are the benefits and harms of using acoustic devices on fishing gear in coastal waters to protect porpoises?,4,2808;2815;2816;2896,4,True
+Q0336,MarineandFreshwaterMammalConservation,What are the demonstrated benefits of prohibiting the hunting of marine mammals?,2,2780;2789,4,True
+Q0337,MarineandFreshwaterMammalConservation,What are the documented behavioral effects on marine mammals of implementing regulations for vessel operations during tourism activities?,4,2758;2838;2839;2840,4,True
+Q0338,MarineandFreshwaterMammalConservation,What are the documented benefits and negative outcomes associated with captive rearing and rehabilitation of marine mammals?,4,2925;2926;2932;2933,4,True
+Q0339,MarineandFreshwaterMammalConservation,What are the documented effects of education and community engagement programs on human behaviour towards marine mammals?,6,2840;2843;2844;2934;2935;2936,4,True
+Q0340,MarineandFreshwaterMammalConservation,What are the documented population-level outcomes of legally protecting marine mammals and their habitats?,7,2780;2915;2916;2917;2918;2919;2923,4,True
+Q0341,MarineandFreshwaterMammalConservation,"What are the most effective interventions for reducing cetacean bycatch in fishing nets, based on evidence from the Atlantic and North Sea?",9,2790;2793;2801;2802;2805;2806;2807;2808;2823,4,True
+Q0342,MarineandFreshwaterMammalConservation,What are the potential negative impacts associated with using acoustic deterrent devices for marine mammal conservation?,9,2746;2748;2751;2761;2775;2808;2815;2816;2896,4,True
+Q0343,MarineandFreshwaterMammalConservation,What are the potential trade-offs associated with using acoustic devices for marine mammal conservation?,8,2748;2751;2761;2775;2808;2815;2816;2896,4,True
+Q0344,MarineandFreshwaterMammalConservation,What interventions are available to mitigate the impacts of underwater noise from construction activities like pile driving?,5,2896;2897;2898;2900;2901,4,True
+Q0345,MarineandFreshwaterMammalConservation,What is the available evidence for methods aimed at reducing marine mammal exposure to noise from industrial activities like pile driving and seismic surveys?,8,2896;2897;2898;2899;2900;2901;2902;2903,4,True
+Q0346,MarineandFreshwaterMammalConservation,"What is the comparative effectiveness of deploying acoustic devices on fishing gear, vessels, or moorings for reducing human-wildlife conflict at wild fisheries?",11,2808;2815;2816;2817;2818;2819;2820;2821;2822;2824;2825,4,True
+Q0347,MarineandFreshwaterMammalConservation,What is the comparative evidence for the effectiveness of legislation preventing the intentional killing of mammals at aquaculture systems versus at wild fisheries?,2,2745;2778,4,True
+Q0348,MarineandFreshwaterMammalConservation,What is the evidence for actions aimed at mitigating pollution threats to marine mammals from agricultural and sewage sources?,9,2865;2866;2867;2868;2879;2880;2881;2882;2883,3,True
+Q0349,MarineandFreshwaterMammalConservation,What is the evidence for interventions that directly manage individual mammals to boost threatened populations?,10,2861;2924;2925;2926;2927;2928;2929;2930;2932;2933,3,True
+Q0350,MarineandFreshwaterMammalConservation,What is the evidence for the success of releasing hand-reared or captive-bred manatees back into the wild in the Americas?,2,2926;2933,4,True
+Q0351,MarineandFreshwaterMammalConservation,What is the state of the evidence for actions designed to mitigate the risks of renewable energy infrastructure to marine and freshwater mammals?,3,2747;2748;2749,4,True
+Q0352,MediterraneanFarmland,"Besides adding amendments like compost or manure, what other management practices can improve soil aggregation and stability on Mediterranean farmland?",12,1345;1362;1363;1364;1365;1366;1367;1368;1369;1370;1371;1373,4,True
+Q0353,MediterraneanFarmland,"Besides adding soil amendments, what alternative management practices can enhance crop quality on Mediterranean farmland?",8,1351;1352;1354;1355;1358;1359;1360;1361,4,True
+Q0354,MediterraneanFarmland,"Besides planting flower strips, what other actions show evidence of benefiting pollinators on Mediterranean farmland?",5,1404;1405;1406;1407;1408,3,True
+Q0355,MediterraneanFarmland,"Besides planting hedgerows, what other habitat creation actions can support pollinators on Mediterranean farmland?",5,1404;1405;1406;1407;1408,2,True
+Q0356,MediterraneanFarmland,"How do adding manure, sewage sludge, or slurry to the soil compare in terms of their effect on crop yields on Mediterranean farmland?",5,1346;1347;1348;1349;1350,4,True
+Q0357,MediterraneanFarmland,"How do different organic amendments like compost, manure, and slurry compare in their effects on crop yields on Mediterranean farmland?",4,1346;1347;1348;1349,4,True
+Q0358,MediterraneanFarmland,How does planting flowers compare to planting hedgerows for supporting pollinators on Mediterranean farmland?,2,1406;1407,4,True
+Q0359,MediterraneanFarmland,"In Mediterranean agricultural systems, what is the evidence for differences in soil and water outcomes between long-term and short-term use of cover crops?",2,1345;1357,4,True
+Q0360,MediterraneanFarmland,"Instead of adding amendments like manure or slurry, what other management practices can be used to improve soil fertility on Mediterranean farmland?",10,1345;1362;1363;1364;1365;1366;1367;1368;1369;1371,4,True
+Q0361,MediterraneanFarmland,"Of the available soil amendments, which is most consistently beneficial for increasing crop yields on Mediterranean farmland?",5,1346;1347;1348;1349;1350,4,True
+Q0362,MediterraneanFarmland,"To mitigate soil greenhouse gas emissions on Mediterranean farmland, which management actions show the most promise and which appear to be harmful?",13,1345;1362;1363;1364;1365;1366;1367;1368;1369;1370;1371;1375;1376,4,True
+Q0363,MediterraneanFarmland,What actions can I take to reduce the loss of nutrients from Mediterranean farmland soils into water?,8,1357;1377;1378;1379;1380;1381;1382;1387,3,True
+Q0364,MediterraneanFarmland,What actions can I take to specifically increase soil organic matter in my Mediterranean vineyard?,13,1345;1362;1363;1364;1365;1366;1367;1368;1369;1370;1371;1372;1375,4,True
+Q0365,MediterraneanFarmland,What actions can be taken on Mediterranean farmland to increase crop yields?,13,1346;1347;1348;1349;1350;1351;1352;1354;1355;1358;1359;1360;1361,4,True
+Q0366,MediterraneanFarmland,What actions can be taken to increase the number of natural enemies for pest regulation on Mediterranean farmland?,9,1392;1393;1394;1395;1397;1398;1399;1400;1401,4,True
+Q0367,MediterraneanFarmland,What are the benefits and drawbacks of using organic fertilizer instead of inorganic fertilizer for crop production and soil health in Mediterranean systems?,5,1350;1366;1381;1393;1412,4,True
+Q0368,MediterraneanFarmland,What are the documented benefits and drawbacks for pest regulation when planting or maintaining ground cover in Mediterranean orchards and vineyards?,2,1352;1395,4,True
+Q0369,MediterraneanFarmland,What are the documented outcomes of restoring habitats along watercourses for different biodiversity groups on Mediterranean farmland?,5,1374;1388;1402;1408;1416,4,True
+Q0370,MediterraneanFarmland,What are the documented trade-offs of growing cover crops in arable fields regarding crop yield and water availability in Mediterranean climates?,4,1345;1351;1357;1394,4,True
+Q0371,MediterraneanFarmland,What are the most and least effective actions for improving crop quality in Mediterranean arable fields?,13,1346;1347;1348;1349;1350;1351;1352;1354;1355;1358;1359;1360;1361,3,True
+Q0372,MediterraneanFarmland,What are the most beneficial actions for reducing soil erosion in Mediterranean orchards?,4,1362;1363;1364;1367,4,True
+Q0373,MediterraneanFarmland,What are the most beneficial tillage practices for increasing soil organic matter in arable fields on Mediterranean farmland?,3,1369;1370;1371,4,True
+Q0374,MediterraneanFarmland,"What are the overall effects of growing cover crops in arable fields on Mediterranean farmland, considering soil health and crop production?",4,1345;1351;1357;1394,4,True
+Q0375,MediterraneanFarmland,"What are the overall effects of using no-tillage in arable fields in Mediterranean climates, covering crop yield, soil health, water availability, and pest numbers?",5,1355;1369;1384;1397;1405,3,True
+Q0376,MediterraneanFarmland,What are the trade-offs associated with different tillage systems (no-till vs reduced-till) specifically concerning weed populations in Mediterranean arable fields?,3,1397;1398;1399,4,True
+Q0377,MediterraneanFarmland,"What conservation actions can be implemented along watercourses on Mediterranean farmland to benefit biodiversity, and what is the evidence?",7,1372;1374;1387;1388;1402;1408;1416,3,True
+Q0378,MediterraneanFarmland,What is the evidence for how different tillage practices affect weed populations in arable fields in Mediterranean agriculture?,3,1397;1398;1399,4,True
+Q0379,MediterraneanFarmland,What is the evidence for the effects of different grazing management strategies on plant biodiversity in Mediterranean grasslands?,5,1417;1418;1419;1420;1421,3,True
+Q0380,MediterraneanFarmland,What is the evidence for the impacts of different grazing management strategies on invertebrate and mammal biodiversity in US grasslands within a Mediterranean climate?,5,1417;1418;1419;1420;1421,4,True
+Q0381,MediterraneanFarmland,What is the evidence for the impacts of restoring habitat along watercourses on different biodiversity groups on Mediterranean farmland?,5,1374;1388;1402;1408;1416,3,True
+Q0382,MediterraneanFarmland,What is the state of the evidence regarding the impacts of different grazing management strategies on invertebrate biodiversity in Mediterranean farmland?,5,1417;1418;1419;1420;1421,2,True
+Q0383,MediterraneanFarmland,Which actions are most effective for increasing beneficial soil organisms like earthworms and microbial biomass on Mediterranean farmland?,13,1345;1362;1363;1364;1365;1366;1367;1368;1369;1370;1371;1372;1375,4,True
+Q0384,NaturalPestControl,"For pasture management in the UK, what is the comparative evidence on natural enemy abundance when delaying mowing versus using grazing instead of cutting?",4,721;725;727;885,4,True
+Q0385,NaturalPestControl,"To attract natural enemies for pest control, what is the comparative evidence for using manufactured chemicals versus planting non-crop plants that produce attractive chemicals?",2,724;754,4,True
+Q0386,NaturalPestControl,"To provide refuge for natural enemies, what is the comparative evidence for creating beetle banks versus leaving part of a crop unharvested?",2,725;729,4,True
+Q0387,NaturalPestControl,What actions are available to a farmer growing perennial crops to enhance natural enemy populations on the ground versus in the tree canopy?,3,720;773;886,4,True
+Q0388,NaturalPestControl,What actions are available to control weeds specifically in pasture or grassland systems?,2,721;722,4,True
+Q0389,NaturalPestControl,What actions can be taken to control weeds on farmland without relying on herbicides?,7,717;718;721;722;728;753;774,4,True
+Q0390,NaturalPestControl,What are the documented effects on crop yield when altering the timing of agricultural practices like spraying or mowing for natural pest control?,3,723;727;774,4,True
+Q0391,NaturalPestControl,"What are the documented financial impacts, in terms of profit and costs, of implementing various natural pest control strategies?",8,717;718;719;723;728;729;750;753,2,True
+Q0392,NaturalPestControl,What are the observed effects of using chemical or plant-based attractants to enhance natural enemy populations?,3,724;753;754,4,True
+Q0393,NaturalPestControl,What are the overall effects of altering pesticide application strategies to benefit natural enemies?,4,723;726;750;774,4,True
+Q0394,NaturalPestControl,What are the overall effects of weed management strategies that rely on plant competition or chemical properties?,7,717;718;721;722;728;753;774,3,True
+Q0395,NaturalPestControl,What are the potential economic outcomes of adopting organic farming or alley cropping systems?,8,717;718;719;723;728;729;750;753,4,True
+Q0396,NaturalPestControl,What are the potential negative impacts on crops when incorporating plant remains into the soil to control weeds?,1,728,4,True
+Q0397,NaturalPestControl,"What is the evidence for the effectiveness of manipulating field structure by adding linear features like hedges, beetle banks, or alley cropping?",3,718;729;752,4,True
+Q0398,NaturalPestControl,What is the evidence from North America for using natural or ecological methods to control weeds?,7,717;719;721;722;725;728;729,3,True
+Q0399,NaturalPestControl,"What is the summary of evidence on the economic outcomes, such as profit and costs, of implementing natural pest control methods?",8,717;718;719;723;728;729;750;753,3,True
+Q0400,NaturalPestControl,"When altering the timing of chemical applications for pest control, what are the comparative effects of delaying herbicide use versus changing insecticide timing?",2,723;774,4,True
+Q0401,NaturalPestControl,"When managing pastureland for natural pest control, is it better to delay mowing/grazing or to use grazing instead of cutting?",2,727;885,4,True
+Q0402,NaturalPestControl,"When planting non-crop vegetation to enhance natural pest control, what is the comparative evidence for planting new hedges versus plants that attract natural enemies with chemicals?",2,724;752,3,True
+Q0403,NaturalPestControl,Which interventions are most effective for increasing pest parasitism rates?,7,717;718;725;753;754;775;886,4,True
+Q0404,PeatlandConservation,"Besides direct legal protection, what alternative policy or financial incentives can be used to encourage peatland conservation?",7,1796;1797;1798;1799;1800;1801;1849,3,True
+Q0405,PeatlandConservation,"Besides mowing, what are some alternative disturbance-based management interventions for maintaining fen and fen meadow habitats?",5,1759;1760;1761;1762;1763,4,True
+Q0406,PeatlandConservation,"For degraded peatlands, how do the effects of completely excluding livestock compare to reducing grazing intensity?",3,1734;1735;1762,4,True
+Q0407,PeatlandConservation,"For re-establishing mosses on degraded bogs, how does direct planting of moss sods compare to spreading moss fragments on the surface?",3,1818;1821;1822,4,True
+Q0408,PeatlandConservation,"To encourage natural revegetation on bare peat, what are the most effective physical and hydrological interventions?",12,1756;1805;1806;1807;1808;1809;1810;1811;1813;1814;1815;1859,3,True
+Q0409,PeatlandConservation,"To maintain disturbance in fens and fen meadows, how does the effect of cutting/mowing compare with using grazing?",2,1759;1762,4,True
+Q0410,PeatlandConservation,"To restore a bog after peat extraction, which vegetation introduction techniques are most effective at establishing Sphagnum moss cover?",5,1738;1804;1818;1821;1822,4,True
+Q0411,PeatlandConservation,"To restore peatlands afforested for commercial forestry, how does simply cutting the trees compare to cutting trees and also rewetting the peat?",2,1731;1732,4,True
+Q0412,PeatlandConservation,"What are the alternatives to completely removing livestock from degraded agricultural peatlands, and how do their effects compare?",5,1733;1734;1735;1736;1737,4,True
+Q0413,PeatlandConservation,What are the documented benefits and harms of using soil amendments or covers to support newly planted peatland vegetation?,16,1825;1826;1827;1828;1829;1830;1831;1832;1833;1834;1835;1836;1837;1839;1840;1841,4,True
+Q0414,PeatlandConservation,What are the documented benefits and negative impacts of using prescribed fire as a peatland management tool?,5,1763;1764;1765;1774;1856,3,True
+Q0415,PeatlandConservation,What are the documented benefits and trade-offs of using traditional management practices like mowing or grazing to maintain biodiversity in fen meadows?,5,1759;1760;1761;1762;1763,4,True
+Q0416,PeatlandConservation,"What are the documented effects of using different physical interventions like mowing, cutting, or complete removal to manage unwanted vegetation in fens?",5,1759;1761;1768;1770;1772,4,True
+Q0417,PeatlandConservation,What are the known benefits and harms of adding lime or inorganic fertilizers to aid peatland vegetation establishment?,5,1790;1812;1825;1826;1827,4,True
+Q0418,PeatlandConservation,What are the typical effects of rewetting on the vegetation of drained peatlands?,4,1732;1756;1765;1831,4,True
+Q0419,PeatlandConservation,What are the typical outcomes for vegetation when the upper layer of degraded peatland soil is removed or disturbed without subsequent planting?,6,1768;1809;1810;1811;1835;1836,4,True
+Q0420,PeatlandConservation,What different management strategies exist to mitigate the negative impacts of livestock on peatlands?,5,1733;1734;1735;1736;1737,4,True
+Q0421,PeatlandConservation,What does the evidence say about the effectiveness of creating or retaining habitat corridors for conserving peatland vegetation?,4,1720;1730;1739;1742,4,True
+Q0422,PeatlandConservation,What interventions are available to restore peatland vegetation on sites previously used for commercial forest plantations?,4,1731;1732;1756;1803,4,True
+Q0423,PeatlandConservation,What is the evidence base for the effectiveness of actions designed to mitigate the impacts of service corridors like roads or pipelines on peatland vegetation?,6,1720;1730;1739;1740;1741;1742,4,True
+Q0424,PeatlandConservation,What is the state of the evidence for actions to mitigate the impacts of service corridors like roads and pipelines on peatland vegetation?,3,1740;1741;1742,4,True
+Q0425,PeatlandConservation,What is the state of the evidence for creating habitat corridors to connect peatlands fragmented by different types of development?,4,1720;1730;1739;1742,2,True
+Q0426,PeatlandConservation,"What management options are available to mitigate damage from human recreational access on peatlands, and is there any evidence for them?",7,1749;1750;1751;1752;1753;1754;1755,4,True
+Q0427,PeatlandConservation,"When harvesting wild biological resources from peatlands, how do different strategies for reducing impact compare in their evidence base?",5,1743;1744;1745;1746;1747,4,True
+Q0428,PrimateConservation,"Following captive breeding and reintroduction, over what timeframes have primate survival and population changes been documented?",11,1567;1589;1590;1591;1592;1593;1594;1595;1596;1597;1600,4,True
+Q0429,PrimateConservation,For what length of time have translocated primate populations been observed to survive post-release?,4,1422;1423;1558;1559,4,True
+Q0430,PrimateConservation,How does a permanent human presence at a site influence the success of primate conservation efforts?,5,1511;1512;1517;1519;1523,4,True
+Q0431,PrimateConservation,"To improve the effectiveness of anti-poaching patrols for primate conservation, what are the documented outcomes of providing better equipment versus providing training?",6,1471;1475;1476;1477;1481;1482,4,True
+Q0432,PrimateConservation,"To manage human-wildlife conflict in residential areas, what are the benefits and potential drawbacks of relocating primates?",4,1422;1423;1558;1559,4,True
+Q0433,PrimateConservation,"To mitigate primate crop-raiding, what is the relative effectiveness of chasing primates with loud noises versus using bright lights?",2,1449;1450,4,True
+Q0434,PrimateConservation,"To reduce primate reliance on human food in tourist areas, what management actions are available and what is their known effectiveness?",5,1502;1505;1507;1508;1561,4,True
+Q0435,PrimateConservation,What actions can be taken at research and tourism sites to reduce the risk of disease transmission from humans to wild primates?,12,1502;1505;1507;1508;1537;1538;1539;1540;1546;1547;1548;1557,4,True
+Q0436,PrimateConservation,What are the comparative outcomes of different supplementary feeding strategies for primates?,4,1526;1527;1528;1529,4,True
+Q0437,PrimateConservation,What are the comparative outcomes of providing primates with continuous supplementary food versus providing it only during scarce periods or for a limited time?,4,1526;1527;1528;1529,4,True
+Q0438,PrimateConservation,What are the documented benefits and harms of running tourism projects focused on wild primates?,10,1502;1504;1507;1508;1512;1519;1537;1538;1539;1546,4,True
+Q0439,PrimateConservation,What are the documented outcomes of providing artificial non-food resources like nesting sites and water sources for primates?,2,1530;1531,4,True
+Q0440,PrimateConservation,What are the documented outcomes of translocating primates as a conflict management tool?,4,1422;1423;1558;1559,3,True
+Q0441,PrimateConservation,What are the effects of installing different types of bridges to mitigate road impacts on arboreal and terrestrial primates?,11,1456;1457;1458;1459;1460;1461;1462;1463;1464;1465;1466,4,True
+Q0442,PrimateConservation,What are the most effective actions for improving habitat connectivity for primates in fragmented agricultural and urban landscapes?,8,1425;1426;1456;1457;1495;1580;1581;1583,4,True
+Q0443,PrimateConservation,What are the typical outcomes when primates are reintroduced into habitats where the same species is already present?,3,1567;1589;1591,4,True
+Q0444,PrimateConservation,What is the evidence base for actions designed to reduce primate mortality and habitat fragmentation from roads and other transportation corridors?,11,1456;1457;1458;1459;1460;1461;1462;1463;1464;1465;1466,3,True
+Q0445,PrimateConservation,What is the evidence base for actions to mitigate the impacts of the mining industry on primate populations?,5,1451;1452;1453;1454;1462,4,True
+Q0446,PrimateConservation,What is the evidence base for conservation actions designed to mitigate the impacts of commercial logging on primate populations?,17,1485;1486;1487;1488;1489;1490;1491;1492;1493;1494;1495;1496;1497;1498;1499;1500;1501,4,True
+Q0447,PrimateConservation,What is the evidence for relocating 'problem' primates versus relocating primates from residential areas for conservation?,4,1422;1423;1558;1559,4,True
+Q0448,PrimateConservation,What is the evidence for the effectiveness of providing financial incentives to farmers to encourage primate conservation on agricultural land?,4,1428;1429;1434;1509,3,True
+Q0449,PrimateConservation,What is the evidence for the success of captive breeding and reintroduction programs based on the primates' rearing environment?,4,1594;1595;1596;1597,4,True
+Q0450,ShrublandandHeathlandConservation,"Apart from herbicides, what alternative interventions have been trialled to control bracken in shrublands?",10,1652;1653;1654;1655;1656;1658;1659;1660;1661;1726,3,True
+Q0451,ShrublandandHeathlandConservation,Does the effectiveness of using fences to exclude livestock from shrublands vary between different countries?,1,1545,4,True
+Q0452,ShrublandandHeathlandConservation,How do the effects of reducing or stopping livestock grazing on shrub cover vary across different countries?,1,1607,4,True
+Q0453,ShrublandandHeathlandConservation,How do the effects of using cutting or mowing to mimic grazing vary between studies in Italy and Spain?,1,1627,4,True
+Q0454,ShrublandandHeathlandConservation,"To reduce the impacts of nitrogen pollution in UK heathlands, is prescribed burning more effective than mowing?",2,1669;1670,4,True
+Q0455,ShrublandandHeathlandConservation,"To restore degraded shrublands by reintroducing plants, which methods have been found to be most beneficial?",12,1686;1697;1698;1700;1701;1702;1703;1712;1713;1714;1715;1716,4,True
+Q0456,ShrublandandHeathlandConservation,"What are the comparative effects of different methods for controlling problematic trees in shrublands, such as cutting, burning, grazing, and herbicide use?",11,1629;1630;1631;1632;1633;1634;1635;1636;1637;1721;1722,4,True
+Q0457,ShrublandandHeathlandConservation,What are the documented effects of changing the type of livestock or shortening the grazing period on shrubland vegetation?,2,1608;1609,4,True
+Q0458,ShrublandandHeathlandConservation,"What are the effects of various soil amendments, such as adding mulch, fertilizer, or manure, when restoring shrublands?",12,1686;1687;1691;1694;1695;1704;1705;1706;1707;1708;1710;1857,4,True
+Q0459,ShrublandandHeathlandConservation,What are the most beneficial interventions for encouraging shrubland recovery after a fire?,3,1679;1686;1698,4,True
+Q0460,ShrublandandHeathlandConservation,What are the most beneficial interventions for restoring shrubland vegetation after a fire?,4,1679;1686;1698;1703,3,True
+Q0461,ShrublandandHeathlandConservation,"What interventions are available for controlling trees in South African shrublands, and what does the evidence say about their effects on overall plant communities?",5,1629;1630;1632;1636;1637,2,True
+Q0462,ShrublandandHeathlandConservation,What is the evidence for the effectiveness of creating corridors or buffer zones to mitigate the impacts of roads on shrublands?,6,1543;1610;1617;1618;1665;1677,4,True
+Q0463,ShrublandandHeathlandConservation,What is the state of the evidence for using physical barriers or deterrents to reduce disturbance from people in shrublands?,4,1613;1619;1620;1621,4,True
+Q0464,ShrublandandHeathlandConservation,What is the state of the evidence for using signs or barriers to reduce human impacts like gathering or disturbance in shrublands?,5,1612;1613;1619;1620;1621,4,True
+Q0465,ShrublandandHeathlandConservation,"What is the state of the evidence regarding creating or maintaining habitat corridors to mitigate the effects of human development, transportation, or energy production in shrublands?",4,1543;1610;1617;1677,4,True
+Q0466,ShrublandandHeathlandConservation,"What management techniques have been evaluated for controlling bracken in shrublands, and what are their effects on heather?",10,1652;1653;1654;1655;1656;1658;1659;1660;1661;1726,4,True
+Q0467,ShrublandandHeathlandConservation,"What techniques involving the addition of materials to soil have been studied for restoring degraded shrublands, and what were their outcomes?",12,1686;1687;1691;1694;1695;1704;1705;1706;1707;1708;1710;1857,3,True
+Q0468,ShrublandandHeathlandConservation,"When attempting to control problematic grass in UK shrublands, how does mowing compare to stripping turf?",5,1638;1641;1647;1648;1685,4,True
+Q0469,ShrublandandHeathlandConservation,"When managing tree encroachment in UK shrublands, how does cutting trees and applying herbicide compare with just cutting the trees?",2,1630;1636,4,True
+Q0470,ShrublandandHeathlandConservation,"When restoring shrubland vegetation, what are the comparative effects of sowing seeds versus planting turf?",4,1697;1698;1700;1703,4,True
+Q0471,ShrublandandHeathlandConservation,"When trying to control bracken in UK heathlands, how does using herbicide alone compare to cutting, or a combination of both?",10,1652;1653;1654;1655;1656;1658;1659;1660;1661;1726,4,True
+Q0472,ShrublandandHeathlandConservation,Which interventions aimed at restoring degraded shrublands by manipulating soil and reintroducing plants have shown the most beneficial outcomes?,9,1685;1686;1697;1698;1700;1701;1703;1711;1857,4,True
+Q0473,SoilFertility,"Besides using crop rotation, what other actions can increase the biodiversity of soil organisms?",15,744;887;888;895;897;898;899;902;903;904;905;906;907;910;911,3,True
+Q0474,SoilFertility,How do the effects of amending soil with fresh plant material compare to retaining crop residues in the field?,2,907;910,4,True
+Q0475,SoilFertility,How do the effects of amending soil with municipal wastes compare to using organic processing wastes?,2,890;891,4,True
+Q0476,SoilFertility,How do the effects of cover crops on soil organic matter differ between studies in Europe and the USA?,2,897;898,4,True
+Q0477,SoilFertility,How do the effects of growing cover crops between crop rows compare to growing them when a field is empty?,2,897;898,4,True
+Q0478,SoilFertility,How do the effects of retaining crop residues on-site compare with incorporating plant material brought from elsewhere?,2,907;910,4,True
+Q0479,SoilFertility,"On sandy loam soils, how do the effects of amending with municipal waste compost compare to amending with organic processing waste composts?",2,890;891,4,True
+Q0480,SoilFertility,What actions can be taken on European farms with sandy-loam soils to improve soil structure?,9,712;744;887;891;898;899;906;910;911,4,True
+Q0481,SoilFertility,What are the benefits and drawbacks of different tillage practices on sandy loam soils in Europe?,3,712;899;906,3,True
+Q0482,SoilFertility,What are the comparative effects of using green manures versus cover crops on soil organic carbon and crop yield?,2,898;908,4,True
+Q0483,SoilFertility,What are the documented benefits and drawbacks of using crop rotation on farms in Canada?,1,857,4,True
+Q0484,SoilFertility,What are the documented benefits and harms of adopting reduced tillage systems on European farms?,2,712;906,4,True
+Q0485,SoilFertility,What are the effects of incorporating hedgerows or tree lines into agricultural land?,2,744;903,4,True
+Q0486,SoilFertility,What are the effects of incorporating leys or grasslands into arable farming systems in Europe?,2,900;905,4,True
+Q0487,SoilFertility,What are the effects of reducing physical disturbance from machinery on agricultural soils?,2,899;906,3,True
+Q0488,SoilFertility,"What conservation actions have evidence from Canada for improving soil health, particularly biodiversity and organic matter?",7,857;887;895;906;907;910;911,4,True
+Q0489,SoilFertility,What does the evidence from the USA indicate about the effect of different agricultural practices on crop yields?,5,895;898;899;906;907,3,True
+Q0490,SoilFertility,What evidence exists from studies in the USA regarding the impact of cover crops and crop residue management on crop yields?,2,898;907,4,True
+Q0491,SoilFertility,What evidence is available from studies in the UK on how soil amendments affect nutrient loss?,7,887;890;891;893;909;910;911,4,True
+Q0492,SoilFertility,What is the available evidence on how incorporating grass or pasture into arable systems affects soil nutrients?,3,900;901;905,4,True
+Q0493,SoilFertility,What is the evidence for actions that reduce nutrient loss from sandy-loam soils?,6,712;891;893;900;902;909,4,True
+Q0494,SoilFertility,Which are the most consistently beneficial actions for increasing microbial biomass in soil?,13,857;888;889;895;897;898;899;902;905;906;907;910;911,3,True
+Q0495,SoilFertility,Which soil management practices are most consistently beneficial for increasing soil organic carbon?,10,857;895;898;902;905;906;907;908;910;911,3,True
+Q0496,SustainableAquaculture,"Based on studies in Australia, which husbandry practices have shown mixed or limited success in managing diseases and environmental impacts from salmon farming?",6,1026;739;742;930;937;945,4,True
+Q0497,SustainableAquaculture,"Beyond growth rates, what other biological effects have been observed in salmon fed diets with krill or plant-based proteins instead of fish meal?",4,732;916;924;926,4,True
+Q0498,SustainableAquaculture,"How do different non-chemical water-based treatments, such as fallowing and freshwater bathing, compare in their reported effectiveness for specific diseases in salmon?",2,1026;739,4,True
+Q0499,SustainableAquaculture,"How do krill, yeast, and animal protein alternatives to fishmeal compare in their effect on Atlantic salmon growth?",3,916;920;922,4,True
+Q0500,SustainableAquaculture,How do physical interventions like aerobic training and altering cage size affect the health and survival of farmed Atlantic salmon?,2,740;742,4,True
+Q0501,SustainableAquaculture,How do plant-based and bacterial protein alternatives to fish meal compare in terms of their effect on Atlantic salmon growth rates in Norway?,6,915;916;918;920;922;924,4,True
+Q0502,SustainableAquaculture,How does the effectiveness of fallowing salmon farm cages for disease control vary between studies in Scotland and Australia?,1,1026,4,True
+Q0503,SustainableAquaculture,"In Norway, how do different plant-based feed alternatives, such as vegetable oils versus plant proteins, affect salmon growth and body composition?",2,924;926,4,True
+Q0504,SustainableAquaculture,"What actions are available to manage the waste products, such as excess nutrients and sludge, from salmon aquaculture operations?",5,1027;932;934;943;945,4,True
+Q0505,SustainableAquaculture,"What are the comparative effects on Atlantic salmon weight when substituting fishmeal with krill, yeast, or other animal-based proteins?",6,915;916;918;920;922;924,4,True
+Q0506,SustainableAquaculture,What are the documented effects of using plant-based proteins in salmon feed in aquaculture operations in Norway and Scotland?,2,732;924,4,True
+Q0507,SustainableAquaculture,"What are the documented effects, both positive and negative, of replacing fish meal with plant-based proteins in Atlantic salmon diets?",2,732;924,4,True
+Q0508,SustainableAquaculture,"What are the documented outcomes of using genetic selection or manipulation, such as breeding for disease resistance or inducing triploidy, in salmon aquaculture?",2,735;939,4,True
+Q0509,SustainableAquaculture,"What are the effects of altering the physical environment of salmon cages, such as their size or lighting, on salmon health in aquaculture?",2,741;742,3,True
+Q0510,SustainableAquaculture,What are the non-chemical alternatives for controlling sea lice on salmon farms?,4,1026;732;738;741,4,True
+Q0511,SustainableAquaculture,What are the observed effects on salmon growth and flesh quality when replacing fish oil with plant-based or other animal-based oils in their diet?,2,922;926,4,True
+Q0512,SustainableAquaculture,"What does the evidence say about using probiotics, immunostimulants, or specific training to improve salmon survival against diseases?",2,732;740,4,True
+Q0513,SustainableAquaculture,What factors influence the success of non-pesticide methods for controlling sea lice on salmon farms?,3,732;738;741,4,True
+Q0514,SustainableAquaculture,What is the evidence from Australian studies on the effectiveness of different husbandry practices for managing Amoebic Gill Disease in farmed salmon?,3,1026;739;742,4,True
+Q0515,SustainableAquaculture,What is the evidence from European studies for using vaccinations or probiotics to improve the survival rates of farmed Atlantic salmon?,2,732;733,4,True
+Q0516,SustainableAquaculture,What is the evidence from studies in Norway for using alternative feed components in Atlantic salmon diets?,9,732;915;916;918;920;924;926;928;930,4,True
+Q0517,SustainableAquaculture,What is the evidence from studies in Norway regarding the effectiveness of non-dietary interventions for improving farmed Atlantic salmon health and survival?,6,1026;732;733;735;740;741,4,True
+Q0518,SustainableAquaculture,What is the evidence regarding the effect of using genetically modified ingredients or dietary supplements on the growth of Atlantic salmon?,2,928;930,4,True
+Q0519,SustainableAquaculture,What is the evidence that integrated aquaculture systems or constructing artificial reefs can mitigate the environmental impacts of salmon farms?,3,1027;932;934,4,True
+Q0520,SustainableAquaculture,What methods are available to control disease and sea lice in Atlantic salmon farms?,9,1026;732;733;735;738;739;740;741;742,4,True
+Q0521,SustainableAquaculture,What non-chemical methods can be used to manage pests and biofouling on salmon farms?,5,1026;732;738;741;937,3,True
+Q0522,SustainableAquaculture,Which dietary alternatives or supplements to traditional fish meal have been shown to have no negative impact on Atlantic salmon growth or weight?,9,915;916;918;920;922;924;926;928;930,4,True
+Q0523,SustainableAquaculture,Which interventions appear most effective for increasing the survival rates of farmed salmon exposed to disease?,5,732;733;735;740;924,4,True

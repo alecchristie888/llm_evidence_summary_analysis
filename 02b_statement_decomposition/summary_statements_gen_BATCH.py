@@ -1,0 +1,897 @@
+# STATEMENT EXTRACTION functions (get_statements_prompt and parse_statements_response) copied heavily from "Evaluation of RAG Metrics for Question Answering in the Telecom Domain" paper
+import os
+import json
+import shutil
+import logging
+import re
+from dotenv import load_dotenv
+from openai import OpenAI
+from google import genai
+from google.genai import types
+
+import nltk
+for resource in ["punkt", "punkt_tab"]:
+    nltk.download(resource, quiet=True)
+from nltk.tokenize import sent_tokenize
+
+from utils.action_parsing import ActionParsingContext, get_parsed_action_by_id, get_parsed_action_as_str
+from utils.exceptions import RetrievalError
+
+load_dotenv()
+
+
+
+### GEMINI BATCH ENDPOINT CALLING:
+
+
+def get_genai_client():
+    api_key = os.getenv("PAID_GEMINI_API_KEY")
+    if not api_key:
+        raise ValueError("PAID_GEMINI_API_KEY environment variable is required for Gemini client for evaluation generation")
+    return genai.Client(
+        api_key=api_key
+    )
+
+
+def append_to_gemini_batch_file(batch_filepath, key, prompt, response_format=None, max_reasoning_tokens=8192):
+    request_body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+    }
+    if response_format is not None:
+        config = types.GenerateContentConfig(
+            thinking_config=types.ThinkingConfig(thinking_budget=max_reasoning_tokens),
+            response_mime_type="application/json",
+            response_schema=response_format
+        )
+    else:
+        config = types.GenerateContentConfig(
+            thinking_config=types.ThinkingConfig(thinking_budget=max_reasoning_tokens),
+        )
+
+    if hasattr(config, 'to_dict'):
+        request_body["generation_config"] = config.to_dict()
+    elif hasattr(config, 'to_json'):
+        request_body["generation_config"] = json.loads(config.to_json())
+    else:
+        plain_config = {
+            "thinking_config": {"thinking_budget": max_reasoning_tokens}
+        }
+        if response_format is not None:
+            plain_config.update({
+                "response_mime_type": "application/json",
+                "response_schema": response_format
+            })
+        request_body["generation_config"] = plain_config
+    
+    request_obj = {
+        "key": key,
+        "request": request_body
+    }
+
+    if not batch_filepath.endswith(".jsonl"):
+        raise ValueError("Gemini batch endpoint only supports .jsonl files currently.")
+    os.makedirs(os.path.dirname(batch_filepath), exist_ok=True)
+    with open(batch_filepath, 'a') as f:
+        f.write(json.dumps(request_obj) + "\n")
+    logging.debug(f"Wrote Gemini batch request with custom id {key} to file {batch_filepath}.")
+
+
+def make_gemini_batch_request(batch_filepath, judge_model="models/gemini-2.5-pro"):
+    if not batch_filepath.endswith(".jsonl"):
+        raise ValueError("Gemini batch endpoint must be given .jsonl file type.")
+    
+    normalised_filepath = os.path.normpath(batch_filepath)
+    filepath_parts = normalised_filepath.split(os.sep)
+    batch_filepath_cleaned = "--".join(filepath_parts)
+
+    client = get_genai_client()
+    uploaded_file = client.files.upload(
+        file=batch_filepath,
+        config=types.UploadFileConfig(display_name=batch_filepath_cleaned.replace(".jsonl", ""), mime_type="jsonl")
+    )
+    file_batch_job = client.batches.create(
+        model = judge_model,
+        src = uploaded_file.name,
+        config = {
+            'display_name': f"file-batch-job {batch_filepath_cleaned}",
+        }
+    )
+    logging.info(f"Created Gemini batch job: {file_batch_job.name}")
+    return file_batch_job
+
+
+def check_gemini_batch_status(batch_job_name):
+    client = get_genai_client()
+    batch_job = client.batches.get(name=batch_job_name)
+    return batch_job.state
+
+
+# Prepends new batch results to output file (file containing results of previous batches)
+def prepend_gemini_batch_results(batch_job_name, output_filepath):
+    batch_job_completed = False
+    batch_job_successful = False
+    client = get_genai_client()
+    batch_job = client.batches.get(name=batch_job_name)
+    completed_states = [
+        'JOB_STATE_SUCCEEDED',
+        'JOB_STATE_FAILED',
+        'JOB_STATE_CANCELLED',
+        'JOB_STATE_EXPIRED'
+    ]
+    if batch_job.state.name == 'JOB_STATE_SUCCEEDED':
+        logging.info(f"Batch job {batch_job.name} completed successfully.")
+
+        result_file_name = batch_job.dest.file_name
+        logging.debug(f"Results are in (uploaded) file: {result_file_name}")
+
+        logging.debug("Downloading result file content...")
+        file_content = client.files.download(file=result_file_name)
+        text_content = file_content.decode('utf-8')
+
+        # Prepend new batch result to output file
+        existing_content = ""
+        if os.path.exists(output_filepath):
+            with open(output_filepath, 'r', encoding='utf-8') as f:
+                existing_content = f.read()
+        os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
+        with open(output_filepath, 'w', encoding='utf-8') as f:
+            f.write(text_content + existing_content)
+        batch_job_completed = True
+        batch_job_successful = True
+    
+    elif batch_job.state.name in completed_states:
+        logging.warning(f"Batch job {batch_job.name} completed with state: {batch_job.state.name}.")
+        batch_job_completed = True
+        batch_job_successful = False
+
+    else:
+        logging.info(f"Batch job not completed successfully. Current state: {batch_job.state.name}")
+        batch_job_completed = False
+        batch_job_successful = False
+
+    return batch_job_completed, batch_job_successful
+
+
+def check_num_open_gemini_batch_jobs():
+    client = get_genai_client()
+    open_states = set([
+        'JOB_STATE_PENDING',
+        'JOB_STATE_RUNNING',
+        'JOB_STATE_QUEUED',
+    ])
+    batch_jobs = client.batches.list(config={"page_size": 10})
+    open_jobs = [job for job in batch_jobs if job.state.name in open_states]
+    num_open_jobs = len(open_jobs)
+    return num_open_jobs
+
+
+
+### STATEMENT EXTRACTION.
+
+
+def get_statements_prompt(question, answer):
+    ## RAGAS statement splitting prompt:
+    # prompt = f"""
+    #     Given a question and answer, create one or more statements from each sentence in the given answer. Output the statements in the following format strictly. [Statement n]: ... where the n is the statement number.\nquestion: {question}\nanswer: {answer}\nStatements:\n
+    # """.strip()
+
+    ## Own prompt:
+    prompt = f"""
+Given a question and answer, create one or more statements from each sentence in the given answer. The answer will likely have references of numerical document ids especially at the end of sentences - YOU MUST NOT MENTION THESE REFERENCES OR NUMERICAL IDS IN ANY OF THE STATEMENTS YOU EXTRACT. Each statement should be fully understandable by itself, which means it needs to be self-contained. This means there should be no pronouns in the statements. Output the statements in the following format strictly. [Statement n]: ... where the n is the statement number.\nquestion: {question}\nanswer: {answer}\nStatements:\n
+    """.strip()
+    return prompt
+
+    
+def parse_statements_response(response):
+    # Splitting statements
+    response = re.sub(
+        r"^.*?[0-9]+\]*[:\.]\s(.*?)", r"\1", response, flags=re.MULTILINE
+    ).strip()
+    statements = sent_tokenize(response)
+    return statements
+
+
+
+### UTILITY FUNCTIONS
+
+def format_batch_job_key(summary_provider, summary_model, query):
+    return f"{parse_provider_name(summary_provider)}_{parse_model_name(summary_model)}__{query}"
+
+
+def assemble_summary_stmts(summary_obj, statements, summary_statements_model):
+    question_details = {
+        "query": summary_obj["query"],
+        "all_relevant_qu_ids" : summary_obj["all_relevant_action_ids"],
+        "regenerated_qu_ids": summary_obj["regenerated_ids"]
+    }
+    summary_details = {
+        "summary_model": summary_obj["model"],
+        "summary_provider": summary_obj["provider"],
+        "relevant_summary": summary_obj["relevant_summary"],
+        "summary_action_ids": summary_obj["summary_action_ids"],
+        "summary_statements_model": summary_statements_model,
+        "summary_statements": statements,
+    }
+    return {
+        "question_details": question_details,
+        "summary_details": summary_details
+    }
+
+
+def parse_model_name(model):
+    model_split = model.split("/")
+    model_name = model_split[-1]
+    cleaned_name = ""
+    for char in model_name:
+        if char.isalnum():
+            cleaned_name += char
+        else:
+            cleaned_name += "-"
+    return cleaned_name
+
+
+def parse_provider_name(provider):
+    if provider is not None:
+        provider_split = provider.split("/")
+        provider_name = provider_split[0]
+        return provider_name
+    else:
+        return ""
+
+
+def read_json_file(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        if not isinstance(data, list):
+            raise RetrievalError(f"Expected JSON file {filepath} to contain a list, but contained {type(data)} instead.")
+        else:
+            logging.debug(f"Loaded json from {filepath}, found {len(data)} objects.")
+            return data
+    except json.JSONDecodeError as e:
+        raise RetrievalError(f"Error decoding JSON from file {filepath}: {str(e)}.")
+    except FileNotFoundError:
+        raise RetrievalError(f"File {filepath} not found.")
+
+
+def write_to_json_file(data_list, filepath):
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data_list, f, indent=2, ensure_ascii=False)
+    except TypeError as e:
+        logging.error(f"Error writing to JSON file {filepath}: {str(e)}.")
+        raise
+
+
+def append_to_json_file(data_list, filepath):
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    if not os.path.exists(filepath):
+        existing_data = []
+    else:
+        try:
+            existing_data = read_json_file(filepath)
+        except RetrievalError as e:
+            raise RetrievalError(f"Error reading existing JSON from file {filepath}: {str(e)}. Cannot append to file.")
+    combined_data = existing_data + data_list
+    write_to_json_file(data_list=combined_data, filepath=filepath)
+
+
+def read_jsonl_file(filepath):
+    data_list = []
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.strip():  # Skip empty lines
+                    try:
+                        data = json.loads(line)
+                        data_list.append(data)
+                    except json.JSONDecodeError as e:
+                        raise RetrievalError(f"Error decoding JSON line in file {filepath}: {str(e)}. Line content: {line}")
+        return data_list
+    except FileNotFoundError:
+        raise RetrievalError(f"File {filepath} not found.")
+
+
+
+### BATCH REQUEST FILES CREATION
+
+
+def make_summary_stmts_batch_request_file_for_file(summaries_filepath, batch_results_filepath):
+    try:
+        summary_dicts = read_json_file(summaries_filepath)
+    except RetrievalError as e:
+        logging.error(f"Unable to load summaries from file {summaries_filepath} to create batch request file (summary statement generation): {e}")
+        return
+        
+    requests = []
+
+    try:
+        summary_count = 0
+        for current_summary_idx, summary_dict in enumerate(summary_dicts):
+            if summary_dict["relevant_summary"] is None:
+                logging.warning(f"Skipping summary to query {summary_dict['query']} in file {summaries_filepath} as it has None summary.")
+                continue
+
+            gen_summary_stmts_request_made = summary_dict.get("gen_summary_stmts_request_made", False)
+
+            if not gen_summary_stmts_request_made: # request to generate summary statements has not been made yet, so we make it now
+                query = summary_dict["query"]
+                summary_model = summary_dict["model"]
+                summary_provider = summary_dict["provider"]
+                relevant_summary = summary_dict["relevant_summary"]
+
+                logging.info(f"Creating request to generate statements for summary generated by model: {summary_model} and provider: {summary_provider} to query: {query}")
+                statement_gen_prompt = get_statements_prompt(question=query, answer=relevant_summary)
+                key = format_batch_job_key(summary_provider=summary_provider, summary_model=summary_model, query=query)
+                requests.append((key, statement_gen_prompt))
+                summary_dicts[current_summary_idx]["gen_summary_stmts_request_made"] = True
+                summary_count += 1
+        
+    finally:
+        logging.info(f"Done creating requests for summary file {summaries_filepath}, summary_count: {summary_count}")
+    
+        if summary_count > 0:
+            # write the new requests to batch request file
+            for key, prompt in requests:
+                append_to_gemini_batch_file(batch_filepath=batch_results_filepath, key=key, prompt=prompt)
+            logging.info(f"Wrote {summary_count} Gemini batch requests to batch request file {batch_results_filepath}.")
+
+            # overwrite the summaries file (to record the updated gen_summary_stmts_request_made fields)
+            write_to_json_file(data_list=summary_dicts, filepath=summaries_filepath)
+            logging.info(f"Updated summaries file {summaries_filepath} gen_summary_stmts_request_made fields.")
+            
+        else:
+            logging.info(f"No batch request file made for file {summaries_filepath}.")
+
+
+def make_summary_stmts_batch_request_files_for_dir(qu_type, filter_stage, retrieval_type, cleaned_summary_model_provider):
+    summaries_dir = os.path.join("live_summaries",f"{qu_type}_{filter_stage}_qus_summaries", retrieval_type, cleaned_summary_model_provider, "stmt_gen_annotated")
+    batch_request_dir = os.path.join("batch_gen", "stmt_gen", "unrequested", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{cleaned_summary_model_provider}")
+    if not os.path.exists(summaries_dir):
+        logging.error(f"Summaries directory {summaries_dir} does not exist.")
+        return
+    else:
+        logging.info(f"Starting creation of batch files (requests) for summary statement generation: for summaries in directory {summaries_dir}")
+        summaries_filenames = [name for name in sorted(os.listdir(summaries_dir)) if name.endswith(".json")]
+
+        for summaries_filename in summaries_filenames:
+            batch_request_filename = summaries_filename.replace("summaries.json", "_StmtGenRequest.jsonl")
+            make_summary_stmts_batch_request_file_for_file(
+                summaries_filepath = os.path.join(summaries_dir, summaries_filename),
+                batch_results_filepath=os.path.join(batch_request_dir, batch_request_filename)
+            )
+
+
+def make_summary_stmts_batch_request_files_all(
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        answering_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ]
+    ):
+    for qu_type in qu_types:
+        for filter_stage in filter_stages:
+            for retrieval_type in retrieval_types:
+                for answering_model_provider in answering_model_providers:
+                    make_summary_stmts_batch_request_files_for_dir(
+                        qu_type=qu_type,
+                        filter_stage=filter_stage,
+                        retrieval_type=retrieval_type,
+                        cleaned_summary_model_provider=answering_model_provider
+                    )
+
+
+
+### SENDING BATCH REQUESTS
+
+
+def send_batch_requests(
+        max_batch_requests=None,
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        answering_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ]
+    ):
+    api_open_requests_limit = 100
+    api_limit_hit = False
+    max_batch_requests_hit = False
+    batch_requests_made = 0
+    for qu_type in qu_types:
+        for filter_stage in filter_stages:
+            for retrieval_type in retrieval_types:
+                for answering_model_provider in answering_model_providers:
+
+                    unrequested_dir = os.path.join("batch_gen", "stmt_gen", "unrequested", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{answering_model_provider}")
+                    requested_dir = os.path.join("batch_gen", "stmt_gen", "requested", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{answering_model_provider}")
+                    
+                    try:
+                        batch_names_for_files = read_json_file(os.path.join(requested_dir, "batch_job_names.json"))
+                    except RetrievalError:
+                        batch_names_for_files = []
+                    
+                    if not os.path.exists(unrequested_dir):
+                        logging.info(f"Unrequested batch requests directory {unrequested_dir} not found, skipping sending batch requests.")
+                        continue
+                    for filename in os.listdir(unrequested_dir):
+                        if filename.endswith(".jsonl"):
+                            unrequested_batch_filepath = os.path.join(unrequested_dir, filename)
+                            requested_batch_filepath = os.path.join(requested_dir, filename)
+
+                            if max_batch_requests is None or batch_requests_made < max_batch_requests:
+                                if check_num_open_gemini_batch_jobs() < api_open_requests_limit:
+                                    batch_job = make_gemini_batch_request(batch_filepath=unrequested_batch_filepath)
+                                    batch_requests_made += 1
+                                    logging.info(f"Sent Gemini batch request for file {unrequested_batch_filepath}, job name: {batch_job.name}")
+                                    os.makedirs(os.path.dirname(requested_batch_filepath), exist_ok=True)
+                                    shutil.move(unrequested_batch_filepath, requested_batch_filepath)# if batch for this summaries file was previously requested (and therefore in the batch/gen/stmt_gen/requested dir), this will be overwritten with the new batchfile 
+                                    logging.info(f"Moved 'unrequested' batch file {filename} to 'requested' directory.")
+
+                                    # prepending new entry to start of list, so that if an older batch for the same summaries file exists, 
+                                        # it will not be found first when searching through the list.
+                                    batch_names_for_files.insert(0, {"batch_filepath": requested_batch_filepath, "batch_job_name": batch_job.name})
+                                    logging.info(f"Added new batch mapping for file {requested_batch_filepath}, job name: {batch_job.name}")
+                                
+                                else:
+                                    api_limit_hit = True
+                                    break
+                            else:
+                                max_batch_requests_hit = True
+                                break
+                    if batch_requests_made > 0:
+                        write_to_json_file(data_list=batch_names_for_files, filepath=os.path.join(requested_dir, "batch_job_names.json"))
+                    if max_batch_requests_hit:
+                        logging.info(f"Reached max batch requests limit of {max_batch_requests}, stopping sending more batch requests.")
+                        return
+                    elif api_limit_hit:
+                        logging.warning("Reached 100 open Gemini batch jobs, stopping sending more batch requests for now.")
+                        return
+
+
+
+### RECEIVING BATCH RESULTS
+
+
+def receive_batch_results(
+        max_batch_checks=None,
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        answering_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ]
+    ):
+    max_batch_checks_hit = False
+    batch_checks_made = 0
+    for qu_type in qu_types:
+        for filter_stage in filter_stages:
+            for retrieval_type in retrieval_types:
+                for answering_model_provider in answering_model_providers:
+                    
+                    requested_batch_job_names_filepath = os.path.join("batch_gen", "stmt_gen", "requested", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{answering_model_provider}", "batch_job_names.json") 
+                    if os.path.exists(requested_batch_job_names_filepath):
+                        requested_batch_job_names = read_json_file(requested_batch_job_names_filepath)
+                    else:
+                        # batch job names file does not existing for this subdir,
+                        #   indicating that there are no requested batch jobs for this subdir (i.e for this configuration of parameters)
+                        continue
+
+                    for job_details in requested_batch_job_names:
+                        batch_job_completed = job_details.get("batch_job_completed", False)
+                        if not batch_job_completed:
+                            if max_batch_checks is None or batch_checks_made < max_batch_checks:
+                                batch_job_name = job_details["batch_job_name"]
+                                batch_request_filepath = job_details["batch_filepath"]
+                                output_filepath = batch_request_filepath.replace("requested", "results").replace("_StmtGenRequest.jsonl", "_StmtGenResults.jsonl")
+                                completed, successful = prepend_gemini_batch_results(batch_job_name=batch_job_name, output_filepath=output_filepath)
+                                if completed:
+                                    job_details["batch_job_completed"] = True
+                                    if successful:
+                                        job_details["batch_job_successful"] = True
+                                        logging.info(f"Wrote Gemini batch results for job {batch_request_filepath} to file {output_filepath}")
+                                    else:
+                                        job_details["batch_job_successful"] = False
+                                        logging.warning(f"Gemini batch job {batch_request_filepath} completed but was not successful.")
+                                else:
+                                    job_details["batch_job_completed"] = False
+                                batch_checks_made += 1
+                            else:
+                                max_batch_checks_hit = True
+                                break
+                    
+                    # overwrite the "batch_job_completed" and "batch_job_successful" fields for jobs in the batch_job_names json file
+                    write_to_json_file(data_list=requested_batch_job_names, filepath=requested_batch_job_names_filepath)
+                    if max_batch_checks_hit:
+                        logging.info(f"Reached max batch checks limit of {max_batch_checks}, stopping obtaining results for more batch jobs.")
+                        return
+    if not max_batch_checks_hit:
+        logging.info("Finished checking all batch jobs for results.")
+
+
+
+### PROCESSING BATCH RESULTS (STORING GENERATED SUMMARY STATEMENTS)
+
+
+def process_batch_results_for_file(
+        summaries_filepath, 
+        statements_filepath, 
+        batch_results_filepath,
+        batch_requests_filepath, 
+        batch_job_names_filepath, 
+    ):
+    try:
+        summary_dicts = read_json_file(summaries_filepath)
+    except RetrievalError as e:
+        logging.error(f"Unable to load summaries (for recording batch results) from file {summaries_filepath}: {e}")
+        return
+
+    try:
+        batch_results = read_jsonl_file(batch_results_filepath)
+    except RetrievalError as e:
+        logging.warning(f"Unable to load batch results from file {batch_results_filepath}: {e}")
+        return
+    
+    try:
+        batch_job_names = read_json_file(batch_job_names_filepath)
+    except RetrievalError as e:
+        logging.error(f"Unable to load batch job names from file {batch_job_names_filepath}: {e}")
+        return
+
+    try:
+        statement_dicts = read_json_file(statements_filepath)
+    except RetrievalError as e:
+        logging.warning(f"Unable to load existing statements from file {statements_filepath}: {e}. Will create new statements file.")
+        statement_dicts = []
+
+    summaries_processed_count = 0
+    try:
+        for summary_dict in summary_dicts:
+            if summary_dict["relevant_summary"] is None:
+                logging.warning(f"Skipping summary to query {summary_dict['query']} in file {summaries_filepath} as it has None summary.")
+                continue
+
+            gen_summary_stmts_received = summary_dict.get("gen_summary_stmts_received", False)
+
+            if not gen_summary_stmts_received:
+                query = summary_dict["query"]
+                summary_model = summary_dict["model"]
+                summary_provider = summary_dict["provider"]
+                relevant_summary = summary_dict["relevant_summary"]
+
+                logging.info(f"Getting batch results (statement gen request) for summary generated by model: {summary_model} and provider: {summary_provider} to query: {query}")
+
+                # check if the (most recent) batch job corresponding to this batch_job_filepath has completed successfully:
+                batch_job_exists = False
+                batch_job_completed = False
+                batch_job_successful = False
+                for job_details in batch_job_names:
+                    if job_details["batch_filepath"] == batch_requests_filepath:
+                        batch_job_exists = True
+                        batch_job_completed = job_details.get("batch_job_completed", False)
+                        batch_job_successful = job_details.get("batch_job_successful", False)
+                        break
+
+                if not batch_job_exists:
+                    logging.warning(f"No batch job found for file {batch_requests_filepath}. Cannot process batch results for summary to query {query} in file {summaries_filepath}.")
+                    continue
+                elif not batch_job_completed: # batch job exists but not completed
+                    logging.info(f"Skipping processing batch results for summary to query {query} in file {summaries_filepath} as the corresponding batch job for file {batch_requests_filepath} has not completed yet.")
+                    continue
+                elif not batch_job_successful: # batch job exists and completed but was not successful
+                    logging.warning(f"While processing batch results, found that batch job for file {batch_requests_filepath} completed UNSUCCESSFULLY. Resetting gen_summary_stmts_request_made and gen_summary_stmts_received flags to False for summary to query {query} in file {summaries_filepath}")
+                    # Reset the gen_summary_stmts_request_made field to False so that statement generation for this summary can be requested again.
+                    summary_dict["gen_summary_stmts_request_made"] = False
+                    summary_dict["gen_summary_stmts_received"] = False
+                    continue
+                
+                # the batch job exists, has completed and was successful.
+
+                # find the batch result corresponding to this summary (by key)
+                batch_job_key = format_batch_job_key(summary_provider=summary_provider, summary_model=summary_model, query=query)
+                batch_result_found = False
+                result_statements = None
+                summary_stmts_model = None
+                for batch_result in batch_results:
+                    if batch_result["key"] == batch_job_key:
+                        batch_result_found = True
+                        llm_output = batch_result["response"]["candidates"][0]["content"]["parts"][0]["text"]
+                        summary_stmts_model = batch_result["response"]["modelVersion"]
+                        # parse statements from response text
+                        result_statements = parse_statements_response(response=llm_output)
+                        break
+
+                if not batch_result_found:# this condition should not happen given that the batch job exists and has completed successfully
+                    logging.error(f"Batch job recorded as having completed successfully but no batch result found for key {batch_job_key} in file {batch_results_filepath}. Resetting gen_summary_stmts_request_made and gen_summary_stmts_received flags to False for this summary.")
+                    # Reset the gen_summary_stmts_request_made field to False so that statement generation for this summary can be requested again.
+                    summary_dict["gen_summary_stmts_request_made"] = False
+                    summary_dict["gen_summary_stmts_received"] = False
+                    continue
+                elif not result_statements:
+                    logging.error(f"No valid statements parsed from response text for key {batch_job_key} in file {batch_results_filepath}. Resetting gen_summary_stmts_request_made and gen_summary_stmts_received flags to False for this summary.")
+                    # Reset the gen_summary_stmts_request_made field to False so that statement generation for this summary can be requested again.
+                    summary_dict["gen_summary_stmts_request_made"] = False
+                    summary_dict["gen_summary_stmts_received"] = False
+                    continue
+
+                # valid statements parsed from llm response text in batch result object in batch results file.
+
+                # find corresponding statement dict if it exists
+                statement_dict_found = False
+                for statement_dict in statement_dicts:
+                    if statement_dict["question_details"]["query"] == query and statement_dict["summary_details"]["relevant_summary"] == relevant_summary:
+                        statement_dict_found = True
+                        # update it to store the generated summary statements
+                        statement_dict["summary_details"]["summary_statements_model"] = summary_stmts_model
+                        statement_dict["summary_details"]["summary_statements"] = result_statements
+                        summary_dict["gen_summary_stmts_received"] = True
+                        summaries_processed_count += 1
+                        logging.info(f"Updated existing statements for summary to query {query} in statements file {statements_filepath}.")
+                        break
+                # if corresponding statement dict does not exist, create a new one and append it to the list of statement_dicts
+                if not statement_dict_found:
+                    new_statements_dict = assemble_summary_stmts(summary_obj=summary_dict, statements=result_statements, summary_statements_model=summary_stmts_model)
+                    statement_dicts.append(new_statements_dict)
+                    summary_dict["gen_summary_stmts_received"] = True
+                    summaries_processed_count += 1
+                    logging.info(f"Appended new statements for summary to query {query} in statements file {statements_filepath}.")
+
+    finally:
+        logging.info(f"Done processing batch results for summary file {summaries_filepath}")
+        if summaries_processed_count > 0:
+            # overwrite the statements file
+            write_to_json_file(data_list=statement_dicts, filepath=statements_filepath)
+            logging.info(f"Wrote/updated {summaries_processed_count} statements to statements file {statements_filepath}.")
+        else:
+            logging.info(f"No batch results processed for file {summaries_filepath}.")
+
+        # overwrite the summaries file (it will contain the updated (gen_summary_stmts_request_made and) gen_summary_stmts_received field)
+        write_to_json_file(data_list=summary_dicts, filepath=summaries_filepath)
+        logging.info(f"Updated summaries file {summaries_filepath} (gen_summary_stmts_request_made and) gen_summary_stmts_received fields.")
+
+    
+def process_batch_results_for_dir(qu_type, filter_stage, retrieval_type, cleaned_summary_model_provider):
+    summaries_dir = os.path.join("live_summaries",f"{qu_type}_{filter_stage}_qus_summaries", retrieval_type, cleaned_summary_model_provider, "stmt_gen_annotated")
+    statements_dir = os.path.join("live_summaries",f"{qu_type}_{filter_stage}_qus_summaries", retrieval_type, cleaned_summary_model_provider, "stmts")
+    batch_results_dir = os.path.join("batch_gen", "stmt_gen", "results", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{cleaned_summary_model_provider}")
+    batch_requests_dir = os.path.join("batch_gen", "stmt_gen", "requested", f"{qu_type}_{filter_stage}_qus", retrieval_type, f"summaries_{cleaned_summary_model_provider}")
+    if not os.path.exists(summaries_dir):
+        logging.error(f"Summaries directory {summaries_dir} does not exist.")
+        return
+    else:
+        logging.info(f"Starting processing batch results for summary statement generation: for summaries in directory {summaries_dir}")
+        summaries_filenames = [name for name in sorted(os.listdir(summaries_dir)) if name.endswith(".json")]
+
+        for summaries_filename in summaries_filenames:
+            statements_filename = summaries_filename.replace("summaries.json", "statements.json")
+            batch_results_filename = summaries_filename.replace("summaries.json", "_StmtGenResults.jsonl")
+            batch_request_filename = summaries_filename.replace("summaries.json", "_StmtGenRequest.jsonl")
+            process_batch_results_for_file(
+                summaries_filepath = os.path.join(summaries_dir, summaries_filename),
+                statements_filepath = os.path.join(statements_dir, statements_filename),
+                batch_results_filepath=os.path.join(batch_results_dir, batch_results_filename),
+                batch_requests_filepath=os.path.join(batch_requests_dir, batch_request_filename),
+                batch_job_names_filepath=os.path.join(batch_requests_dir, "batch_job_names.json"),
+            )
+
+
+def process_batch_results_all(
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        answering_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ]
+    ):
+    for qu_type in qu_types:
+        for filter_stage in filter_stages:
+            for retrieval_type in retrieval_types:
+                for answering_model_provider in answering_model_providers:
+                    process_batch_results_for_dir(
+                        qu_type=qu_type,
+                        filter_stage=filter_stage,
+                        retrieval_type=retrieval_type,
+                        cleaned_summary_model_provider=answering_model_provider
+                    )
+
+
+
+### CHECK IF ALL SUMMARY STATEMENTS HAVE BEEN GENERATED AND STORED
+
+
+def check_all_summary_stmts_generated_for_file(summaries_filepath):
+    try:
+        summary_dicts = read_json_file(summaries_filepath)
+    except RetrievalError as e:
+        logging.error(f"Unable to load summaries for checking statement generation from file {summaries_filepath}: {e}")
+        raise
+
+    total_viable_summaries = 0 # viable summaries are those which do not have None value - i.e. the summary_dict has a non-None relevant_summary field.
+    summaries_with_stmts = 0
+    for summary_dict in summary_dicts:
+        if summary_dict["relevant_summary"] is None:
+            continue
+        total_viable_summaries += 1
+        gen_summary_stmts_received = summary_dict.get("gen_summary_stmts_received", False)
+        if gen_summary_stmts_received:
+            summaries_with_stmts += 1
+
+    all_generated = total_viable_summaries == summaries_with_stmts
+    return {
+        "all_generated": all_generated,
+        "num_viable_summaries": total_viable_summaries,
+        "num_summary_stmts_generated": summaries_with_stmts
+    }
+
+
+def check_all_summary_stmts_generated_for_dir(qu_type, filter_stage, retrieval_type, cleaned_summary_model_provider):
+    summaries_dir = os.path.join("live_summaries",f"{qu_type}_{filter_stage}_qus_summaries", retrieval_type, cleaned_summary_model_provider, "stmt_gen_annotated")
+    if not os.path.exists(summaries_dir):
+        raise FileNotFoundError(f"Summaries directory {summaries_dir} does not exist.")
+    else:
+        logging.debug(f"Starting checking if all summary statements have been generated: for summaries in directory {summaries_dir}")
+        summaries_filenames = [name for name in sorted(os.listdir(summaries_dir)) if name.endswith(".json")]
+
+        dir_results = {"all_generated": True, "num_viable_summaries":0, "num_summary_stmts_generated":0}
+        for summaries_filename in summaries_filenames:
+            file_results = check_all_summary_stmts_generated_for_file(
+                summaries_filepath = os.path.join(summaries_dir, summaries_filename)
+            )
+            dir_results["all_generated"] &= file_results["all_generated"]
+            dir_results["num_viable_summaries"] += file_results["num_viable_summaries"]
+            dir_results["num_summary_stmts_generated"] += file_results["num_summary_stmts_generated"]
+        return dir_results
+        
+
+def check_all_summary_stmts_generated_for_all(
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        answering_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ]
+    ):
+    all_results = {"all_generated": True, "num_viable_summaries":0, "num_summary_stmts_generated":0}
+    for qu_type in qu_types:
+        for filter_stage in filter_stages:
+            for retrieval_type in retrieval_types:
+                for answering_model_provider in answering_model_providers:
+                    dir_results = check_all_summary_stmts_generated_for_dir(
+                        qu_type=qu_type,
+                        filter_stage=filter_stage,
+                        retrieval_type=retrieval_type,
+                        cleaned_summary_model_provider=answering_model_provider
+                    )
+                    all_results["all_generated"] &= dir_results["all_generated"]
+                    all_results["num_viable_summaries"] += dir_results["num_viable_summaries"]
+                    all_results["num_summary_stmts_generated"] += dir_results["num_summary_stmts_generated"]
+    return all_results
+
+
+
+### DISPLAYING STATUS:
+
+
+def print_running_jobs():
+    client = get_genai_client()
+    batch_jobs = client.batches.list(config={"page_size": 10})
+    for job in batch_jobs:
+        if job.state.name != "JOB_STATE_SUCCEEDED":
+            print("Running job:", job.name, job.display_name, job.state.name)
+
+
+
+### FULL PROCESS
+
+def run_full_process(
+        qu_types = ["answerable", "unanswerable"],
+        filter_stages = ["passed", "failed"],
+        retrieval_types = ["hybrid_cross-encoder"],
+        summary_model_providers = [
+            "_claude-sonnet-4",
+            "_gemini-2-5-pro",
+            "_gpt-5",
+            "fireworks_kimi-k2-0905"
+        ],
+        max_batch_requests=None,
+        max_batch_retrievals=None
+    ):
+    logging.basicConfig(level=logging.INFO, filename="logfiles/summary_statements_gen_batch.log", format='%(asctime)s - %(levelname)s - %(message)s')
+    # disable httpx logging
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+    
+    logging.info(f"STARTING FULL PROCESS FOR SUMMARY STATEMENT GENERATION USING GEMINI BATCH API. There are currently {check_num_open_gemini_batch_jobs()} open Gemini batch jobs.")
+    
+    logging.info("Starting making batch request files for summary statement generation, for all summaries.")
+    make_summary_stmts_batch_request_files_all(
+        qu_types=qu_types, 
+        filter_stages=filter_stages, 
+        retrieval_types=retrieval_types, 
+        answering_model_providers=summary_model_providers
+    )
+    logging.info("Finished making batch request files for summary statement generation, for all summaries.")
+
+    logging.info("Starting sending batch requests.")
+    send_batch_requests(
+        max_batch_requests=max_batch_requests,
+        qu_types=qu_types, 
+        filter_stages=filter_stages, 
+        retrieval_types=retrieval_types, 
+        answering_model_providers=summary_model_providers
+    )
+    logging.info("Finished sending batch requests.")
+    logging.info(f"Number of open Gemini batch jobs: {check_num_open_gemini_batch_jobs()}")
+
+    logging.info("Starting receiving batch results.")
+    receive_batch_results(
+        max_batch_checks=max_batch_retrievals,
+        qu_types=qu_types,
+        filter_stages=filter_stages,
+        retrieval_types=retrieval_types,
+        answering_model_providers=summary_model_providers
+    )
+    logging.info("Finished receiving batch results.")
+
+    logging.info("Starting processing batch results for summary statement generation, for all summaries.")
+    process_batch_results_all(
+        qu_types=qu_types,
+        filter_stages=filter_stages,
+        retrieval_types=retrieval_types,
+        answering_model_providers=summary_model_providers
+    )
+    logging.info("Finished processing batch results for summary statement generation, for all summaries.")
+
+    logging.info(f"There are now {check_num_open_gemini_batch_jobs()} open Gemini batch jobs.")
+    stmts_generation_details = check_all_summary_stmts_generated_for_all(
+        qu_types=qu_types,
+        filter_stages=filter_stages,
+        retrieval_types=retrieval_types,
+        answering_model_providers=summary_model_providers
+    )
+    if stmts_generation_details["all_generated"]:
+        logging.info(f"All summary statements have been generated and stored. Number of viable summaries: {stmts_generation_details['num_viable_summaries']}, number of summaries with generated statements: {stmts_generation_details['num_summary_stmts_generated']}.")
+    else:
+        logging.info(f"Not all summary statements have been generated and stored. Run the program again to generate and record more summary statements. Number of viable summaries: {stmts_generation_details['num_viable_summaries']}, number of summaries with generated statements: {stmts_generation_details['num_summary_stmts_generated']}.")
+    logging.info(f"ENDING PROCESS FOR SUMMARY STATEMENT GENERATION USING GEMINI BATCH API.")
+
+
+def main():
+    qu_types = ["answerable", "unanswerable"]
+    filter_stages = ["passed", "failed"]
+    retrieval_types = ["hybrid_cross-encoder"]
+    answering_model_providers = [
+        "_claude-sonnet-4",
+        "_gemini-2-5-pro",
+        "_gpt-5",
+        "fireworks_kimi-k2-0905"
+    ]
+    run_full_process(
+        qu_types=qu_types,
+        filter_stages=filter_stages,
+        retrieval_types=retrieval_types,
+        summary_model_providers=answering_model_providers,
+        max_batch_requests=5
+    )
+
+
+if __name__ == "__main__":
+    main()
+
+

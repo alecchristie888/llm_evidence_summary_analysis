@@ -1,0 +1,75 @@
+You are checking whether a statement is factually grounded in a set of conservation evidence documents.
+
+You must be STRICT and SCEPTICAL.
+Your top priority is to catch ANY unfaithful content, even if that means occasionally flagging faithful statements as unfaithful.
+If you are not clearly convinced that the statement is fully supported, you MUST treat it as unfaithful.
+
+Statement:
+{statement}
+
+Available Evidence Documents:
+---
+{all_action_docs_text}
+---
+
+Task:
+You are a fact-checker. Break the statement into its main factual claims.
+For EACH claim, check whether it is explicitly and fully supported by at least one evidence document. Support must be clear, not inferred by guesswork or world knowledge.
+
+Important principles:
+- Treat the evidence documents as the ONLY source of truth.
+- Do NOT rely on outside knowledge or assumptions.
+- If the documents are vague, incomplete, or ambiguous about a claim, then that claim is NOT fully supported.
+- Absence of evidence in the documents counts as NO SUPPORT for the claim.
+- Match scope carefully (species, location, intervention, comparator, timeframe, number of studies, and whether the claim is about one study or the overall evidence base).
+- If you are unsure whether a claim is fully supported, treat it as NOT supported.
+
+A statement FAILS (overall verdict 'No') if ANY of its claims show one or more of the following problems:
+- States a specific number, count, or quantifier that is wrong or not clearly supported (e.g. says 'several studies' when only one or two exist).
+- Gets the direction, size, or certainty of an effect wrong (e.g. says 'increased' when a document says 'no significant effect'; says 'strong evidence' when the document indicates very limited or mixed evidence).
+- Makes a comparative claim (e.g. 'X is more effective than Y') that is not explicitly supported by at least one document.
+- Merges findings from different studies into a single claim that does not match what any individual study actually found.
+- Overgeneralises — attributes a finding to 'most', 'all', 'typically', or 'generally' when the evidence is mixed, limited, or only from a small number of studies.
+- Makes any specific factual claim (about effects, sample sizes, locations, species, contexts, study design, etc.) that is absent from or contradicted by the documents.
+- Makes claims about the overall state of evidence (e.g. 'no studies', 'only one study', 'many studies') that are not clearly supported by the number and type of studies in the documents.
+- Changes the scope in a way that is not supported (e.g. from one species to many species, from one context to all contexts, or from one study to the whole evidence base).
+- Relies on silence in the documents as if it were positive support.
+
+A statement does NOT fail solely because it:
+- Uses different wording than the documents, as long as the meaning is the same.
+- Omits some findings that are present in the documents.
+- Reports absence of evidence (e.g. 'no studies were found') AND the documents clearly state that no relevant studies exist.
+
+Decision rule:
+- If ANY claim is not fully supported, is only partially supported, or is ambiguous, the overall verdict MUST be 'No'.
+- Only if ALL claims are clearly and fully supported by the documents may the overall verdict be 'Yes'.
+
+Reasoning procedure (follow these steps):
+1) Extract 1–5 key factual claims from the statement.
+2) For each claim:
+   - Quote or closely paraphrase the most relevant evidence from the documents      (or state 'no supporting evidence found').
+   - Decide whether the claim is: 'fully_supported' or 'not_fully_supported'.
+3) If ANY claim is 'not_fully_supported', set the overall verdict to 'No'; otherwise 'Yes'.
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the original statement text,
+  "claims": [
+    {{
+      "claim_text": string,
+      "supporting_evidence": string,
+      "support_assessment": "fully_supported" or "not_fully_supported",
+      "failure_reasons": [
+         "wrong_quantity",
+         "wrong_effect_direction_or_magnitude",
+         "unsupported_comparative_claim",
+         "mismerged_studies",
+         "overgeneralisation",
+         "absent_or_contradicted_fact",
+         "unsupported_evidence_summary",
+         "scope_mismatch",
+         "unsupported_by_silence"
+      ]
+    }}
+  ],
+  "reasoning": string,
+  "verdict": "Yes" or "No"

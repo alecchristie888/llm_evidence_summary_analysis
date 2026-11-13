@@ -1,0 +1,24 @@
+# Dependencies for the generation stages (00_action_data_prep, 01_question_generation,
+# 02_summary_generation, 02b_statement_decomposition and utils/). The analysis pipeline
+# (run_all.sh) does not need these; see README.
+#
+# Versions are those with which the retrieval and statement-decomposition reproduction
+# checks were run (Python 3.12, November 2026). transformers and sentence-transformers are
+# pinned deliberately: the nomic-ai/nomic-embed-text-v1.5 model's remote code fails with
+# transformers 5.x ("'NomicBertModel' object has no attribute 'get_extended_attention_mask'").
+# Install torch first from https://pytorch.org (the CPU build is sufficient).
+torch==2.15.0
+transformers==4.56.2
+sentence-transformers==5.1.1
+einops==0.8.2
+bm25s==0.3.16
+PyStemmer==3.1.0
+scikit-learn==1.9.1
+numpy==2.5.4
+pandas==3.1.1
+nltk==3.10.4
+pydantic==2.14.3
+python-dotenv==1.2.4
+google-genai==3.3.0
+google-api-core==2.44.0
+openai==3.50.0

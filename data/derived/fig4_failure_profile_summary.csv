@@ -1,0 +1,29 @@
+model,failure_reason,n_summaries,n_tags_total,n_affected,mean_tags_per_summary,lo,hi,pct_affected,pct_affected_lo,pct_affected_hi,rate_per_100_mean
+Claude Sonnet 4,absent_or_contradicted_fact,515,988,354,1.918,1.732,2.117,68.738,64.608,72.59,12.481
+Claude Sonnet 4,mismerged_studies,515,151,90,0.293,0.227,0.367,17.476,14.44,20.993,1.97
+Claude Sonnet 4,overgeneralisation,515,512,235,0.994,0.868,1.126,45.631,41.377,49.949,5.949
+Claude Sonnet 4,unsupported_comparative_claim,515,203,131,0.394,0.328,0.46,25.437,21.867,29.371,2.679
+Claude Sonnet 4,unsupported_evidence_summary,515,176,125,0.342,0.276,0.412,24.272,20.768,28.156,2.285
+Claude Sonnet 4,wrong_effect_direction_or_magnitude,515,161,109,0.313,0.254,0.373,21.165,17.857,24.9,1.862
+Claude Sonnet 4,wrong_quantity,515,309,169,0.6,0.511,0.707,32.816,28.9,36.985,3.983
+Gemini 2.5 Pro,absent_or_contradicted_fact,519,297,172,0.572,0.48,0.663,33.141,29.228,37.301,6.165
+Gemini 2.5 Pro,mismerged_studies,519,94,72,0.181,0.141,0.227,13.873,11.163,17.113,2.028
+Gemini 2.5 Pro,overgeneralisation,519,89,57,0.171,0.123,0.22,10.983,8.574,13.965,1.521
+Gemini 2.5 Pro,unsupported_comparative_claim,519,11,11,0.021,0.01,0.035,2.119,1.188,3.755,0.191
+Gemini 2.5 Pro,unsupported_evidence_summary,519,18,13,0.035,0.015,0.056,2.505,1.47,4.238,0.297
+Gemini 2.5 Pro,wrong_effect_direction_or_magnitude,519,33,26,0.064,0.039,0.091,5.01,3.441,7.239,0.672
+Gemini 2.5 Pro,wrong_quantity,519,117,71,0.225,0.17,0.287,13.68,10.989,16.905,2.165
+GPT-5,absent_or_contradicted_fact,467,411,189,0.88,0.758,1.004,40.471,36.115,44.983,6.695
+GPT-5,mismerged_studies,467,115,74,0.246,0.186,0.313,15.846,12.814,19.435,2.117
+GPT-5,overgeneralisation,467,139,89,0.298,0.227,0.373,19.058,15.754,22.867,2.225
+GPT-5,unsupported_comparative_claim,467,21,17,0.045,0.024,0.073,3.64,2.285,5.752,0.308
+GPT-5,unsupported_evidence_summary,467,27,22,0.058,0.034,0.084,4.711,3.131,7.03,0.401
+GPT-5,wrong_effect_direction_or_magnitude,467,40,34,0.086,0.058,0.12,7.281,5.256,10.002,0.736
+GPT-5,wrong_quantity,467,172,96,0.368,0.291,0.456,20.557,17.139,24.455,2.9
+Kimi K2,absent_or_contradicted_fact,489,1146,393,2.344,2.151,2.546,80.368,76.616,83.646,19.08
+Kimi K2,mismerged_studies,489,165,111,0.337,0.272,0.411,22.699,19.208,26.617,2.758
+Kimi K2,overgeneralisation,489,592,264,1.211,1.067,1.364,53.988,49.556,58.357,9.557
+Kimi K2,unsupported_comparative_claim,489,239,149,0.489,0.413,0.577,30.47,26.556,34.689,3.952
+Kimi K2,unsupported_evidence_summary,489,156,109,0.319,0.26,0.38,22.29,18.826,26.187,2.742
+Kimi K2,wrong_effect_direction_or_magnitude,489,212,131,0.434,0.356,0.509,26.789,23.056,30.884,3.449
+Kimi K2,wrong_quantity,489,260,156,0.532,0.454,0.618,31.902,27.925,36.16,4.195

@@ -1,0 +1,17 @@
+You are evaluating whether a statement is supported by evidence from a set of conservation evidence documents.
+
+Statement: {statement}
+
+Available Evidence Documents:
+---
+{all_action_docs_text}
+---
+
+Task: Determine whether the specific claims in the statement are supported by the evidence documents shown above. The specific findings — numbers, outcomes, species, locations — must be traceable to the documents. It is not sufficient that the general topic is covered; the actual claim must be present. Mark No if the statement contains specific details that are absent from or contradict the documents.
+
+Provide your reasoning first, then give a final verdict of 'Yes' (fully supported by the available evidence) or 'No' (not fully supported).
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation
+  "verdict": "Yes" or "No"

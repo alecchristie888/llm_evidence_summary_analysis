@@ -1,0 +1,5 @@
+model,iters,iters_lo,iters_hi,searches,searches_lo,searches_hi,max_offset,max_offset_lo,max_offset_hi,n
+anthropic/claude-sonnet-4,6.176,6.058,6.304,3.222,3.12,3.338,0.766,0.571,0.988,517
+google/gemini-2.5-pro,3.403,3.331,3.474,1.399,1.329,1.468,0.249,0.162,0.347,519
+moonshotai/kimi-k2-0905,6.587,6.439,6.727,3.294,3.182,3.395,3.53,3.047,4.047,506
+openai/gpt-5,5.719,5.572,5.877,3.243,3.123,3.372,4.57,4.224,4.933,481

@@ -1,0 +1,51 @@
+You are evaluating whether a statement extracted from a conservation evidence summary is faithfully supported by a set of source action documents.
+
+Statement: {statement}
+
+Available Evidence Documents:
+---
+{all_action_docs_text}
+---
+
+## Evaluation Standards
+
+Apply these standards, which mirror how expert human reviewers judge faithfulness. Read carefully: the most common mistakes are (A) accepting cherry-picked halves of mixed findings, and (B) accepting comparative/superlative claims based on a single supporting study when the full body of evidence contradicts or undermines the comparison.
+
+1. **Omission is not unfaithfulness.** The statement need not mention everything the documents say. If the statement asserts a claim that is correctly supported, do not mark No merely because the documents contain additional nuances from *separate, unrelated* studies that the statement does not mention.
+
+2. **Selective reporting of mixed findings IS unfaithful (critical).** When a document reports a finding as mixed — e.g., "reduced or did not alter", "no effect or some negative effects", "in two trials X, in two trials Y" — and the statement reports only one side of that mixed finding as if it stood alone, mark **No**. This applies even if the cherry-picked side is literally mentioned in the document. The test: if you removed the other half of the finding, would a reader get a materially different impression? If yes → No.
+   - Example: Document says "either reduced or did not alter density." Statement says "did not alter density." → **No** (distorted).
+   - Example: Document says "in two trials, good numbers of queens were produced" (out of four, with two reporting very low/zero). Statement says "Other reintroduction trials reported good production of new queens" without noting the failed trials → **No** (distorted).
+
+3. **Specific details must be correct and traceable.** Numbers, effect directions (increase/decrease/no difference), species, locations, countries, study counts, and study designs stated in the statement must match the documents exactly. If any specific detail is absent from or contradicts the documents, mark No.
+
+4. **Comparative, superlative, and evaluative claims require explicit, unambiguous support.** Claims like "most studies", "the majority", "more effective than", "higher than", "the only", "variable effectiveness", "mixed results", "primarily focused on", "suggests X may be better than Y" require that the documents explicitly state that comparison or characterisation as a synthesised conclusion.
+   - Do NOT infer a comparative characterisation ("variable", "mixed", "effective") just because you, the judge, can see variable results across studies. The statement is only faithful if the *document itself* characterises the body of evidence that way, OR if the statement is narrowly scoped to a single study that the document describes in those terms.
+   - Do NOT accept "X may be more effective than Y" just because one study found X > Y. A single supporting study does not license an evidence-level comparative suggestion, especially if other studies in the documents show no difference or the opposite.
+   - Example: Statement "Chemical methods show variable effectiveness" — faithful only if a document explicitly summarises chemical methods as variable/mixed. Inferring "variable" from reading multiple study results yourself → **No**.
+   - Example: Statement "hydroseeding may be more effective than drill seeding" when one study supports it but another shows no/opposite effect → **No**.
+
+5. **Generalisations require explicit support.** Broad framing claims ("several actions can be taken to X", "a range of interventions exist for Y", "evidence shows Z") must be directly stated or clearly implied by the documents as a general conclusion — not merely inferable from the existence of multiple action entries.
+
+6. **Conflation of conditions/contexts is unfaithful.** If a finding in a document is tied to specific conditions (soil type, species, region, study design), do not accept the statement's attribution of that finding to different conditions unless the document explicitly links them.
+
+7. **Vague-but-not-wrong statements are acceptable.** Non-specific hedged claims ("some studies found X", "a study found Y", "sometimes inhibited") are faithful if at least one document clearly supports them and no document directly contradicts the hedge. The hedge must genuinely match the evidence — "sometimes" is fine for a finding reported in some studies; "may be more effective" is NOT a mere hedge, it is a comparative suggestion (see Standard 4).
+
+8. **"No evidence / no studies found" statements** are faithful if a document explicitly states that no studies or no evidence were found for that specific intervention and outcome.
+
+## Procedure (follow step by step)
+
+1. **Decompose the statement** into atomic claims: entities, conditions, effect direction, magnitude, scope, study count/design, location, and — importantly — any comparative, superlative, evaluative, or generalising language ("variable", "more effective", "mixed", "may", "suggests", "most").
+
+2. **Locate support for each claim.** Cite the Action ID and quote the relevant passage.
+
+3. **For each finding-level claim, check the surrounding sentence in the document.** Is the finding reported as mixed (contains "or", "either", "but not", "some…others", "in X trials…in Y trials")? If yes, does the statement convey both sides or only one? If only one → distortion → No.
+
+4. **For each comparative/evaluative word in the statement, ask:** does a document explicitly use this characterisation, or am I (the judge) inferring it by synthesising across studies? If the latter → No.
+
+5. **Verdict:** Yes only if every claim is supported without distortion, cherry-picking, unsupported comparison, or context mismatch. Otherwise No.
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation, citing Action IDs and specific passages, explicitly noting any mixed-finding check and any comparative-support check
+  "verdict": "Yes" or "No"

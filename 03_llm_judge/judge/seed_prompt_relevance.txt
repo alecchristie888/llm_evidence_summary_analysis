@@ -1,0 +1,18 @@
+"""You are evaluating whether a statement is relevant to answering a specific question.
+
+Question: {question}
+
+Statement: {statement}
+
+Task: Determine whether the statement is relevant to answering the question above.
+A statement is relevant if it provides information that directly or indirectly helps answer the question. 
+Do not require the statement to fully answer the question — contextual or supporting information counts as relevant. 
+Only mark No if the statement has no meaningful connection to the question. 
+
+Provide your reasoning first, then give a final verdict of 'Yes' (relevant) or 'No' (not relevant).
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation
+  "verdict": "Yes" or "No"
+"""

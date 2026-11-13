@@ -1,0 +1,81 @@
+You are evaluating whether a statement in a conservation evidence summary is accurately supported by the single cited action document provided.
+
+Statement: {statement}
+
+Cited Action ID: {cited_action_id}
+
+Content of Cited Document (Action {cited_action_id}):
+---
+{cited_action_text}
+---
+
+Task: Decide whether the statement is supported by the cited document.
+
+Core decision standards (apply these exactly):
+1. Reasonable paraphrasing is acceptable — synonyms, reordering, and light rewording are fine. Do not require verbatim wording.
+2. If the statement summarises a finding clearly present in the document, answer Yes — even if the document contains additional nuance, caveats, or mixed results the statement omits. A statement does not need to capture every qualification in the document; it only needs to not contradict or misrepresent it.
+3. Absence-of-evidence statements (e.g., "no studies were found on X") are Yes if the document explicitly states that no studies were found on that topic. The statement's framing of the topic need only match the document's framing at a reasonable level of generality.
+4. Answer No only if the statement makes a specific claim that is clearly absent from, or contradicts, the document. When in doubt about whether an added qualifier or number is supported, err on the side of No if you cannot point to an explicit supporting span.
+
+Verification procedure:
+Break the statement into its component claims (entities, numbers, study counts, study types, locations, directions of effect, conditions, combinations, habitats/settings, species) and check each against the document. For each, try to find a supporting span. Quote or paraphrase the relevant span in your reasoning. Before answering No, deliberately search the document for paraphrases and for the action title itself, which often licenses general framings in the statement.
+
+Guidance on common judgement calls:
+
+A. Quantitative / enumerative claims — CHECK NUMBERS CAREFULLY.
+   - The document must support the specific number of studies and the study type stated. If the statement says "Three studies" but the document says "Two studies", that is a contradiction — answer No.
+   - Count carefully: if the document says "Ten studies ... (including two replicated paired site comparisons and a review)", the total is ten studies and the review is one of those ten. A statement describing this as "a review of ten studies" is a reasonable paraphrase of the document's grouping and should be Yes, unless the document clearly distinguishes the review as separate from the count.
+   - Hedged quantifiers ("some", "several", "studies", "in some cases", "a minority") are supported if the document reports at least the corresponding pattern.
+   - Parenthetical additions like "(one site comparison)" in the document do not increase the count; e.g., "Two before-and-after studies (one site comparison)" means two studies, not three.
+
+B. Geographic / location claims.
+   - Each named location must be linked to the finding in the document.
+   - Single-location claims are Yes if the document links the finding to that location, even without further sub-details.
+
+C. Added habitat / setting / sub-condition claims — BE STRICT ABOUT SOIL TYPES, SPECIES, AND NARROW QUALIFIERS.
+   - Pay attention to qualifiers the statement adds beyond location (e.g., "vineyard", "sandy loam", "captive", "semi-arid"). These must be directly supported by a span linking the specific finding to that qualifier.
+   - Action-title/scope licensing (limited): If the action title itself names the habitat/sector (e.g., "Plant or maintain ground cover in orchards or vineyards"), statements using those title-level qualifiers for findings within the action are supported, provided the document does not restrict the finding to a different sub-setting.
+   - Do NOT infer a narrower qualifier from mere co-occurrence or from header lists. In particular: if the document lists soil types (e.g., "SOIL TYPES COVERED: sandy loam, clay, ...") or habitat types as a header/scope list covering the action as a whole, this does NOT license attaching any one of those types to a specific finding unless the finding's own description names it. Statements like "X increased nutrient loss on sandy loam soils" are No if the specific trial reporting X is not explicitly linked to sandy loam in the finding's text.
+   - Do NOT infer species, substance identity, or setting from similar-sounding items. "Municipal waste compost" is not "cotton gin compost"; "water runoff" is not "soil loss"; "semi-arid" must be explicitly stated.
+   - If the statement omits a qualifier the document includes, that is fine (faithful, less-specific paraphrase).
+
+D. Effectiveness / causal claims.
+   - Distinguish descriptive reports from evaluative claims. Evaluative language ("effectively builds", "shown some positive results", "likely to be beneficial") is supported if the document's own effectiveness rating or synthesis supports it, or if multiple studies in the document report the outcome. A single positive study alone does not license broad evaluative claims unless hedged ("some positive results", "in some cases").
+   - "Mixed", "inconsistent", "sometimes", "variable outcomes" are supported if the document reports at least one instance of that outcome among varied results (e.g., "positive, negative and mixed effects").
+
+E. Combined / compound / list-structure claims — BE STRICT WHEN THE STATEMENT CHANGES LIST SEMANTICS.
+   - Carefully compare the statement's list structure to the document's. Pay attention to whether items are presented as alternatives (A, B, or C), as a combination (A with B and C), or as a co-equal set.
+   - If the document says "hole habitats, along with rock pools, or grooves" — this typically means hole habitats together with (rock pools or grooves). A statement reframing this as a simple alternation "hole habitats, rock pools, or grooves" changes the combinatorial structure and may be No, because it drops the "along with" relation.
+   - Only accept list paraphrases as Yes when the logical relationship between the items and the outcome is preserved. If you cannot confirm the structure matches, lean No.
+   - Answer No if the statement asserts a specific combination/alternation the document clearly contradicts, or omits items the document treats as co-equal in a way that changes meaning.
+
+F. Inferential leaps / added claims.
+   - If the statement asserts a conclusion or evaluative judgement not stated or directly implied (e.g., "can still potentially affect crops", "presents a significant challenge"), answer No — joining two separate facts into a new causal claim is not supported.
+   - Contrast with straightforward paraphrase of a finding.
+
+G. Negated / "did not" findings.
+   - Supported if the document reports no difference, or reports the effect only in a contrasting group.
+
+H. Absence-of-evidence statements — extra care.
+   - Supported if the document explicitly states no studies were found on the topic, AND the statement's topic is not narrower or substantively different.
+   - Extra descriptive phrasing about the action's mechanism or goal that paraphrases the action's purpose (as described anywhere in the document, including title and background) is acceptable.
+   - Answer No only if the statement's topic is clearly narrower, different, or adds specific claims the "no studies" statement does not cover.
+
+I. Action-title and scope support.
+   - The action title and background section are part of the document. Statements that paraphrase the action title (e.g., "a management option is to use signs and access restrictions") are supported by the title itself.
+   - Scope qualifiers in the title (habitats, sectors, taxa covered by the action) license those qualifiers in statements about findings within the action. However, scope LISTS in headers (e.g., "SOIL TYPES COVERED", "HABITATS COVERED") that enumerate multiple sub-types do NOT license attaching any one specific sub-type to a specific finding — they only indicate the action's overall coverage.
+
+Tie-breaking principles:
+- When the statement is a faithful paraphrase or summary of a finding (or absence of evidence) the document clearly reports, answer Yes even if wording differs.
+- When the statement adds a specific number, study count, sub-location, narrower habitat/setting (including a specific soil type drawn from a scope list), condition, combination, species, substance, or evaluative/inferential claim that you cannot point to a direct supporting span for, answer No.
+- When the statement changes the logical structure of a list (combination vs. alternation), answer No unless the document's phrasing clearly supports the new structure.
+- If an added qualifier matches the action title's overall scope and the action title names that single qualifier, treat it as supported unless the document indicates the finding was restricted to a different sub-setting.
+- If uncertain, re-read the action title, key messages, and the specific finding's span before finalising.
+
+Provide your reasoning first, listing each component claim of the statement and the specific supporting (or missing) span from the document (including the action title where relevant). Pay particular attention to: (a) exact study counts, (b) whether narrow qualifiers like soil types or substances appear in the specific finding's text (not just a scope header), (c) whether list structures (combination vs. alternation) are preserved. Then give a final verdict of 'Yes' (supported) or 'No' (not supported).
+
+Respond ONLY as a JSON object with the following fields:
+    "statement": the statement text
+    "cited_action_id": the action ID
+    "reasoning": your explanation, listing each component claim and whether it is supported, with reference to specific document spans
+    "verdict": "Yes" or "No"

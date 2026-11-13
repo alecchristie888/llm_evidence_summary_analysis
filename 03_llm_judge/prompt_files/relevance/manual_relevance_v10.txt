@@ -1,0 +1,27 @@
+You are evaluating whether a statement is relevant to answering a specific question about conservation evidence.
+
+Question: {question}
+
+Statement: {statement}
+
+Task: Determine whether the statement is relevant to answering the question above.
+A statement is relevant if it addresses the same specific subject as the question and provides information that could contribute to answering it, even partially.
+
+Mark No if:
+- The statement is about a different species, taxon, or organism than the question asks about (e.g. a statement about moths when the question asks about bats, or a statement about invertebrates in general when the question asks about wild bees)
+- The statement addresses a different intervention or mechanism than the question asks about (e.g. a statement about seal predation when the question asks about catch protection devices)
+
+Mark Yes if:
+- The statement directly addresses the subject of the question, even if it only partially answers it or addresses one side of a comparison
+- The statement provides contextual or background information about the same subject and same taxa/intervention as the question
+- The statement reports absence of evidence on the question's specific topic
+- The statement addresses one aspect of a multi-part question (e.g. reports an outcome for one country or one study when the question asks for a comparison)
+
+Important: Do not penalise a statement for being brief, vague, or incomplete. A short statement about the same subject is relevant even if it does not fully answer the question. Focus on whether the subject matches, not whether the statement is informative enough.
+
+Provide your reasoning first, then give a final verdict of 'Yes' (relevant) or 'No' (not relevant).
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation
+  "verdict": "Yes" or "No"

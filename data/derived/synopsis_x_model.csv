@@ -1,0 +1,381 @@
+model,synopsis,metric,mean_score,n_summaries
+Claude Sonnet 4,AmphibianConservation,Relevance,0.9516,32
+Claude Sonnet 4,AmphibianConservation,Citation rate,0.8922,32
+Claude Sonnet 4,AmphibianConservation,CC (all stmts),0.8185,32
+Claude Sonnet 4,AmphibianConservation,CC (when cited),0.9182,32
+Claude Sonnet 4,AmphibianConservation,Faithfulness,0.8136,32
+Claude Sonnet 4,BatConservation,Relevance,0.9653,22
+Claude Sonnet 4,BatConservation,Citation rate,0.8536,22
+Claude Sonnet 4,BatConservation,CC (all stmts),0.8122,22
+Claude Sonnet 4,BatConservation,CC (when cited),0.9491,22
+Claude Sonnet 4,BatConservation,Faithfulness,0.8136,22
+Claude Sonnet 4,BeeConservation,Relevance,0.9179,26
+Claude Sonnet 4,BeeConservation,Citation rate,0.8212,26
+Claude Sonnet 4,BeeConservation,CC (all stmts),0.7909,26
+Claude Sonnet 4,BeeConservation,CC (when cited),0.9585,25
+Claude Sonnet 4,BeeConservation,Faithfulness,0.8112,26
+Claude Sonnet 4,BiodiversityofMarineArtificialStructures,Relevance,0.9699,43
+Claude Sonnet 4,BiodiversityofMarineArtificialStructures,Citation rate,0.9058,43
+Claude Sonnet 4,BiodiversityofMarineArtificialStructures,CC (all stmts),0.8332,43
+Claude Sonnet 4,BiodiversityofMarineArtificialStructures,CC (when cited),0.9201,43
+Claude Sonnet 4,BiodiversityofMarineArtificialStructures,Faithfulness,0.8023,43
+Claude Sonnet 4,ButterflyandMothConservation,Relevance,0.9625,34
+Claude Sonnet 4,ButterflyandMothConservation,Citation rate,0.8325,34
+Claude Sonnet 4,ButterflyandMothConservation,CC (all stmts),0.7742,34
+Claude Sonnet 4,ButterflyandMothConservation,CC (when cited),0.9303,33
+Claude Sonnet 4,ButterflyandMothConservation,Faithfulness,0.7947,34
+Claude Sonnet 4,ControlofFreshwaterInvasiveSpecies,Relevance,0.944,40
+Claude Sonnet 4,ControlofFreshwaterInvasiveSpecies,Citation rate,0.8689,40
+Claude Sonnet 4,ControlofFreshwaterInvasiveSpecies,CC (all stmts),0.8111,40
+Claude Sonnet 4,ControlofFreshwaterInvasiveSpecies,CC (when cited),0.934,40
+Claude Sonnet 4,ControlofFreshwaterInvasiveSpecies,Faithfulness,0.8162,40
+Claude Sonnet 4,FarmlandConservation,Relevance,0.9639,25
+Claude Sonnet 4,FarmlandConservation,Citation rate,0.8932,25
+Claude Sonnet 4,FarmlandConservation,CC (all stmts),0.8569,25
+Claude Sonnet 4,FarmlandConservation,CC (when cited),0.9598,25
+Claude Sonnet 4,FarmlandConservation,Faithfulness,0.8732,25
+Claude Sonnet 4,ForestConservation,Relevance,0.8738,25
+Claude Sonnet 4,ForestConservation,Citation rate,0.8228,25
+Claude Sonnet 4,ForestConservation,CC (all stmts),0.7989,25
+Claude Sonnet 4,ForestConservation,CC (when cited),0.9702,24
+Claude Sonnet 4,ForestConservation,Faithfulness,0.8487,25
+Claude Sonnet 4,GrasslandConservation,Relevance,0.8987,23
+Claude Sonnet 4,GrasslandConservation,Citation rate,0.8517,23
+Claude Sonnet 4,GrasslandConservation,CC (all stmts),0.7996,23
+Claude Sonnet 4,GrasslandConservation,CC (when cited),0.9377,22
+Claude Sonnet 4,GrasslandConservation,Faithfulness,0.7988,23
+Claude Sonnet 4,ManagementofCaptiveAnimals,Relevance,0.9225,27
+Claude Sonnet 4,ManagementofCaptiveAnimals,Citation rate,0.8479,27
+Claude Sonnet 4,ManagementofCaptiveAnimals,CC (all stmts),0.8153,27
+Claude Sonnet 4,ManagementofCaptiveAnimals,CC (when cited),0.964,27
+Claude Sonnet 4,ManagementofCaptiveAnimals,Faithfulness,0.8573,27
+Claude Sonnet 4,MarineFishConservation,Relevance,0.9448,21
+Claude Sonnet 4,MarineFishConservation,Citation rate,0.8322,21
+Claude Sonnet 4,MarineFishConservation,CC (all stmts),0.7567,21
+Claude Sonnet 4,MarineFishConservation,CC (when cited),0.9101,21
+Claude Sonnet 4,MarineFishConservation,Faithfulness,0.7499,21
+Claude Sonnet 4,MarineandFreshwaterMammalConservation,Relevance,0.9441,26
+Claude Sonnet 4,MarineandFreshwaterMammalConservation,Citation rate,0.8097,26
+Claude Sonnet 4,MarineandFreshwaterMammalConservation,CC (all stmts),0.7017,26
+Claude Sonnet 4,MarineandFreshwaterMammalConservation,CC (when cited),0.8701,25
+Claude Sonnet 4,MarineandFreshwaterMammalConservation,Faithfulness,0.7693,26
+Claude Sonnet 4,MediterraneanFarmland,Relevance,0.8934,32
+Claude Sonnet 4,MediterraneanFarmland,Citation rate,0.8723,32
+Claude Sonnet 4,MediterraneanFarmland,CC (all stmts),0.7878,32
+Claude Sonnet 4,MediterraneanFarmland,CC (when cited),0.9046,32
+Claude Sonnet 4,MediterraneanFarmland,Faithfulness,0.7495,32
+Claude Sonnet 4,NaturalPestControl,Relevance,0.936,20
+Claude Sonnet 4,NaturalPestControl,Citation rate,0.8942,20
+Claude Sonnet 4,NaturalPestControl,CC (all stmts),0.864,20
+Claude Sonnet 4,NaturalPestControl,CC (when cited),0.9659,20
+Claude Sonnet 4,NaturalPestControl,Faithfulness,0.8508,20
+Claude Sonnet 4,PeatlandConservation,Relevance,0.949,24
+Claude Sonnet 4,PeatlandConservation,Citation rate,0.8502,24
+Claude Sonnet 4,PeatlandConservation,CC (all stmts),0.7924,24
+Claude Sonnet 4,PeatlandConservation,CC (when cited),0.939,24
+Claude Sonnet 4,PeatlandConservation,Faithfulness,0.849,24
+Claude Sonnet 4,PrimateConservation,Relevance,0.908,22
+Claude Sonnet 4,PrimateConservation,Citation rate,0.808,22
+Claude Sonnet 4,PrimateConservation,CC (all stmts),0.7265,22
+Claude Sonnet 4,PrimateConservation,CC (when cited),0.8927,22
+Claude Sonnet 4,PrimateConservation,Faithfulness,0.8148,22
+Claude Sonnet 4,ShrublandandHeathlandConservation,Relevance,0.87,22
+Claude Sonnet 4,ShrublandandHeathlandConservation,Citation rate,0.8235,22
+Claude Sonnet 4,ShrublandandHeathlandConservation,CC (all stmts),0.8028,22
+Claude Sonnet 4,ShrublandandHeathlandConservation,CC (when cited),0.9748,22
+Claude Sonnet 4,ShrublandandHeathlandConservation,Faithfulness,0.8527,22
+Claude Sonnet 4,SoilFertility,Relevance,0.9183,23
+Claude Sonnet 4,SoilFertility,Citation rate,0.8776,23
+Claude Sonnet 4,SoilFertility,CC (all stmts),0.7678,23
+Claude Sonnet 4,SoilFertility,CC (when cited),0.8794,23
+Claude Sonnet 4,SoilFertility,Faithfulness,0.6771,23
+Claude Sonnet 4,SustainableAquaculture,Relevance,0.9034,28
+Claude Sonnet 4,SustainableAquaculture,Citation rate,0.8937,28
+Claude Sonnet 4,SustainableAquaculture,CC (all stmts),0.8654,28
+Claude Sonnet 4,SustainableAquaculture,CC (when cited),0.9692,28
+Claude Sonnet 4,SustainableAquaculture,Faithfulness,0.8779,28
+Gemini 2.5 Pro,AmphibianConservation,Relevance,0.9391,32
+Gemini 2.5 Pro,AmphibianConservation,Citation rate,0.9456,32
+Gemini 2.5 Pro,AmphibianConservation,CC (all stmts),0.9002,32
+Gemini 2.5 Pro,AmphibianConservation,CC (when cited),0.953,32
+Gemini 2.5 Pro,AmphibianConservation,Faithfulness,0.857,32
+Gemini 2.5 Pro,BatConservation,Relevance,0.9349,25
+Gemini 2.5 Pro,BatConservation,Citation rate,0.9658,25
+Gemini 2.5 Pro,BatConservation,CC (all stmts),0.9411,25
+Gemini 2.5 Pro,BatConservation,CC (when cited),0.975,25
+Gemini 2.5 Pro,BatConservation,Faithfulness,0.9261,25
+Gemini 2.5 Pro,BeeConservation,Relevance,0.8253,27
+Gemini 2.5 Pro,BeeConservation,Citation rate,0.9695,27
+Gemini 2.5 Pro,BeeConservation,CC (all stmts),0.9585,27
+Gemini 2.5 Pro,BeeConservation,CC (when cited),0.9891,27
+Gemini 2.5 Pro,BeeConservation,Faithfulness,0.9161,27
+Gemini 2.5 Pro,BiodiversityofMarineArtificialStructures,Relevance,0.9372,43
+Gemini 2.5 Pro,BiodiversityofMarineArtificialStructures,Citation rate,0.9663,43
+Gemini 2.5 Pro,BiodiversityofMarineArtificialStructures,CC (all stmts),0.9323,43
+Gemini 2.5 Pro,BiodiversityofMarineArtificialStructures,CC (when cited),0.9651,43
+Gemini 2.5 Pro,BiodiversityofMarineArtificialStructures,Faithfulness,0.8708,43
+Gemini 2.5 Pro,ButterflyandMothConservation,Relevance,0.9186,34
+Gemini 2.5 Pro,ButterflyandMothConservation,Citation rate,0.9727,34
+Gemini 2.5 Pro,ButterflyandMothConservation,CC (all stmts),0.9266,34
+Gemini 2.5 Pro,ButterflyandMothConservation,CC (when cited),0.9527,34
+Gemini 2.5 Pro,ButterflyandMothConservation,Faithfulness,0.9023,34
+Gemini 2.5 Pro,ControlofFreshwaterInvasiveSpecies,Relevance,0.8706,40
+Gemini 2.5 Pro,ControlofFreshwaterInvasiveSpecies,Citation rate,0.9706,40
+Gemini 2.5 Pro,ControlofFreshwaterInvasiveSpecies,CC (all stmts),0.9629,40
+Gemini 2.5 Pro,ControlofFreshwaterInvasiveSpecies,CC (when cited),0.9923,40
+Gemini 2.5 Pro,ControlofFreshwaterInvasiveSpecies,Faithfulness,0.9768,40
+Gemini 2.5 Pro,FarmlandConservation,Relevance,0.8959,25
+Gemini 2.5 Pro,FarmlandConservation,Citation rate,0.977,25
+Gemini 2.5 Pro,FarmlandConservation,CC (all stmts),0.9595,25
+Gemini 2.5 Pro,FarmlandConservation,CC (when cited),0.9821,25
+Gemini 2.5 Pro,FarmlandConservation,Faithfulness,0.9478,25
+Gemini 2.5 Pro,ForestConservation,Relevance,0.8407,25
+Gemini 2.5 Pro,ForestConservation,Citation rate,0.9782,25
+Gemini 2.5 Pro,ForestConservation,CC (all stmts),0.9471,25
+Gemini 2.5 Pro,ForestConservation,CC (when cited),0.9661,25
+Gemini 2.5 Pro,ForestConservation,Faithfulness,0.963,25
+Gemini 2.5 Pro,GrasslandConservation,Relevance,0.8404,23
+Gemini 2.5 Pro,GrasslandConservation,Citation rate,0.9042,23
+Gemini 2.5 Pro,GrasslandConservation,CC (all stmts),0.8319,23
+Gemini 2.5 Pro,GrasslandConservation,CC (when cited),0.924,22
+Gemini 2.5 Pro,GrasslandConservation,Faithfulness,0.8806,22
+Gemini 2.5 Pro,ManagementofCaptiveAnimals,Relevance,0.907,27
+Gemini 2.5 Pro,ManagementofCaptiveAnimals,Citation rate,0.9802,27
+Gemini 2.5 Pro,ManagementofCaptiveAnimals,CC (all stmts),0.9696,27
+Gemini 2.5 Pro,ManagementofCaptiveAnimals,CC (when cited),0.9889,27
+Gemini 2.5 Pro,ManagementofCaptiveAnimals,Faithfulness,0.9658,27
+Gemini 2.5 Pro,MarineFishConservation,Relevance,0.947,21
+Gemini 2.5 Pro,MarineFishConservation,Citation rate,0.9628,21
+Gemini 2.5 Pro,MarineFishConservation,CC (all stmts),0.94,21
+Gemini 2.5 Pro,MarineFishConservation,CC (when cited),0.9752,21
+Gemini 2.5 Pro,MarineFishConservation,Faithfulness,0.874,21
+Gemini 2.5 Pro,MarineandFreshwaterMammalConservation,Relevance,0.9141,26
+Gemini 2.5 Pro,MarineandFreshwaterMammalConservation,Citation rate,0.9805,26
+Gemini 2.5 Pro,MarineandFreshwaterMammalConservation,CC (all stmts),0.9505,26
+Gemini 2.5 Pro,MarineandFreshwaterMammalConservation,CC (when cited),0.9692,26
+Gemini 2.5 Pro,MarineandFreshwaterMammalConservation,Faithfulness,0.9188,26
+Gemini 2.5 Pro,MediterraneanFarmland,Relevance,0.7624,32
+Gemini 2.5 Pro,MediterraneanFarmland,Citation rate,0.9378,32
+Gemini 2.5 Pro,MediterraneanFarmland,CC (all stmts),0.8807,32
+Gemini 2.5 Pro,MediterraneanFarmland,CC (when cited),0.9396,32
+Gemini 2.5 Pro,MediterraneanFarmland,Faithfulness,0.8063,32
+Gemini 2.5 Pro,NaturalPestControl,Relevance,0.9061,20
+Gemini 2.5 Pro,NaturalPestControl,Citation rate,0.958,20
+Gemini 2.5 Pro,NaturalPestControl,CC (all stmts),0.9346,20
+Gemini 2.5 Pro,NaturalPestControl,CC (when cited),0.9766,20
+Gemini 2.5 Pro,NaturalPestControl,Faithfulness,0.9343,20
+Gemini 2.5 Pro,PeatlandConservation,Relevance,0.9147,24
+Gemini 2.5 Pro,PeatlandConservation,Citation rate,0.9491,24
+Gemini 2.5 Pro,PeatlandConservation,CC (all stmts),0.91,24
+Gemini 2.5 Pro,PeatlandConservation,CC (when cited),0.9592,24
+Gemini 2.5 Pro,PeatlandConservation,Faithfulness,0.9156,24
+Gemini 2.5 Pro,PrimateConservation,Relevance,0.7331,22
+Gemini 2.5 Pro,PrimateConservation,Citation rate,0.9729,22
+Gemini 2.5 Pro,PrimateConservation,CC (all stmts),0.9589,22
+Gemini 2.5 Pro,PrimateConservation,CC (when cited),0.9851,22
+Gemini 2.5 Pro,PrimateConservation,Faithfulness,0.9526,22
+Gemini 2.5 Pro,ShrublandandHeathlandConservation,Relevance,0.8853,23
+Gemini 2.5 Pro,ShrublandandHeathlandConservation,Citation rate,0.9849,23
+Gemini 2.5 Pro,ShrublandandHeathlandConservation,CC (all stmts),0.9688,23
+Gemini 2.5 Pro,ShrublandandHeathlandConservation,CC (when cited),0.9832,23
+Gemini 2.5 Pro,ShrublandandHeathlandConservation,Faithfulness,0.9527,23
+Gemini 2.5 Pro,SoilFertility,Relevance,0.8537,23
+Gemini 2.5 Pro,SoilFertility,Citation rate,0.9638,23
+Gemini 2.5 Pro,SoilFertility,CC (all stmts),0.928,23
+Gemini 2.5 Pro,SoilFertility,CC (when cited),0.9609,23
+Gemini 2.5 Pro,SoilFertility,Faithfulness,0.9201,23
+Gemini 2.5 Pro,SustainableAquaculture,Relevance,0.9027,28
+Gemini 2.5 Pro,SustainableAquaculture,Citation rate,0.9287,28
+Gemini 2.5 Pro,SustainableAquaculture,CC (all stmts),0.9056,28
+Gemini 2.5 Pro,SustainableAquaculture,CC (when cited),0.976,28
+Gemini 2.5 Pro,SustainableAquaculture,Faithfulness,0.9446,28
+GPT-5,AmphibianConservation,Relevance,0.974,30
+GPT-5,AmphibianConservation,Citation rate,0.9918,30
+GPT-5,AmphibianConservation,CC (all stmts),0.9305,30
+GPT-5,AmphibianConservation,CC (when cited),0.9387,30
+GPT-5,AmphibianConservation,Faithfulness,0.8777,30
+GPT-5,BatConservation,Relevance,0.9825,21
+GPT-5,BatConservation,Citation rate,0.9569,21
+GPT-5,BatConservation,CC (all stmts),0.9176,21
+GPT-5,BatConservation,CC (when cited),0.9603,21
+GPT-5,BatConservation,Faithfulness,0.9272,21
+GPT-5,BeeConservation,Relevance,0.9779,22
+GPT-5,BeeConservation,Citation rate,0.9973,22
+GPT-5,BeeConservation,CC (all stmts),0.9953,22
+GPT-5,BeeConservation,CC (when cited),0.9979,22
+GPT-5,BeeConservation,Faithfulness,0.8957,22
+GPT-5,BiodiversityofMarineArtificialStructures,Relevance,0.9824,40
+GPT-5,BiodiversityofMarineArtificialStructures,Citation rate,0.9676,40
+GPT-5,BiodiversityofMarineArtificialStructures,CC (all stmts),0.9281,40
+GPT-5,BiodiversityofMarineArtificialStructures,CC (when cited),0.9602,40
+GPT-5,BiodiversityofMarineArtificialStructures,Faithfulness,0.8867,40
+GPT-5,ButterflyandMothConservation,Relevance,0.9487,31
+GPT-5,ButterflyandMothConservation,Citation rate,0.99,31
+GPT-5,ButterflyandMothConservation,CC (all stmts),0.9376,31
+GPT-5,ButterflyandMothConservation,CC (when cited),0.9473,31
+GPT-5,ButterflyandMothConservation,Faithfulness,0.8356,31
+GPT-5,ControlofFreshwaterInvasiveSpecies,Relevance,0.9502,40
+GPT-5,ControlofFreshwaterInvasiveSpecies,Citation rate,0.9605,40
+GPT-5,ControlofFreshwaterInvasiveSpecies,CC (all stmts),0.9543,40
+GPT-5,ControlofFreshwaterInvasiveSpecies,CC (when cited),0.9937,40
+GPT-5,ControlofFreshwaterInvasiveSpecies,Faithfulness,0.9471,40
+GPT-5,FarmlandConservation,Relevance,0.9913,25
+GPT-5,FarmlandConservation,Citation rate,0.9939,25
+GPT-5,FarmlandConservation,CC (all stmts),0.9669,25
+GPT-5,FarmlandConservation,CC (when cited),0.9729,25
+GPT-5,FarmlandConservation,Faithfulness,0.9028,25
+GPT-5,ForestConservation,Relevance,0.9168,19
+GPT-5,ForestConservation,Citation rate,0.9875,19
+GPT-5,ForestConservation,CC (all stmts),0.9724,19
+GPT-5,ForestConservation,CC (when cited),0.9848,19
+GPT-5,ForestConservation,Faithfulness,0.9235,19
+GPT-5,GrasslandConservation,Relevance,0.9866,20
+GPT-5,GrasslandConservation,Citation rate,0.99,20
+GPT-5,GrasslandConservation,CC (all stmts),0.9035,20
+GPT-5,GrasslandConservation,CC (when cited),0.9135,20
+GPT-5,GrasslandConservation,Faithfulness,0.8569,20
+GPT-5,ManagementofCaptiveAnimals,Relevance,0.9689,27
+GPT-5,ManagementofCaptiveAnimals,Citation rate,0.9863,27
+GPT-5,ManagementofCaptiveAnimals,CC (all stmts),0.9809,27
+GPT-5,ManagementofCaptiveAnimals,CC (when cited),0.9946,27
+GPT-5,ManagementofCaptiveAnimals,Faithfulness,0.9666,27
+GPT-5,MarineFishConservation,Relevance,0.9688,21
+GPT-5,MarineFishConservation,Citation rate,0.9709,21
+GPT-5,MarineFishConservation,CC (all stmts),0.9526,21
+GPT-5,MarineFishConservation,CC (when cited),0.9816,21
+GPT-5,MarineFishConservation,Faithfulness,0.8753,21
+GPT-5,MarineandFreshwaterMammalConservation,Relevance,0.9764,24
+GPT-5,MarineandFreshwaterMammalConservation,Citation rate,0.9637,24
+GPT-5,MarineandFreshwaterMammalConservation,CC (all stmts),0.8957,24
+GPT-5,MarineandFreshwaterMammalConservation,CC (when cited),0.9318,24
+GPT-5,MarineandFreshwaterMammalConservation,Faithfulness,0.8953,24
+GPT-5,MediterraneanFarmland,Relevance,0.9495,25
+GPT-5,MediterraneanFarmland,Citation rate,0.9743,25
+GPT-5,MediterraneanFarmland,CC (all stmts),0.9506,25
+GPT-5,MediterraneanFarmland,CC (when cited),0.9763,25
+GPT-5,MediterraneanFarmland,Faithfulness,0.901,25
+GPT-5,NaturalPestControl,Relevance,0.9699,16
+GPT-5,NaturalPestControl,Citation rate,0.99,16
+GPT-5,NaturalPestControl,CC (all stmts),0.978,16
+GPT-5,NaturalPestControl,CC (when cited),0.988,16
+GPT-5,NaturalPestControl,Faithfulness,0.9288,16
+GPT-5,PeatlandConservation,Relevance,0.9575,22
+GPT-5,PeatlandConservation,Citation rate,0.9615,22
+GPT-5,PeatlandConservation,CC (all stmts),0.9442,22
+GPT-5,PeatlandConservation,CC (when cited),0.9827,22
+GPT-5,PeatlandConservation,Faithfulness,0.9388,22
+GPT-5,PrimateConservation,Relevance,0.9402,19
+GPT-5,PrimateConservation,Citation rate,0.9329,19
+GPT-5,PrimateConservation,CC (all stmts),0.9,19
+GPT-5,PrimateConservation,CC (when cited),0.9669,19
+GPT-5,PrimateConservation,Faithfulness,0.938,19
+GPT-5,ShrublandandHeathlandConservation,Relevance,0.9421,19
+GPT-5,ShrublandandHeathlandConservation,Citation rate,0.9939,19
+GPT-5,ShrublandandHeathlandConservation,CC (all stmts),0.9808,19
+GPT-5,ShrublandandHeathlandConservation,CC (when cited),0.9867,19
+GPT-5,ShrublandandHeathlandConservation,Faithfulness,0.8922,19
+GPT-5,SoilFertility,Relevance,0.9631,19
+GPT-5,SoilFertility,Citation rate,1,19
+GPT-5,SoilFertility,CC (all stmts),0.9641,19
+GPT-5,SoilFertility,CC (when cited),0.9641,19
+GPT-5,SoilFertility,Faithfulness,0.8062,19
+GPT-5,SustainableAquaculture,Relevance,0.9694,27
+GPT-5,SustainableAquaculture,Citation rate,0.9827,27
+GPT-5,SustainableAquaculture,CC (all stmts),0.9622,27
+GPT-5,SustainableAquaculture,CC (when cited),0.9795,27
+GPT-5,SustainableAquaculture,Faithfulness,0.9438,27
+Kimi K2,AmphibianConservation,Relevance,0.9525,30
+Kimi K2,AmphibianConservation,Citation rate,0.2237,30
+Kimi K2,AmphibianConservation,CC (all stmts),0.2054,30
+Kimi K2,AmphibianConservation,CC (when cited),0.8526,9
+Kimi K2,AmphibianConservation,Faithfulness,0.7678,30
+Kimi K2,BatConservation,Relevance,0.9576,22
+Kimi K2,BatConservation,Citation rate,0.6159,22
+Kimi K2,BatConservation,CC (all stmts),0.5574,22
+Kimi K2,BatConservation,CC (when cited),0.9037,16
+Kimi K2,BatConservation,Faithfulness,0.7959,22
+Kimi K2,BeeConservation,Relevance,0.907,23
+Kimi K2,BeeConservation,Citation rate,0.4132,23
+Kimi K2,BeeConservation,CC (all stmts),0.3065,23
+Kimi K2,BeeConservation,CC (when cited),0.7161,12
+Kimi K2,BeeConservation,Faithfulness,0.7169,23
+Kimi K2,BiodiversityofMarineArtificialStructures,Relevance,0.9753,43
+Kimi K2,BiodiversityofMarineArtificialStructures,Citation rate,0.4371,43
+Kimi K2,BiodiversityofMarineArtificialStructures,CC (all stmts),0.3542,43
+Kimi K2,BiodiversityofMarineArtificialStructures,CC (when cited),0.7646,24
+Kimi K2,BiodiversityofMarineArtificialStructures,Faithfulness,0.7221,43
+Kimi K2,ButterflyandMothConservation,Relevance,0.9799,33
+Kimi K2,ButterflyandMothConservation,Citation rate,0.2966,33
+Kimi K2,ButterflyandMothConservation,CC (all stmts),0.2324,33
+Kimi K2,ButterflyandMothConservation,CC (when cited),0.8018,14
+Kimi K2,ButterflyandMothConservation,Faithfulness,0.6715,33
+Kimi K2,ControlofFreshwaterInvasiveSpecies,Relevance,0.9296,39
+Kimi K2,ControlofFreshwaterInvasiveSpecies,Citation rate,0.4947,39
+Kimi K2,ControlofFreshwaterInvasiveSpecies,CC (all stmts),0.4364,39
+Kimi K2,ControlofFreshwaterInvasiveSpecies,CC (when cited),0.8702,22
+Kimi K2,ControlofFreshwaterInvasiveSpecies,Faithfulness,0.7479,39
+Kimi K2,FarmlandConservation,Relevance,0.975,25
+Kimi K2,FarmlandConservation,Citation rate,0.4496,25
+Kimi K2,FarmlandConservation,CC (all stmts),0.3264,25
+Kimi K2,FarmlandConservation,CC (when cited),0.714,15
+Kimi K2,FarmlandConservation,Faithfulness,0.7525,25
+Kimi K2,ForestConservation,Relevance,0.9091,23
+Kimi K2,ForestConservation,Citation rate,0.4276,23
+Kimi K2,ForestConservation,CC (all stmts),0.3829,23
+Kimi K2,ForestConservation,CC (when cited),0.953,12
+Kimi K2,ForestConservation,Faithfulness,0.8024,23
+Kimi K2,GrasslandConservation,Relevance,0.9563,22
+Kimi K2,GrasslandConservation,Citation rate,0.5266,22
+Kimi K2,GrasslandConservation,CC (all stmts),0.4356,22
+Kimi K2,GrasslandConservation,CC (when cited),0.835,15
+Kimi K2,GrasslandConservation,Faithfulness,0.7098,22
+Kimi K2,ManagementofCaptiveAnimals,Relevance,0.8863,26
+Kimi K2,ManagementofCaptiveAnimals,Citation rate,0.3904,26
+Kimi K2,ManagementofCaptiveAnimals,CC (all stmts),0.3669,26
+Kimi K2,ManagementofCaptiveAnimals,CC (when cited),0.9473,12
+Kimi K2,ManagementofCaptiveAnimals,Faithfulness,0.808,26
+Kimi K2,MarineFishConservation,Relevance,0.9263,18
+Kimi K2,MarineFishConservation,Citation rate,0.2775,18
+Kimi K2,MarineFishConservation,CC (all stmts),0.1842,18
+Kimi K2,MarineFishConservation,CC (when cited),0.6213,6
+Kimi K2,MarineFishConservation,Faithfulness,0.7377,18
+Kimi K2,MarineandFreshwaterMammalConservation,Relevance,0.9706,25
+Kimi K2,MarineandFreshwaterMammalConservation,Citation rate,0.3804,25
+Kimi K2,MarineandFreshwaterMammalConservation,CC (all stmts),0.3369,25
+Kimi K2,MarineandFreshwaterMammalConservation,CC (when cited),0.871,12
+Kimi K2,MarineandFreshwaterMammalConservation,Faithfulness,0.7157,25
+Kimi K2,MediterraneanFarmland,Relevance,0.9502,28
+Kimi K2,MediterraneanFarmland,Citation rate,0.6208,28
+Kimi K2,MediterraneanFarmland,CC (all stmts),0.4615,28
+Kimi K2,MediterraneanFarmland,CC (when cited),0.7311,23
+Kimi K2,MediterraneanFarmland,Faithfulness,0.593,28
+Kimi K2,NaturalPestControl,Relevance,0.9352,18
+Kimi K2,NaturalPestControl,Citation rate,0.3786,18
+Kimi K2,NaturalPestControl,CC (all stmts),0.3177,18
+Kimi K2,NaturalPestControl,CC (when cited),0.8298,8
+Kimi K2,NaturalPestControl,Faithfulness,0.7615,18
+Kimi K2,PeatlandConservation,Relevance,0.9698,21
+Kimi K2,PeatlandConservation,Citation rate,0.5573,21
+Kimi K2,PeatlandConservation,CC (all stmts),0.4779,21
+Kimi K2,PeatlandConservation,CC (when cited),0.8487,14
+Kimi K2,PeatlandConservation,Faithfulness,0.7335,21
+Kimi K2,PrimateConservation,Relevance,0.9086,22
+Kimi K2,PrimateConservation,Citation rate,0.252,22
+Kimi K2,PrimateConservation,CC (all stmts),0.2197,22
+Kimi K2,PrimateConservation,CC (when cited),0.9016,8
+Kimi K2,PrimateConservation,Faithfulness,0.7418,22
+Kimi K2,ShrublandandHeathlandConservation,Relevance,0.9588,23
+Kimi K2,ShrublandandHeathlandConservation,Citation rate,0.41,23
+Kimi K2,ShrublandandHeathlandConservation,CC (all stmts),0.3907,23
+Kimi K2,ShrublandandHeathlandConservation,CC (when cited),0.9515,12
+Kimi K2,ShrublandandHeathlandConservation,Faithfulness,0.7806,23
+Kimi K2,SoilFertility,Relevance,0.9317,21
+Kimi K2,SoilFertility,Citation rate,0.5914,21
+Kimi K2,SoilFertility,CC (all stmts),0.5208,21
+Kimi K2,SoilFertility,CC (when cited),0.8844,15
+Kimi K2,SoilFertility,Faithfulness,0.6534,21
+Kimi K2,SustainableAquaculture,Relevance,0.9252,27
+Kimi K2,SustainableAquaculture,Citation rate,0.3478,27
+Kimi K2,SustainableAquaculture,CC (all stmts),0.3093,27
+Kimi K2,SustainableAquaculture,CC (when cited),0.8891,10
+Kimi K2,SustainableAquaculture,Faithfulness,0.8233,27

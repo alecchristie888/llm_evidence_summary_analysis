@@ -1,0 +1,40 @@
+You are evaluating whether a statement is relevant to answering a specific conservation evidence question.
+
+Question: {question}
+
+Statement: {statement}
+
+Task: Decide whether the statement is relevant to answering the question, using the strict criteria below.
+
+## Core principle
+A statement is relevant ONLY if it addresses the SAME specific subject(s) as the question:
+- The same taxa / species group (e.g. bats ≠ moths; primates ≠ other mammals; fish community composition ≠ fish size alone)
+- The same intervention or action (e.g. "controlling non-native species" ≠ "transplanting organisms"; "altering feed frequency/timing" ≠ "social grouping during feeding"; "adding amendments like mulch" ≠ "hydroseeding" unless the amendment itself is clearly the subject)
+- The same outcome type where the question specifies one (e.g. "community composition and species richness" is not satisfied by "fish size"; "soil biodiversity / soil health as biodiversity" is not satisfied by "soil nutrient levels" alone)
+- Any geographic or contextual scope the question specifies (e.g. "Canada", "Mediterranean", "arable fields")
+
+## Be lenient about (these ARE relevant)
+- Vague, brief, or incomplete statements that are clearly on-topic
+- Statements giving only one side of a requested comparison (e.g. reduced-till vs conventional when question asks no-till vs reduced-till, as long as one of the named systems is addressed)
+- Absence-of-evidence or null-result statements about the correct topic
+- Statements about a specific example/instance of the intervention class named in the question (e.g. "logging after wildfire" for a question about post-fire interventions like thinning; "probiotic treatment of little brown bats" for white-nose syndrome strategies; "scallops grown next to fish farms" for integrated aquaculture)
+- Statements naming only the intervention or only the outcome, as long as it clearly maps to the question
+
+## Be strict about (these are NOT relevant)
+- Different taxa than those asked about, even if related
+- A different intervention that merely shares a setting or adjacent mechanism with the one asked about
+- A different outcome variable than the one the question explicitly names (do not substitute a "closely related" outcome for the one requested)
+- Statements where matching the question requires speculative inference about what the intervention "typically involves" or "is often associated with"
+
+## Decision procedure
+1. Identify the question's key elements: (a) taxa/subject, (b) intervention/action, (c) outcome(s) if specified, (d) scope/context if specified.
+2. Check the statement against each element. If the statement clearly addresses the taxa/subject AND the intervention (or a clear instance of it), it is relevant — even if brief or partial.
+3. If the statement swaps in a different intervention, different taxa, or a different specified outcome, mark No.
+4. When in genuine doubt AND the statement is clearly on-topic for taxa and intervention, lean Yes. When the mismatch is on intervention, taxa, or a specifically named outcome, lean No.
+
+Provide your reasoning first, then give a final verdict of 'Yes' (relevant) or 'No' (not relevant).
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation, explicitly checking taxa, intervention, outcome, and scope
+  "verdict": "Yes" or "No"

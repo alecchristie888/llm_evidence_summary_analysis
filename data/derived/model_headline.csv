@@ -1,0 +1,21 @@
+model,metric,n_summaries,mean,lo,hi
+Claude Sonnet 4,Relevance,515,0.9306,0.9207,0.9406
+Gemini 2.5 Pro,Relevance,520,0.8823,0.8637,0.8996
+GPT-5,Relevance,467,0.9647,0.9571,0.972
+Kimi K2,Relevance,489,0.9442,0.9352,0.9531
+Claude Sonnet 4,Citation rate,515,0.8581,0.845,0.871
+Gemini 2.5 Pro,Citation rate,520,0.9617,0.9541,0.969
+GPT-5,Citation rate,467,0.9778,0.97,0.9845
+Kimi K2,Citation rate,489,0.4246,0.3879,0.4611
+Claude Sonnet 4,CC (all stmts),515,0.8004,0.7859,0.8143
+Gemini 2.5 Pro,CC (all stmts),520,0.9318,0.9216,0.9414
+GPT-5,CC (all stmts),467,0.9473,0.9371,0.9567
+Kimi K2,CC (all stmts),489,0.3579,0.3223,0.3921
+Claude Sonnet 4,CC (when cited),510,0.9332,0.9252,0.9417
+Gemini 2.5 Pro,CC (when cited),519,0.969,0.962,0.9752
+GPT-5,CC (when cited),467,0.9693,0.9621,0.9759
+Kimi K2,CC (when cited),259,0.8332,0.8052,0.8623
+Claude Sonnet 4,Faithfulness,515,0.8111,0.7974,0.825
+Gemini 2.5 Pro,Faithfulness,519,0.9151,0.9032,0.9259
+GPT-5,Faithfulness,467,0.9028,0.8903,0.9143
+Kimi K2,Faithfulness,489,0.737,0.7207,0.7527

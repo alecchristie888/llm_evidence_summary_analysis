@@ -1,0 +1,73 @@
+Loading reviewer files...
+  Reviewer_1: 262 scored statements loaded
+  Reviewer_2: 296 scored statements loaded
+  Reviewer_3: 262 scored statements loaded
+
+======================================================================
+INTER-RATER RELIABILITY ANALYSIS
+======================================================================
+
+  Reviewer_1 vs Reviewer_2 — 19 overlapping statements
+  Metric                                Agree   Total    Raw%   Kappa  Interpretation
+  -----------------------------------  ------  ------  ------  ------  --------------------
+  relevance                                19      19  100.0%   1.000  almost perfect
+                                       Prec:1.000  Rec:1.000  F1:1.000  Spec:N/A
+  citation_correctness                     19      19  100.0%   1.000  almost perfect
+                                       Prec:1.000  Rec:1.000  F1:1.000  Spec:1.000
+  citation_correctness (cited only)        15      15  100.0%   1.000  almost perfect
+                                       Prec:1.000  Rec:1.000  F1:1.000  Spec:N/A
+  faithfulness                             17      19  89.5%   0.457  moderate
+                                       Prec:0.889  Rec:1.000  F1:0.941  Spec:0.333
+
+  Reviewer_1 vs Reviewer_3 — 19 overlapping statements
+  Metric                                Agree   Total    Raw%   Kappa  Interpretation
+  -----------------------------------  ------  ------  ------  ------  --------------------
+  relevance                                16      19  84.2%  -0.075  worse than chance
+                                       Prec:0.889  Rec:0.941  F1:0.914  Spec:0.000
+  citation_correctness                     18      19  94.7%   0.855  almost perfect
+                                       Prec:1.000  Rec:0.933  F1:0.966  Spec:1.000
+  citation_correctness (cited only)        14      15  93.3%   0.000  slight
+                                       Prec:1.000  Rec:0.933  F1:0.966  Spec:N/A
+  faithfulness                             17      19  89.5%   0.457  moderate
+                                       Prec:1.000  Rec:0.889  F1:0.941  Spec:1.000
+
+  Reviewer_2 vs Reviewer_3 — 19 overlapping statements
+  Metric                                Agree   Total    Raw%   Kappa  Interpretation
+  -----------------------------------  ------  ------  ------  ------  --------------------
+  relevance                                18      19  94.7%   0.000  slight
+                                       Prec:0.947  Rec:1.000  F1:0.973  Spec:0.000
+  citation_correctness                     19      19  100.0%   1.000  almost perfect
+                                       Prec:1.000  Rec:1.000  F1:1.000  Spec:1.000
+  citation_correctness (cited only)        15      15  100.0%   1.000  almost perfect
+                                       Prec:1.000  Rec:1.000  F1:1.000  Spec:N/A
+  faithfulness                             16      19  84.2%   0.000  slight
+                                       Prec:0.842  Rec:1.000  F1:0.914  Spec:0.000
+
+--- Pairwise Cohen's Kappa ---
+  Reviewer_1 vs Reviewer_2:
+    relevance                           n= 19  agree:100.0%  kappa:1.000  (almost perfect)
+    citation_correctness (cited only)              n= 19  agree:100.0%  kappa:1.000  (almost perfect)
+    faithfulness                           n= 19  agree:89.5%  kappa:0.457  (moderate)
+  Reviewer_1 vs Reviewer_3:
+    relevance                           n= 19  agree:84.2%  kappa:-0.075  (worse than chance)
+    citation_correctness (cited only)              n= 19  agree:94.7%  kappa:0.855  (almost perfect)
+    faithfulness                           n= 19  agree:89.5%  kappa:0.457  (moderate)
+  Reviewer_2 vs Reviewer_3:
+    relevance                           n= 19  agree:94.7%  kappa:0.000  (slight)
+    citation_correctness (cited only)              n= 19  agree:100.0%  kappa:1.000  (almost perfect)
+    faithfulness                           n= 19  agree:84.2%  kappa:0.000  (slight)
+
+--- Average pairwise Cohen's Kappa ---
+  relevance                           avg kappa: 0.308  (fair)  [3 pairs: 1.000, -0.075, 0.000]
+  citation_correctness (cited only)              avg kappa: 0.952  (almost perfect)  [3 pairs: 1.000, 0.855, 1.000]
+  faithfulness                           avg kappa: 0.305  (fair)  [3 pairs: 0.457, 0.457, 0.000]
+
+--- Fleiss' Kappa (all reviewers simultaneously) ---
+    Uses all statements rated by 2+ reviewers.
+  relevance                           n= 57 subjects  fleiss_kappa: -0.036  (worse than chance)
+  citation_correctness (cited only)              n= 45 subjects  fleiss_kappa: -0.011  (worse than chance)
+  faithfulness                           n= 57 subjects  fleiss_kappa: 0.296  (fair)
+
+Full overlap data saved to: data\derived\inter_rater_overlap.csv
+Disagreements only saved to: data\derived\inter_rater_disagreements.csv  (12 rows)
+

@@ -1,0 +1,5 @@
+model,Relevance (mean),Citation rate (mean),CC (all statements) (mean),CC (when cited) (mean),Faithfulness (mean),Retrieval recall (mean),Citation recall (mean),Retrieval precision (mean),Cite-through rate (mean),Task completion (mean),Composite (retrieval recall x faithfulness) (mean),Relevance (rank),Citation rate (rank),CC (all statements) (rank),CC (when cited) (rank),Faithfulness (rank),Retrieval recall (rank),Citation recall (rank),Retrieval precision (rank),Cite-through rate (rank),Task completion (rank),Composite (retrieval recall x faithfulness) (rank)
+Claude Sonnet 4,0.9306,0.8581,0.8004,0.9332,0.8111,0.7288,0.6897,0.537,0.947,0.9962,0.5909,3,3,3,3,3,1,1,4,4,2,1
+GPT-5,0.9647,0.9778,0.9473,0.9693,0.9028,0.6517,0.6288,0.7029,0.9664,0.9269,0.5889,1,1,1,1,2,3,3,1,2,4,2
+Gemini 2.5 Pro,0.8823,0.9617,0.9318,0.969,0.9151,0.4924,0.4857,0.6764,0.9851,1,0.4528,4,2,2,2,1,4,4,2,1,1,4
+Kimi K2,0.9442,0.4246,0.3579,0.8332,0.737,0.6845,0.6575,0.5763,0.9602,0.975,0.5082,2,4,4,4,4,2,2,3,3,3,3

@@ -1,0 +1,9 @@
+model,recall_definition,n,composite_mean,lo,hi,model_level_product_illustrative
+Claude Sonnet 4,evaluated_run_paper,515,0.5909,0.571,0.6117,0.5911
+Claude Sonnet 4,log_based,514,0.6313,0.6106,0.651,0.6307
+GPT-5,evaluated_run_paper,467,0.5889,0.5647,0.6139,0.5883
+GPT-5,log_based,464,0.6158,0.5907,0.6405,0.6155
+Gemini 2.5 Pro,evaluated_run_paper,519,0.4528,0.4294,0.4795,0.4506
+Gemini 2.5 Pro,log_based,513,0.4925,0.4686,0.5192,0.4928
+Kimi K2,evaluated_run_paper,489,0.5082,0.4862,0.5313,0.5045
+Kimi K2,log_based,486,0.5465,0.5238,0.5671,0.5432

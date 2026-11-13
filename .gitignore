@@ -1,0 +1,31 @@
+# secrets — never commit API keys
+.env
+*.key
+# bulky archived data: distributed via Zenodo, not git (see README)
+data/actions/
+data/summaries/
+data/raw/
+data/judge_outputs/
+data/judge_validation/
+# regenerated
+data/derived/tool_traces.json
+# tooling
+__pycache__/
+*.pyc
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+*.bak
+*.tmp.json
+* - copy.*
+# working folders created by the generation stages (00-02b)
+logfiles/
+live_questions/
+live_summaries/
+batch_gen/
+question_gen_data/
+data/actions/background_key_messages/bg_km_synopsis/
+data/actions/background_key_messages/bg_km_synopsis_concat/
+data/actions/parsed_*

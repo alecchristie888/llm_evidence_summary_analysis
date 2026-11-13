@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper and the archived release."
+title: "Faithfulness rewards omission in AI synthesis of conservation evidence"
+authors:
+  - family-names: Agrawal
+    given-names: Radhika
+  - family-names: Jaffer
+    given-names: Sadiq
+  - family-names: Reynolds
+    given-names: Sam
+  - family-names: Cutts
+    given-names: Vanessa
+  - family-names: Dicks
+    given-names: Lynn V.
+  - family-names: Madhavapeddy
+    given-names: Anil
+  - family-names: Smith
+    given-names: Rebecca K.
+  - family-names: Sutherland
+    given-names: William J.
+  - family-names: Taylor
+    given-names: Nigel G.
+  - family-names: Thornton
+    given-names: Ann
+  - family-names: Christie
+    given-names: Alec P.
+version: "1.0.0"
+date-released: "2026-11-13"
+license: MIT
+repository-code: "https://github.com/faithfulness-rewards-omission"
+doi: "TBC"

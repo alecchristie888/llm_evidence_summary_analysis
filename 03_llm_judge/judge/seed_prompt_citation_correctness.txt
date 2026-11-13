@@ -1,0 +1,21 @@
+"""You are evaluating whether a statement is accurately supported by a specific cited document.
+
+Statement: {statement}
+
+Cited Action ID: {cited_action_id}
+
+Content of Cited Document (Action {cited_action_id}):
+---
+{cited_action_text}
+---
+
+Task: Determine whether the core factual claim of the statement is supported by the cited document shown above. Reasonable paraphrasing is acceptable — do not require verbatim wording, only that the underlying finding or fact is present in the document. 
+The statement should be marked No only if it contains specific claims that are absent from or contradict the cited document.
+Provide your reasoning first, then give a final verdict of 'Yes' (fully supported by the cited document) or 'No' (not fully supported).
+
+Respond ONLY as a JSON object with the following fields:
+    "statement": the statement text
+    "cited_action_id": the action ID
+    "reasoning": your explanation
+    "verdict": "Yes" or "No"
+"""

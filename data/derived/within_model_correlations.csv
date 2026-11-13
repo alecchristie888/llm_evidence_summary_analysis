@@ -1,0 +1,25 @@
+model,x,y,pearson_r,n
+Claude Sonnet 4,n_iterations_run,faithfulness_score,-0.012,515
+Claude Sonnet 4,n_opened_run,faithfulness_score,-0.073,515
+Claude Sonnet 4,n_searches_run,faithfulness_score,0.022,515
+Claude Sonnet 4,n_statements,faithfulness_score,-0.142,515
+Claude Sonnet 4,recall_log,faithfulness_score,0.022,514
+Claude Sonnet 4,recall_run,faithfulness_score,-0.005,515
+GPT-5,n_iterations_run,faithfulness_score,0.017,467
+GPT-5,n_opened_run,faithfulness_score,-0.04,467
+GPT-5,n_searches_run,faithfulness_score,0.058,467
+GPT-5,n_statements,faithfulness_score,-0.139,467
+GPT-5,recall_log,faithfulness_score,0.015,464
+GPT-5,recall_run,faithfulness_score,0.014,467
+Gemini 2.5 Pro,n_iterations_run,faithfulness_score,0.015,519
+Gemini 2.5 Pro,n_opened_run,faithfulness_score,-0.037,519
+Gemini 2.5 Pro,n_searches_run,faithfulness_score,0.066,519
+Gemini 2.5 Pro,n_statements,faithfulness_score,-0.069,519
+Gemini 2.5 Pro,recall_log,faithfulness_score,0.012,513
+Gemini 2.5 Pro,recall_run,faithfulness_score,0.032,519
+Kimi K2,n_iterations_run,faithfulness_score,-0.023,489
+Kimi K2,n_opened_run,faithfulness_score,-0.08,489
+Kimi K2,n_searches_run,faithfulness_score,-0.038,489
+Kimi K2,n_statements,faithfulness_score,-0.087,489
+Kimi K2,recall_log,faithfulness_score,0.068,486
+Kimi K2,recall_run,faithfulness_score,0.073,489

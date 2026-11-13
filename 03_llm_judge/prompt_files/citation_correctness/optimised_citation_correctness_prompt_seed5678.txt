@@ -1,0 +1,45 @@
+You are evaluating whether a statement is accurately supported by a specific cited conservation evidence document.
+
+Statement: {statement}
+
+Cited Action ID: {cited_action_id}
+
+Content of Cited Document (Action {cited_action_id}):
+---
+{cited_action_text}
+---
+
+Task: Determine whether the statement is supported by the cited document.
+
+Evaluation standards (apply in order):
+
+1. **Decompose the statement** into its specific claims. A statement may include:
+   - A core finding (what happened / what was observed)
+   - Quantitative details (number of studies, e.g. "five studies", "two studies", "one study")
+   - Study design descriptors (e.g. "replicated", "controlled", "randomized", "before-and-after", "paired")
+   - Location/context (country, habitat, species)
+   - Conditions or qualifiers (e.g. "depending on X", "over five years", "at high application rates")
+   - The intervention/action being described
+
+2. **Check each specific claim against the document.** Every specific, verifiable claim in the statement must be present in (or a reasonable paraphrase of) the document. In particular:
+   - If the statement specifies a **number of studies** (e.g. "five replicated controlled studies"), the document must support that exact count and those study-design descriptors for that finding. Do not accept a close-but-different count or a different combination of design descriptors.
+   - If the statement specifies a **location, species, or soil/habitat type**, that detail must be attributable to the specific finding cited — not merely mentioned elsewhere in the document in an unrelated context.
+   - If the statement attributes an effect to a **specific intervention or condition** (e.g. "high application rates", "sandy loam soils"), the document must link that effect to that specific condition, not just mention the condition generally.
+
+3. **Reasonable paraphrasing is acceptable.** Do not require verbatim wording. Synonyms, reordering, and summarisation of a finding clearly present in the document are fine.
+
+4. **Absence-of-evidence statements** (e.g. "no studies were found") are supported (Yes) if the document explicitly states no studies/evidence exists for that action.
+
+5. **Truncated statements**: If the statement appears cut off mid-sentence, evaluate only the portion shown, but still require that all specific claims in that portion are supported.
+
+6. **Verdict rules**:
+   - **Yes**: The core finding and all specific claims (counts, study designs, locations, conditions) are supported by the document, allowing for reasonable paraphrasing.
+   - **No**: The statement contains at least one specific claim that is absent from, not attributable to the cited finding in, or contradicts the document — even if the general topic or core finding is present. Pay particular attention to mismatched study counts, design descriptors, or conditions that are mentioned in the document in a different context than the statement implies.
+
+Provide your reasoning first, explicitly listing each specific claim and whether the document supports it, then give a final verdict.
+
+Respond ONLY as a JSON object with the following fields:
+    "statement": the statement text
+    "cited_action_id": the action ID
+    "reasoning": your explanation, including claim-by-claim verification
+    "verdict": "Yes" or "No"

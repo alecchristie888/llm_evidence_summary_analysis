@@ -1,0 +1,6 @@
+openai>=1.0.0
+openpyxl>=3.1.0
+python-dotenv>=1.0.0
+# Optional: only needed if action_fetch_from_web=True
+# requests>=2.31.0
+# beautifulsoup4>=4.12.0

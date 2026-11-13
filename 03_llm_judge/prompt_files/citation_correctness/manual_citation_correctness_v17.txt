@@ -1,0 +1,48 @@
+You are evaluating whether a statement is accurately supported by a specific cited document from a conservation evidence database.
+
+Statement: {statement}
+
+Cited Action ID: {cited_action_id}
+
+Content of Cited Document (Action {cited_action_id}):
+---
+{cited_action_text}
+---
+
+Task: Determine whether the core factual claim(s) of the statement are supported by the cited document.
+
+## Evaluation principles
+
+1. Reasonable paraphrasing is acceptable. Do not require verbatim wording. Focus on whether the underlying finding, fact, or summary is present in the document.
+
+2. Summary claims are acceptable. If the statement summarises or generalises findings clearly present in the document (e.g. paraphrasing a Background, Key messages, or summary section), mark Yes — even if exact numbers or qualifiers differ slightly.
+
+3. Absence-of-evidence statements. If the statement says there is no evidence / no studies / effectiveness unknown, and the document explicitly indicates this (e.g. 'Unknown effectiveness', 'No evidence found', 'We found no studies'), mark Yes.
+
+4. Effectiveness language. Treat informal phrasing charitably: a statement saying an action 'has been effective' or 'proven effective' is supported if the document's effectiveness category is Beneficial or Likely beneficial, or if the summary describes positive outcomes. Only mark No for effectiveness mismatch if the statement makes a strong specific efficacy claim that directly contradicts the document.
+
+5. Quantifiers ('several', 'many', 'most', 'some'). Interpret loosely but not carelessly. 'Several' or 'some' is supported if the document describes at least one or two relevant instances. Directional quantifiers that characterise the balance of evidence ('most', 'in most cases', 'majority', 'usually') must match the document's actual framing. If the document's direction is reversed from the statement, mark No.
+
+6. Direction and polarity of findings — CRITICAL. Before marking Yes, verify the statement's direction (increase/decrease/no change/mixed) matches the document. Common failure mode: the document reports a disjunctive finding ('no change or a reduction', 'mixed effects') and the statement picks only one side. If the statement asserts a single specific outcome when the document's finding is disjunctive or more negative/positive than stated, mark No.
+
+7. Comparative claims. If the statement makes a comparison (X vs Y, 'more than', 'no difference from'), the document must explicitly support that comparative direction.
+
+8. Mark No when the statement: makes a specific factual claim clearly absent from the document; contradicts the document; misattributes findings to a different subject/species/context; selectively reports one outcome from a disjunctive/mixed finding as if it were the sole result; or reverses/overstates the directional strength of evidence.
+
+9. When genuinely uncertain and the gist of the statement is recognisably drawn from the document without directional distortion, lean toward Yes.
+
+## Reasoning procedure
+
+Work through these steps:
+1. Identify the statement's core claim(s): subject, outcome, direction, quantifiers.
+2. Locate the specific passage(s) in the document addressing the same topic.
+3. Check direction/polarity: does the document's finding match the statement?
+4. Check quantifier fidelity: does most/several/some/mixed match the document's framing?
+5. Check for disjunctive findings the statement may have narrowed.
+6. Decide Yes or No based on the principles above.
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "cited_action_id": the action ID
+  "reasoning": your step-by-step explanation, quoting specific document content
+  "verdict": "Yes" or "No"

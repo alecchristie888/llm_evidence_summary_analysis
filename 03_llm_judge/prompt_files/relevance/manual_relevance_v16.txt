@@ -1,0 +1,46 @@
+You are evaluating whether a statement is relevant to answering a specific question about conservation evidence.
+
+Question: {question}
+
+Statement: {statement}
+
+Task: Determine whether the statement is relevant to answering the question above.
+
+## Core principle
+A statement is relevant if its subject matter overlaps meaningfully with what the question is asking about. The key test is: could a human reviewer reasonably cite this statement as part of an answer to this question, even as partial, indirect, or tangential evidence?
+
+Be INCLUSIVE rather than strict. Human reviewers tend to accept statements that are on-topic even if brief, vague, partial, or addressing a sub-case, related instance, or analogous system of the question's topic.
+
+## Mark Yes if ANY of the following apply:
+- The statement addresses the same taxa/species/group AND the same intervention/mechanism/topic as the question, even if briefly, vaguely, or incompletely.
+- The statement addresses one side of a comparison, one country, one study, one sub-aspect, or one specific example within a multi-part or broad question.
+- The statement reports absence of evidence on the question's topic OR on a specific sub-intervention, method, or approach that falls under the broader topic of the question.
+- The statement concerns a broader category, specific instance, sub-method, or related mechanism that falls within the scope of the question (e.g. question asks about 'public engagement initiatives' broadly, statement describes 'community-based management').
+- The statement describes a closely analogous or functionally equivalent intervention to the one in the question, even if the specific terminology differs. For example: 'hedgerows/tree lines in agricultural land' and 'tree plantations next to remnant vegetation' both describe linear/adjacent woody vegetation effects on wildlife in modified landscapes; 'scattering food' and 'hiding food' are both forms of food enrichment/dispersal. Ask whether the mechanism of action or ecological function is substantially the same.
+- The statement provides background or contextual information about the same subject as the question.
+
+## Mark No ONLY if:
+- The statement is clearly about a different taxon/species/organism than the question asks about (e.g. moths when the question asks about bats; general invertebrates when the question specifies wild bees), AND has no bridging relevance.
+- The statement addresses a fundamentally unrelated intervention or mechanism with no plausible connection to the question's topic.
+- The statement has no meaningful overlap with the question's subject matter.
+
+## Critical guidance on sub-interventions and analogous interventions
+A question often asks about a broad intervention category. Statements about specific methods, tools, sub-interventions, or functionally analogous interventions within that category ARE relevant.
+
+Before marking No on the grounds that the statement addresses a 'different intervention,' ask BOTH:
+1. Is the statement's intervention a specific type, method, or instance of the broader intervention in the question?
+2. Does the statement's intervention operate via substantially the same mechanism, structure, or ecological function as the question's intervention (even if named differently)?
+
+If YES to either, mark Yes.
+
+## Important guidance
+- Do NOT penalise statements for being brief, vague, incomplete, or only partially answering the question.
+- When in doubt, lean toward Yes. Only mark No when there is a clear mismatch in taxon OR a clear mismatch in intervention mechanism with no sub-category or analogous relationship.
+- Focus on mechanism and function, not just surface-level wording.
+
+Provide your reasoning first, then give a final verdict of 'Yes' (relevant) or 'No' (not relevant).
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": your explanation
+  "verdict": "Yes" or "No"

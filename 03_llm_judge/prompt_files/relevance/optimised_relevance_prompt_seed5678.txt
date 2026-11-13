@@ -1,0 +1,38 @@
+You are evaluating whether a statement is relevant to answering a specific conservation evidence question.
+
+Question: {question}
+
+Statement: {statement}
+
+Task: Decide if the statement is relevant to the question using the rules below.
+
+RELEVANCE RULES:
+
+1. TOPIC MATCH (required): The statement must address the same taxa/species group, intervention, and outcome domain as the question.
+   - Same or narrower taxa/species than the question's focal group counts as a match (e.g. "chimpanzees" for a question about "primates"; "harbour seals" for "marine mammals").
+   - Closely related but DIFFERENT taxa do NOT count (e.g. moths for bats; young trees for shrubs; cotton gin compost/poultry manure are organic processing wastes, which match if the question asks about organic processing wastes — but trees do NOT match a question about shrublands unless the study context is explicitly shrubland restoration).
+   - The intervention in the statement must be the same intervention family as the question. Different interventions in the same general area are NOT relevant (e.g. changing livestock numbers ≠ changing livestock type or grazing period; social grouping during feeding ≠ altering feed frequency/timing).
+
+2. PARTIAL / INCOMPLETE STATEMENTS ARE RELEVANT: Vague, brief, or summary statements on the correct topic count as Yes, even if they do not give full details or numbers (e.g. "several pesticide strategy changes can increase natural enemies" for a question on pesticide strategy effects on natural enemies).
+
+3. ONE SIDE OF A COMPARISON IS RELEVANT: If the question asks for a comparison (A vs B, Europe vs USA, continuous vs short-term), a statement giving evidence for just one side IS relevant, provided the side it covers clearly matches one arm of the comparison.
+
+4. ABSENCE-OF-EVIDENCE STATEMENTS ARE RELEVANT if they concern the question's specific taxa and intervention (e.g. "no evidence was captured for providing food at natural feeding times" is relevant to altering feed timing for captive primates).
+
+5. CONTEXT-ONLY / METHODOLOGICAL STATEMENTS ARE NOT RELEVANT if they do not report an outcome or explicit absence of outcome on the question's topic (e.g. "the effects on natural enemies were not monitored" does not help answer a question about effectiveness).
+
+6. When in doubt about taxa scope: if the statement's taxon is a clear subset of the question's taxon, say Yes. If it is a sibling or adjacent taxon (trees vs shrubs, moths vs bats), say No — even if the ecosystem or synopsis is similar.
+
+7. When in doubt about intervention scope: if the statement's intervention is one specific instance of the question's intervention family, say Yes. If it is a different lever (even in the same management area), say No.
+
+DECISION PROCEDURE:
+Step 1: Identify the question's focal taxa/system, intervention, and outcome.
+Step 2: Identify what the statement is about on those same three dimensions.
+Step 3: Check taxa match (subset = yes; sibling/adjacent = no).
+Step 4: Check intervention match (same family/instance = yes; different lever = no).
+Step 5: If both match, verdict is Yes even if the statement is brief, one-sided, or reports absence of evidence. Otherwise No.
+
+Respond ONLY as a JSON object with the following fields:
+  "statement": the statement text
+  "reasoning": concise explanation following the steps above, explicitly noting taxa match and intervention match
+  "verdict": "Yes" or "No"

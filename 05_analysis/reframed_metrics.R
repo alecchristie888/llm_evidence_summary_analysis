@@ -1,5 +1,5 @@
 # ============================================================================
-# Analyses added for the reframed manuscript ("Faithful but incomplete").
+# Analyses added for the reframed manuscript ("Single metrics mislead when evaluating Large Language Models for evidence synthesis and decision-support").
 # Everything here is derived from files already in data/ — no API calls.
 #
 # Inputs

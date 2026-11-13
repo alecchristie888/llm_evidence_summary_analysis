@@ -1,4 +1,4 @@
-# Data for "Faithfulness rewards omission in AI synthesis of conservation evidence"
+# Data for "Single metrics mislead when evaluating Large Language Models for evidence synthesis and decision-support"
 
 Agrawal R, Jaffer S, Reynolds S, Cutts V, Dicks LV, Madhavapeddy A, Smith RK, Sutherland WJ, Taylor NG, Thornton A, Christie AP (in preparation).
 

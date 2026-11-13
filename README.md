@@ -1,4 +1,4 @@
-# Faithfulness rewards omission in AI synthesis of conservation evidence
+# Single metrics mislead when evaluating Large Language Models for evidence synthesis and decision-support
 
 Code and data for Agrawal, Jaffer, Reynolds, Cutts, Dicks, Madhavapeddy, Smith, Sutherland, Taylor, Thornton & Christie (in preparation).
 

@@ -1,5 +1,5 @@
 # ============================================================================
-# All figures for "Faithful but incomplete" (main Figs 1–4 and Extended Data
+# All figures for "Single metrics mislead when evaluating Large Language Models for evidence synthesis and decision-support" (main Figs 1–4 and Extended Data
 # Figs 1–2), built from the derived tables written by build_score_tables.py,
 # analysis.R and reframed_metrics.R. No API calls.
 #

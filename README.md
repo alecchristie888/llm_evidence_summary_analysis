@@ -27,7 +27,7 @@ run_all.sh  run_all.ps1  verify_results.py  make_manifest.py  check_manifest.py 
 
 ## Data
 
-The data archive is distributed via Zenodo (DOI to be minted): unpack it so that `data/` sits at the repository root. `python check_manifest.py` then confirms every file is byte-identical to the archive used for the paper.
+The data archive is on Zenodo, https://doi.org/10.5281/zenodo.24202231. Download `data.zip` and unpack it so that `data/` sits at the repository root. `python check_manifest.py` then confirms every file is byte-identical to the archive used for the paper.
 
 | Folder | Contents | Files |
 |---|---|---|

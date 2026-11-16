@@ -231,7 +231,7 @@ local({
     scale_y_continuous(limits = c(-3, 103), breaks = seq(0, 100, 25), expand = c(0, 0)) +
     labs(x = "Retrieval recall (% of relevant evidence sources opened)",
          y = "Faithfulness (% statements supported)",
-         title = "b.  Faithfulness rewards omission")+
+         title = "b.  Faithfulness can reward omission")+
     theme_minimal(base_size = 15) +
     theme(panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"),
           plot.subtitle = element_text(colour = "grey35", size = 10),

@@ -6,24 +6,33 @@ authors:
     given-names: Radhika
   - family-names: Jaffer
     given-names: Sadiq
+    orcid: \"https://orcid.org/0009-0006-4120-3244"
   - family-names: Reynolds
     given-names: Sam
+    orcid: \"https://orcid.org/0000-0002-1255-580X"
   - family-names: Cutts
     given-names: Vanessa
+    orcid: \"https://orcid.org/0000-0002-4986-2934"
   - family-names: Dicks
     given-names: Lynn V.
+    orcid: \"https://orcid.org/0000-0002-8304-4468"
   - family-names: Madhavapeddy
     given-names: Anil
+    orcid: \"https://orcid.org/0000-0001-8954-2428"
   - family-names: Smith
     given-names: Rebecca K.
+    orcid: \"https://orcid.org/0000-0003-3294-7592"
   - family-names: Sutherland
     given-names: William J.
+    orcid: \"https://orcid.org/0000-0002-6498-0437"
   - family-names: Taylor
     given-names: Nigel G.
+    orcid: \"https://orcid.org/0000-0002-8643-826X"
   - family-names: Thornton
     given-names: Ann
   - family-names: Christie
     given-names: Alec P.
+    orcid: \"https://orcid.org/0000-0002-8465-8410"
 version: "1.0.0"
 date-released: "2026-11-19"
 license: MIT

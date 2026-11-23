@@ -43,5 +43,5 @@ identifiers:
     value: "10.5281/zenodo.24372257"
     description: "Code, all versions (Zenodo concept DOI)"
   - type: doi
-    value: "10.5281/zenodo.24202231"
-    description: "Data archive (Zenodo)"
+    value: "10.5281/zenodo.24202230"
+    description: "Data archive, all versions (Zenodo concept DOI)"

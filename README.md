@@ -2,7 +2,7 @@
 
 Code and data for Agrawal, Jaffer, Reynolds, Cutts, Dicks, Madhavapeddy, Smith, Sutherland, Taylor, Thornton & Christie (in preparation).
 
-Code (all versions): https://doi.org/10.5281/zenodo.24372257 · Data: https://doi.org/10.5281/zenodo.24202231
+Code (all versions): https://doi.org/10.5281/zenodo.24372257 · Data (all versions): https://doi.org/10.5281/zenodo.24202230
 
 The study benchmarks four frontier LLMs (Claude Sonnet 4, Gemini 2.5 Pro, GPT-5, Kimi K2) that each had to find and summarise evidence from the Conservation Evidence database through an agentic search loop, for 520 open-ended questions across 19 subject areas. The 1,991 resulting summaries (23,641 statements) were scored for relevance, citation correctness and faithfulness by a judge LLM validated against 820 expert-labelled statements, and retrieval recall, precision, agent behaviour and task completion were measured from the tool-call logs.
 
@@ -29,7 +29,7 @@ run_all.sh  run_all.ps1  verify_results.py  make_manifest.py  check_manifest.py 
 
 ## Data
 
-The data archive is on Zenodo, https://doi.org/10.5281/zenodo.24202231. Download `data.zip` and unpack it so that `data/` sits at the repository root. `python check_manifest.py` then confirms every file is byte-identical to the archive used for the paper.
+The data archive is on Zenodo, https://doi.org/10.5281/zenodo.24202230. Download `data.zip` and unpack it so that `data/` sits at the repository root. `python check_manifest.py` then confirms every file is byte-identical to the archive used for the paper.
 
 | Folder | Contents | Files |
 |---|---|---|

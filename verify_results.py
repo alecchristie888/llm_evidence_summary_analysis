@@ -57,6 +57,13 @@ bh = pd.read_csv(f"{D}/agent_behaviour_by_model.csv").set_index("model")
 check("searches per question — Gemini 2.5 Pro", bh.loc["google/gemini-2.5-pro", "searches"], 1.40, 0.005)
 check("max search offset — GPT-5 (evaluated-run)", r.loc["GPT-5", "max_offset"], 4.68, 0.005)
 check("max search offset — Gemini 2.5 Pro (evaluated-run)", r.loc["Gemini 2.5 Pro", "max_offset"], 0.24, 0.005)
+# Search depth counts both paging (offset) and larger result sets (k up to 10): % of summaries in which
+# no search went beyond the top three results, and the deepest result rank returned (k + offset)
+TOP3 = {"Gemini 2.5 Pro": 91.3, "Kimi K2": 20.2, "Claude Sonnet 4": 18.4, "GPT-5": 16.9}
+for m, want in TOP3.items():
+    check(f"saw only top-3 results % — {m}", r.loc[m, "top3_only"], want)
+check("deepest result rank — Gemini 2.5 Pro", r.loc["Gemini 2.5 Pro", "max_rank"], 3.36, 0.005)
+check("deepest result rank — Kimi K2", r.loc["Kimi K2", "max_rank"], 10.85, 0.005)
 er = pd.read_csv(f"{D}/agent_errors_by_model.csv").set_index("model")
 check("tool-error rate % — Kimi K2", er.loc["moonshotai/kimi-k2-0905", "pct_toolerr"], 11.2)
 

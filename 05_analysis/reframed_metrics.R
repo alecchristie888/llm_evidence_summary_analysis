@@ -77,7 +77,7 @@ as_chr_ids <- function(v) if (is.null(v)) character(0) else as.character(unlist(
 parse_entry <- function(e, model, area) {
   if (is.null(e$relevant_summary) || !nzchar(e$relevant_summary)) return(NULL)  # not evaluated
   pool   <- as_chr_ids(e$all_relevant_action_ids)
-  opened <- character(0); n_search <- 0L; max_off <- 0L; n_err <- 0L; n_iter <- 0L
+  opened <- character(0); n_search <- 0L; max_off <- 0L; max_rank <- 0L; n_err <- 0L; n_iter <- 0L
   if (!is.null(e$tool_call_details)) {
     n_iter <- length(e$tool_call_details)
     for (it in e$tool_call_details) {
@@ -87,7 +87,10 @@ parse_entry <- function(e, model, area) {
         args <- tryCatch(fromJSON(t$args, simplifyVector = TRUE), error = function(err) list())
         if (identical(t$function_name, "search_actions")) {
           n_search <- n_search + 1L
-          off <- suppressWarnings(as.integer(args$offset)); if (length(off) && !is.na(off)) max_off <- max(max_off, off)
+          off <- suppressWarnings(as.integer(args$offset)); if (!length(off) || is.na(off)) off <- 0L
+          k   <- suppressWarnings(as.integer(args$k));      if (!length(k)   || is.na(k))   k   <- 3L  # tool default
+          max_off  <- max(max_off, off)
+          max_rank <- max(max_rank, off + k)  # deepest result rank returned: models could page (offset) or ask for up to 10 results (k)
         } else if (identical(t$function_name, "get_action_details") && !is.null(args$action_id)) {
           opened <- union(opened, as.character(args$action_id))
         }
@@ -98,7 +101,9 @@ parse_entry <- function(e, model, area) {
   hit     <- intersect(opened, pool)
   tibble(summary_model = model, synopsis = area, question = str_trim(e$query),
          n_pool = length(pool), n_opened_run = length(opened), n_searches_run = n_search,
-         max_offset_run = max_off, n_iterations_run = n_iter, n_tool_errors_run = n_err,
+         max_offset_run = max_off, max_rank_run = max_rank,
+         top3_only_run = as.numeric(max_rank <= 3), never_paged_run = as.numeric(max_off == 0),
+         n_iterations_run = n_iter, n_tool_errors_run = n_err,
          recall_run    = if (length(pool)) length(hit) / length(pool) else NA_real_,
          precision_run = if (length(opened)) length(hit) / length(opened) else NA_real_,
          cite_through_run = if (length(hit)) length(intersect(cited, hit)) / length(hit) else NA_real_,
@@ -173,9 +178,31 @@ retr_paper <- per |>
     }
     out
   }) |> ungroup()
+
+# Search depth. Models could look beyond the top three results either by paging (offset) or by
+# requesting more results per search (k, up to 10), so max_offset alone understates depth.
+# max_rank = deepest result rank returned (k + offset); top3_only = % of summaries in which no search
+# returned anything beyond the top three; never_paged = % in which no search used offset > 0.
+# Bootstrapped with its own seed and the global RNG state restored afterwards, so every other
+# bootstrap CI in this script is unchanged by adding these columns.
+depth_cols <- c(max_rank = "max_rank_run", top3_only = "top3_only_run", never_paged = "never_paged_run")
+rng_saved <- .Random.seed
+set.seed(2)
+depth <- per |>
+  group_by(model) |>
+  group_modify(function(g, k) {
+    out <- tibble(.rows = 1)
+    for (nm in names(depth_cols)) {
+      ci <- boot_mean_ci(g[[depth_cols[[nm]]]]); f <- if (nm == "max_rank") 1 else 100
+      out[[nm]] <- round(f * ci[["mean"]], 3); out[[paste0(nm, "_lo")]] <- round(f * ci[["lo"]], 3); out[[paste0(nm, "_hi")]] <- round(f * ci[["hi"]], 3)
+    }
+    out
+  }) |> ungroup()
+assign(".Random.seed", rng_saved, envir = .GlobalEnv)
+retr_paper <- left_join(retr_paper, depth, by = "model")
 write_csv(retr_paper, file.path(D, "retrieval_metrics_by_model_evaluated_run.csv"))
 cat("\n=== Retrieval metrics, evaluated-run definition (paper) ===\n")
-print(select(retr_paper, model, n, ret_recall, ret_prec, cite_recall, cite_through, n_opened, n_searches, max_offset), width = 200)
+print(select(retr_paper, model, n, ret_recall, ret_prec, cite_recall, cite_through, n_opened, n_searches, max_offset, max_rank, top3_only, never_paged), width = 200)
 
 # ----------------------------------------------------------------------------
 # 3. Composite: mean of per-summary retrieval recall x faithfulness (bootstrap CI)

@@ -95,7 +95,9 @@ Columns (7): `metric`, `model`, `n`, `median`, `p_lt_50`, `p_lt_70`, `p_ge_90`
 
 ## `retrieval_metrics_by_model_evaluated_run.csv`
 
-Retrieval metrics under the evaluated-run definition (the values reported in the paper): ret_recall, cite_recall, ret_prec, cite_through in percent; n_opened, n_searches, max_offset as counts; each with `_lo`/`_hi` bootstrap 95% CI bounds; n = evaluated summaries.
+Retrieval metrics under the evaluated-run definition (the values reported in the paper): ret_recall, cite_recall, ret_prec, cite_through in percent; n_opened, n_searches, max_offset as counts; search depth as max_rank (mean deepest result rank returned, k + offset), top3_only (% of summaries in which no search returned anything beyond the top three results) and never_paged (% of summaries in which no search used offset > 0); each with `_lo`/`_hi` bootstrap 95% CI bounds; n = evaluated summaries. Models could look beyond the top three results either by paging (offset) or by requesting up to 10 results per search (k), so max_offset and never_paged alone understate search depth.
+
+Columns (32): `model`, `n`, `ret_recall`, `ret_recall_lo`, `ret_recall_hi`, `cite_recall`, `cite_recall_lo`, `cite_recall_hi`, `ret_prec`, `ret_prec_lo`, `ret_prec_hi`, `cite_through`, `cite_through_lo`, `cite_through_hi`, `n_opened`, `n_opened_lo`, `n_opened_hi`, `n_searches`, `n_searches_lo`, `n_searches_hi`, `max_offset`, `max_offset_lo`, `max_offset_hi`, `max_rank`, `max_rank_lo`, `max_rank_hi`, `top3_only`, `top3_only_lo`, `top3_only_hi`, `never_paged`, `never_paged_lo`, `never_paged_hi`
 
 ## `fig4_failure_profile_summary.csv`
 
@@ -173,7 +175,7 @@ Columns (7): `metric`, `model_a`, `model_b`, `diff`, `lo`, `hi`, `sig`
 
 Model-level means under the evaluated-run (reported) and log-based definitions side by side.
 
-Columns (33): `model`, `n_summaries`, `recall_log_based_paper`, `recall_log_based_paper_lo`, `recall_log_based_paper_hi`, `recall_evaluated_run`, `recall_evaluated_run_lo`, `recall_evaluated_run_hi`, `precision_log_based_paper`, `precision_log_based_paper_lo`, `precision_log_based_paper_hi`, `precision_evaluated_run`, `precision_evaluated_run_lo`, `precision_evaluated_run_hi`, `opened_log_based_paper`, `opened_log_based_paper_lo`, `opened_log_based_paper_hi`, `opened_evaluated_run`, `opened_evaluated_run_lo`, `opened_evaluated_run_hi`, `cite_through_log_based_paper`, `cite_through_log_based_paper_lo`, `cite_through_log_based_paper_hi`, `cite_through_evaluated_run`, `cite_through_evaluated_run_lo`, `cite_through_evaluated_run_hi`, `searches_evaluated_run`, `searches_evaluated_run_lo`, `searches_evaluated_run_hi`, `max_offset_evaluated_run`, `max_offset_evaluated_run_lo`, `max_offset_evaluated_run_hi`, `n_with_log_based`
+Columns (36): `model`, `n_summaries`, `n_with_log_based`, `recall_log_based`, `recall_log_based_lo`, `recall_log_based_hi`, `recall_evaluated_run`, `recall_evaluated_run_lo`, `recall_evaluated_run_hi`, `precision_log_based`, `precision_log_based_lo`, `precision_log_based_hi`, `precision_evaluated_run`, `precision_evaluated_run_lo`, `precision_evaluated_run_hi`, `opened_log_based`, `opened_log_based_lo`, `opened_log_based_hi`, `opened_evaluated_run`, `opened_evaluated_run_lo`, `opened_evaluated_run_hi`, `cite_through_log_based`, `cite_through_log_based_lo`, `cite_through_log_based_hi`, `cite_through_evaluated_run`, `cite_through_evaluated_run_lo`, `cite_through_evaluated_run_hi`, `searches_evaluated_run`, `searches_evaluated_run_lo`, `searches_evaluated_run_hi`, `max_offset_evaluated_run`, `max_offset_evaluated_run_lo`, `max_offset_evaluated_run_hi`, `cite_recall_evaluated_run`, `cite_recall_evaluated_run_lo`, `cite_recall_evaluated_run_hi`
 
 
 ## `retrieval_metrics_by_model.csv`
@@ -187,7 +189,9 @@ Columns (17): `model`, `ret_recall`, `ret_recall_lo`, `ret_recall_hi`, `cite_rec
 
 summary_level joined to retrieval metrics under both definitions: `*_run` = trace of the run that produced the summary (from data/summaries; the evaluated-run definition reported in the paper); `*_log` = union over all completed runs in the logs (comparison only).
 
-Columns (25): `summary_model`, `synopsis`, `question`, `n_statements`, `n_cited_statements`, `citation_rate`, `relevance_score`, `cc_all_score`, `cc_cited_score`, `faithfulness_score`, `n_pool`, `n_opened_run`, `n_searches_run`, `max_offset_run`, `n_iterations_run`, `recall_run`, `precision_run`, `cite_through_run`, `n_cited_actions`, `recall_log`, `precision_log`, `n_opened_log`, `cite_through_log`, `cite_recall_log`, `model`
+Columns (30): `summary_model`, `synopsis`, `question`, `n_statements`, `n_cited_statements`, `citation_rate`, `relevance_score`, `cc_all_score`, `cc_cited_score`, `faithfulness_score`, `n_pool`, `n_opened_run`, `n_searches_run`, `max_offset_run`, `max_rank_run`, `top3_only_run`, `never_paged_run`, `n_iterations_run`, `n_tool_errors_run`, `recall_run`, `precision_run`, `cite_through_run`, `cite_recall_run`, `n_cited_actions`, `recall_log`, `precision_log`, `n_opened_log`, `cite_through_log`, `cite_recall_log`, `model`
+
+`max_rank_run` = deepest result rank returned by any search (k + offset; k defaults to 3); `top3_only_run` = 1 if no search returned anything beyond the top three results; `never_paged_run` = 1 if no search used offset > 0.
 
 
 ## `retrieval_recall.csv`

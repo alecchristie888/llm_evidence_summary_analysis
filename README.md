@@ -54,6 +54,7 @@ The data archive is on Zenodo, https://doi.org/10.5281/zenodo.24202231. Download
 | Retrieval recall, citation recall, precision, actions opened, cite-through (evaluated-run definition, as reported) | `05_analysis/reframed_metrics.R` | `retrieval_metrics_by_model_evaluated_run.csv`, `retrieval_per_summary.csv` |
 | Log-based retrieval metrics (union over all completed runs; comparison only) | `04_retrieval_traces/true_retrieval_recall.py`, `retrieval_summary_stats.py` | `retrieval_recall.csv`, `retrieval_metrics_by_model.csv`, `retrieval_definition_comparison.csv` |
 | Searches, offsets, iterations, tool errors | `parse_tool_traces.py`, `recheck_traces.py` | `agent_behaviour_by_model.csv`, `agent_errors_by_model.csv` |
+| Search depth: deepest result rank returned (k + offset), % of summaries seeing only the top three results | `05_analysis/reframed_metrics.R` | `retrieval_metrics_by_model_evaluated_run.csv`, `retrieval_per_summary.csv` |
 | Task completion / attrition | `recheck_traces.py` | `attrition_by_model.csv` |
 | Within-model correlations (retrieval effort vs faithfulness) | `reframed_metrics.R` | `within_model_correlations.csv` |
 | ED Fig. 1 citation rate vs correctness when cited; ED Fig. 2 subject-area heatmap | `05_analysis/figures.R` (`ed_fig1_cite_quality_scatter.png`, `ed_fig2_synopsis_heatmap.png`) | `summary_level.csv`, `synopsis_x_model.csv` |

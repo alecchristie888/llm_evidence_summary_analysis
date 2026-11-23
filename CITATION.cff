@@ -37,11 +37,11 @@ version: "1.1.0"
 date-released: "2026-11-23"
 license: MIT
 repository-code: "https://github.com/alecchristie888/llm_evidence_summary_analysis"
-doi: "10.5281/zenodo.24372258"
+doi: "10.5281/zenodo.24372257"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.24372258"
-    description: "Code, release v1.0.0 (Zenodo)"
+    value: "10.5281/zenodo.24372257"
+    description: "Code, all versions (Zenodo concept DOI)"
   - type: doi
     value: "10.5281/zenodo.24202231"
     description: "Data archive (Zenodo)"
